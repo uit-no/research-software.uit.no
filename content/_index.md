@@ -1,0 +1,34 @@
++++
++++
+
+# Research software engineering (RSE) group at [UiT](https://uit.no)
+
+We are starting a RSE group at UiT, following the footsteps of [UK-based
+groups](https://society-rse.org/) and the [RSE group at Aalto
+University](https://scicomp.aalto.fi/).
+
+Our vision is to put UiT on the map as a place where research groups have
+access to best in class RSE services. Over time we wish to attract excellent
+staff, research groups, funding, collaborations, and attention.
+
+
+## What we offer
+
+- Consulting and help with programming and research software engineering
+- Making code more reproducible and reusable
+- Help with software licenses and open sourcing
+- Help with Git, GitHub, and GitLab
+- Help with organization of reusable and reproducible Jupyter notebooks and
+  Binder
+- Packaging and sharing software
+- Improving scaling, CPU, and memory footprint of research codes
+- **If you have questions about code you wrote or want to write, please come
+  and talk to us**
+
+
+## What we plan to do as next steps
+
+- Set up a proper contact email address
+- Establish office hours
+- Short presentation slide deck for research groups
+- Short video which describes what we do and want to do
