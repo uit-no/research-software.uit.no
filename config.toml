@@ -1,0 +1,33 @@
+# The URL the site will be built for
+base_url = "https://uit-no.github.io/rse"
+
+title = "Research software engineering group website"
+
+description = '''
+Edit this longer description.
+'''
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = false
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+
+
+[markdown]
+
+highlight_code = true
+highlight_theme = "cheerfully-light"
+
+
+[extra]
+
+navigation = [
+  { name = "Home", path = "/" },
+# { name = "About", path = "/about/" },
+# { name = "Topics", path = "/topics/" },
+# { name = "How to watch", path = "/watch/" },
+# { name = "twitch.tv/RSHour", path = "https://twitch.tv/RSHour" }
+]
+
+# twitter_image = "https://researchsoftwarehour.github.io/img/logo-hashbang-big.png"
