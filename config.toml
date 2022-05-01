@@ -1,7 +1,7 @@
 # The URL the site will be built for
 base_url = "https://uit-no.github.io/rse"
 
-title = "Research software engineering group website"
+title = "Research software engineering group at UiT"
 
 description = '''
 Edit this longer description.
@@ -24,10 +24,9 @@ highlight_theme = "cheerfully-light"
 
 navigation = [
   { name = "Home", path = "/" },
-# { name = "About", path = "/about/" },
-# { name = "Topics", path = "/topics/" },
-# { name = "How to watch", path = "/watch/" },
-# { name = "twitch.tv/RSHour", path = "https://twitch.tv/RSHour" }
+  { name = "About us", path = "/about/" },
+  { name = "Courses", path = "/courses/" },
+  { name = "Blog", path = "/blog/" },
 ]
 
 # twitter_image = "https://researchsoftwarehour.github.io/img/logo-hashbang-big.png"
