@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/img/logo-hashbang.ico">
+
+    <title>{{ config.title }}</title>
+
+    {% if config.extra.twitter_image %}
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:image" content="{{ config.extra.twitter_image | safe }}" />
+    {% endif %}
+
+    {% if page.description %}
+      <meta name="description" content="{{ page.description }}" />
+      <meta name="twitter:description" content="{{ page.description }}" />
+    {% else %}
+      <meta name="description" content="{{ config.description }}" />
+      <meta name="twitter:description" content="{{ config.description }}" />
+    {% endif %}
+
+    {% if page.title %}
+      <meta name="twitter:title" content="{{ page.title }}" />
+    {% else %}
+      <meta name="twitter:title" content="{{ config.title }}" />
+    {% endif %}
+
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" integrity="sha256-UXesixbeLkB/UYxVTzuj/gg3+LMzgwAmg3zD+C4ZASQ=" crossorigin="anonymous">
+
+    <link href="/css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="ui container bottom-buffer">
+      <div class="ui secondary pointing stackable menu">
+        <div class="right menu">
+          {% for link in config.extra.navigation %}
+            <a class="item" href="{{ link.path | safe }}" id="fonts">{{ link.name }}</a>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="top-buffer">
+        {% block content %}
+        {% endblock content %}
+      </div>
+
+      <div class="top-buffer">
+        <hr>
+
+        <div class="ui horizontal list">
+          <div class="item">
+            <div class="content">
+              <i class="mail icon"></i>
+              <a class="item"
+                 target="_blank"
+                 href="mailto:radovan.bast@uit.no">radovan.bast@uit.no</a>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="content">
+              <i class="github icon"></i>
+              <a class="item"
+                 target="_blank"
+                 href="https://github.com/uit-no/rse">RSE @ UiT</a>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="content">
+              <i class="github icon"></i>
+              <a class="item"
+                 target="_blank"
+                 href="https://github.com/bast">bast</a>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="content">
+              <i class="twitter blue icon"></i>
+              <a class="item"
+                 target="_blank"
+                 href="https://twitter.com/__radovan">__radovan</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js" integrity="sha256-CgSoWC9w5wNmI1aN8dIMK+6DPelUEtvDr+Bc2m/0Nx8=" crossorigin="anonymous"></script>
+
+  </body>
+</html>
