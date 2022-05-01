@@ -33,7 +33,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" integrity="sha256-UXesixbeLkB/UYxVTzuj/gg3+LMzgwAmg3zD+C4ZASQ=" crossorigin="anonymous">
 
-    <link href="/css/style.css" rel="stylesheet">
+    <link href="{{ get_url(path="css/style.css") | safe }}" rel="stylesheet">
   </head>
 
   <body>
@@ -42,7 +42,7 @@
       <div class="ui secondary pointing stackable menu">
         <div class="right menu">
           {% for link in config.extra.navigation %}
-            <a class="item" href="{{ link.path | safe }}" id="fonts">{{ link.name }}</a>
+            <a class="item" href="{{ get_url(path=link.path) | safe }}" id="fonts">{{ link.name }}</a>
           {% endfor %}
         </div>
       </div>
