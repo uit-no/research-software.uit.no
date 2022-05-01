@@ -20,8 +20,11 @@ staff, research groups, funding, collaborations, and attention.
 - Help with Git, GitHub, and GitLab
 - Help with organization of reusable and reproducible Jupyter notebooks and
   Binder
+- Advice and help how to best document code
 - Packaging and sharing software
+- Help publishing your code
 - Improving scaling, CPU, and memory footprint of research codes
+- Help with modularizing your code
 - **If you have questions about code you wrote or want to write, please come
   and talk to us**
 
