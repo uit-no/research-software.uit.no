@@ -10,7 +10,11 @@ and enjoys supporting multi-disciplinary research.  He now works as part of
 [NRIS](https://documentation.sigma2.no/) at the University of Tromsø, Norway,
 and leads the [CodeRefinery](https://coderefinery.org) project.
 
-[Geir Villy Isaksen](https://isaksengeir.github.io/) ... (to be written).
+[Geir Villy Isaksen](https://isaksengeir.github.io/) has a Ph.D in molecular sciences / computational chemistry.
+Over the past decade he has been involved in several interdisciplinary software developement and reasearch projects where
+his interests in coding, graphical design and software development grew. After many years as a scientist, both in Tromsø and Uppsala, Geir now works
+full time as a senior engineer at [NRIS](https://documentation.sigma2.no/) focusing on adcanced HPC user support and scientific
+software developement. 
 
 Together, we have many years of experience programming for science, mentoring,
 and teaching computing.
