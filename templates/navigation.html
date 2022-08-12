@@ -1,4 +1,4 @@
-<nav class="uk-container uk-navbar">
+<nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
   <div class="uk-navbar-right">
     <ul class="uk-navbar-nav uk-visible@s">
       {% for link in config.extra.navigation %}
@@ -13,7 +13,7 @@
   <div class="uk-offcanvas-bar">
     <ul class="uk-nav">
       {% for link in config.extra.navigation %}
-        <li><a class="uk-text-large" href="{{ get_url(path=link.path) }}">{{ link.name }}</a></li>
+        <li><a href="{{ get_url(path=link.path) }}">{{ link.name }}</a></li>
       {% endfor %}
     </ul>
   </div>
