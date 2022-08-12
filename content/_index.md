@@ -36,3 +36,4 @@ staff, research groups, funding, collaborations, and attention.
 - Establish office hours
 - Short presentation slide deck for research groups
 - Short video which describes what we do and want to do
+- Set up newsletter
