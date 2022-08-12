@@ -1,0 +1,33 @@
+// https://getuikit.com/docs/sass
+@import "../uikit/src/scss/variables-theme.scss";
+@import "../uikit/src/scss/mixins-theme.scss";
+@import "../uikit/src/scss/uikit-theme.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.content ul {
+    @extend .uk-list;
+    @extend .uk-list-square;
+
+}
+
+$heading-color: #404040;
+
+.content h1 {
+    @extend .uk-h2;
+    color: $heading-color;
+}
+
+.content h2 {
+    @extend .uk-h3;
+    color: $heading-color;
+}
+
+.content h3 {
+    @extend .uk-h4;
+    color: $heading-color;
+}

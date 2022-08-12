@@ -15,4 +15,4 @@ branch. The branch `gh-pages` should not be manually modified.
 - Install [Zola](https://www.getzola.org/documentation/getting-started/installation/)
 - Serve locally: `$ zola serve`
 
-CSS is using [Semantic UI](https://semantic-ui.com/).
+CSS is using [UIkit](https://getuikit.com/).

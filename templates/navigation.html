@@ -1,0 +1,20 @@
+<nav class="uk-container uk-navbar">
+  <div class="uk-navbar-right">
+    <ul class="uk-navbar-nav uk-visible@s">
+      {% for link in config.extra.navigation %}
+        <li><a href="{{ get_url(path=link.path) }}">{{ link.name }}</a></li>
+      {% endfor %}
+    </ul>
+    <a href="#" class="uk-navbar-toggle uk-hidden@s" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
+  </div>
+</nav>
+
+<div id="sidenav" uk-offcanvas="flip: true" class="uk-offcanvas">
+  <div class="uk-offcanvas-bar">
+    <ul class="uk-nav">
+      {% for link in config.extra.navigation %}
+        <li><a class="uk-text-large" href="{{ get_url(path=link.path) }}">{{ link.name }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
