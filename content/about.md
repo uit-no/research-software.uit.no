@@ -3,6 +3,9 @@
 
 # About us
 
+Together, we have many years of experience programming for science, mentoring,
+and teaching computing.
+
 {{ div(attributes='class="uk-child-width-expand@m" uk-grid') }}
 
 {{ div() }}
@@ -27,6 +30,3 @@ software developement.
 {{ enddiv() }}
 
 {{ enddiv() }}
-
-Together, we have many years of experience programming for science, mentoring,
-and teaching computing.
