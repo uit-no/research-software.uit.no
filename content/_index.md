@@ -36,6 +36,7 @@ staff, research groups, funding, collaborations, and attention.
 
 {{ enddiv() }}
 
+---
 
 ## What we plan to do as next steps
 
