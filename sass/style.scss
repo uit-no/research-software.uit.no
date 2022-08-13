@@ -9,7 +9,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.content ul {
+.markdown ul {
     @extend .uk-list;
     @extend .uk-list-square;
 
@@ -17,17 +17,17 @@
 
 $heading-color: #404040;
 
-.content h1 {
+.markdown h1 {
     @extend .uk-h2;
     color: $heading-color;
 }
 
-.content h2 {
+.markdown h2 {
     @extend .uk-h3;
     color: $heading-color;
 }
 
-.content h3 {
+.markdown h3 {
     @extend .uk-h4;
     color: $heading-color;
 }
