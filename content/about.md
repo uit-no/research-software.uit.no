@@ -3,7 +3,7 @@
 
 # About us
 
-{{ div(attributes='class="uk-child-width-expand@s" uk-grid') }}
+{{ div(attributes='class="uk-child-width-expand@m" uk-grid') }}
 
 {{ div() }}
 
