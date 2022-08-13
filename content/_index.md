@@ -29,6 +29,7 @@ staff, research groups, funding, collaborations, and attention.
 - Help publishing your code
 - Improving scaling, CPU, and memory footprint of research codes
 - Help with modularizing your code
+- Consulting and help with web development (static websites, JavaScript, HTML, CSS frameworks)
 - **If you have questions about code you wrote or want to write, please write or come
   and talk to us**
 
