@@ -24,6 +24,7 @@ staff, research groups, funding, collaborations, and attention.
 - Help with organization of reusable and reproducible Jupyter notebooks and
   Binder
 - Advice and help how to best document code
+- Advice about whether to use YAML or CSV or JSON or TOML or something else
 - Packaging and sharing software
 - Help with pip, PyPI, and Conda
 - Help publishing your code
