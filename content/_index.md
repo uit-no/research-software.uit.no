@@ -14,6 +14,8 @@ staff, research groups, funding, collaborations, and attention.
 
 ## What we offer
 
+{{ div(attributes='class="uk-column-1-2@l"') }}
+
 - Consulting and help with programming and research software engineering
 - Making code more reproducible and reusable
 - Help with software licenses and open sourcing
@@ -29,6 +31,8 @@ staff, research groups, funding, collaborations, and attention.
 - Help with modularizing your code
 - **If you have questions about code you wrote or want to write, please write or come
   and talk to us**
+
+{{ enddiv() }}
 
 
 ## What we plan to do as next steps
