@@ -3,6 +3,16 @@
 
 # Research software engineering (RSE) group at [UiT](https://uit.no)
 
+{{ div(attributes='uk-grid') }}
+
+{{ div(attributes='class="uk-width-auto@m"') }}
+
+<img src="logo1.png" width="150px"/>
+
+{{ enddiv() }}
+
+{{ div(attributes='class="uk-width-1-2@m"') }}
+
 We are starting a RSE group at UiT, following the footsteps of [UK-based
 groups](https://society-rse.org/) and the [RSE group at Aalto
 University](https://scicomp.aalto.fi/).
@@ -10,6 +20,10 @@ University](https://scicomp.aalto.fi/).
 Our vision is to put UiT on the map as a place where research groups have
 access to best in class RSE services. Over time we wish to attract excellent
 staff, research groups, funding, collaborations, and attention.
+
+{{ enddiv() }}
+
+{{ enddiv() }}
 
 
 ## What we offer
