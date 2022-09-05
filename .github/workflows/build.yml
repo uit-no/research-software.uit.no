@@ -17,7 +17,7 @@ env:
   ZOLA_VERSION: "0.16.0"
   MAIN_BRANCH: "main"
   TARGET_BRANCH: "gh-pages"
-# CNAME: "example.org"
+  CNAME: "research-software.uit.no"
 
 on:
   push:
