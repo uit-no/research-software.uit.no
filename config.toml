@@ -4,7 +4,9 @@ base_url = "https://research-software.uit.no"
 title = "Research software engineering group at UiT"
 
 description = '''
-Edit this longer description.
+Our vision is to put UiT on the map as a place where research groups have
+access to best in class RSE services. Over time we wish to attract excellent
+staff, research groups, funding, collaborations, and attention.
 '''
 
 # Whether to automatically compile all Sass files in the sass directory
