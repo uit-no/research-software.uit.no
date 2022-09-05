@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://uit-no.github.io/rse"
+base_url = "https://research-software.uit.no"
 
 title = "Research software engineering group at UiT"
 
@@ -29,4 +29,4 @@ navigation = [
   { name = "Blog", path = "/blog/" },
 ]
 
-# twitter_image = "https://researchsoftwarehour.github.io/img/logo-hashbang-big.png"
+twitter_image = "https://raw.githubusercontent.com/uit-no/rse/main/content/logo1.png"
