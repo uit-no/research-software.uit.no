@@ -21,11 +21,11 @@ and leads the [CodeRefinery](https://coderefinery.org) project.
 
 {{ div() }}
 
-[Geir Villy Isaksen](https://isaksengeir.github.io/) has a Ph.D in molecular sciences / computational chemistry.
-Over the past decade he has been involved in several interdisciplinary software developement and reasearch projects where
-his interests in coding, graphical design and software development grew. After many years as a scientist, both in Tromsø and Uppsala, Geir now works
-full time as a senior engineer at [NRIS](https://documentation.sigma2.no/) focusing on adcanced HPC user support and scientific
-software developement.
+Jørn Dietze is almost finished with a Ph.D in bioinformatics.
+He has experience with programming in Python, Julia and a little bit of C and
+working with HPC systems. He is part of [NRIS](https://documentation.sigma2.no/)
+at the University of Tromsø, Norway, and the 
+[LUMI User Suppor Team](https://www.lumi-supercomputer.eu/).
 
 {{ enddiv() }}
 
