@@ -30,6 +30,7 @@ staff, research groups, funding, collaborations, and attention.
 
 {{ div(attributes='class="uk-column-1-2@l"') }}
 
+- **Code review**: we look together at your code/script and give constructive feedback
 - Consulting and help with programming and research software engineering
 - Making code more reproducible and reusable
 - Help with software licenses and open sourcing
