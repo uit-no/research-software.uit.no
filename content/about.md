@@ -27,7 +27,7 @@ Jørn Dietze is almost finished with a Ph.D in bioinformatics.
 He has experience with programming in Python, Julia, and a little bit of C and
 working with HPC systems. He is part of [NRIS](https://documentation.sigma2.no/)
 at the University of Tromsø, Norway, and the 
-[LUMI User Suppor Team](https://www.lumi-supercomputer.eu/).
+[LUMI User Support Team](https://www.lumi-supercomputer.eu/).
 
 {{ enddiv() }}
 
