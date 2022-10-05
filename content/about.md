@@ -16,7 +16,7 @@ now Tromsø at the border between science, software, and computational support
 and enjoys supporting multi-disciplinary research.  He now works as part of
 [NRIS](https://documentation.sigma2.no/) at the University of Tromsø, Norway,
 and leads the [CodeRefinery](https://coderefinery.org) project.
-These days mostly programming in Python and Rust and JavaScript but has spent
+These days mostly programming in Python, Rust, and JavaScript but has spent
 many years with Fortran and C(++).
 
 {{ enddiv() }}
