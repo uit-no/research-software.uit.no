@@ -40,6 +40,7 @@ staff, research groups, funding, collaborations, and attention.
 - Advice and help how to best document code
 - Advice about whether to use YAML or CSV or JSON or TOML or something else
 - Packaging and sharing software
+- Containerization (Singularity, Docker)
 - Help with pip, PyPI, and Conda
 - Help publishing your code
 - Improving scaling, CPU, and memory footprint of research codes
