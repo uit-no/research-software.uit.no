@@ -29,6 +29,7 @@ navigation = [
   { name = "About us", path = "/about/" },
   { name = "Courses", path = "/courses/" },
   { name = "Blog", path = "/blog/" },
+  { name = "Contact", path = "/contact/" },
 ]
 
 twitter_image = "https://raw.githubusercontent.com/uit-no/rse/main/content/logo1.png"
