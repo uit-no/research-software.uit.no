@@ -15,7 +15,8 @@ background in theoretical chemistry.  He's worked in France, Stockholm, and
 now Tromsø at the border between science, software, and computational support
 and enjoys supporting multi-disciplinary research.  He now works as part of
 [NRIS](https://documentation.sigma2.no/) at the University of Tromsø, Norway,
-and leads the [CodeRefinery](https://coderefinery.org) project.
+and leads the [CodeRefinery](https://coderefinery.org) project
+and the high-performance computing group.
 These days mostly programming in Python, Rust, and JavaScript but has spent
 many years with Fortran and C(++).
 
@@ -24,11 +25,16 @@ many years with Fortran and C(++).
 {{ div() }}
 
 Jørn Dietze is almost finished with a Ph.D in bioinformatics.
-He has experience with programming in Python, Julia, and a little bit of C and
-working with HPC systems. He is part of [NRIS](https://documentation.sigma2.no/)
-at the University of Tromsø, Norway, and the 
+He is working with high-performance computing systems and
+has experience with programming in Python, Julia, and a little bit of C.
+He is part of [NRIS](https://documentation.sigma2.no/)
+at the University of Tromsø, Norway, and the
 [LUMI User Support Team](https://www.lumi-supercomputer.eu/).
 
 {{ enddiv() }}
 
 {{ enddiv() }}
+
+---
+
+**And you?** If you are interested in this work, please contact us.
