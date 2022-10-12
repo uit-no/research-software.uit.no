@@ -30,6 +30,7 @@ staff, research groups, funding, collaborations, and attention.
 
 {{ div(attributes='class="uk-column-1-2@l"') }}
 
+- [Short presentation slide deck](https://cicero.xyz/v3/remark/0.14.0/github.com/uit-no/rse-presentations/main/2022-rse-intro.md/) for research groups
 - **Code review**: we look together at your code/script and give constructive feedback and advice
 - Consulting and help with programming and research software engineering
 - Making code more reproducible and reusable
@@ -47,7 +48,7 @@ staff, research groups, funding, collaborations, and attention.
 - Improving scaling, CPU, and memory footprint of research codes
 - Help with modularizing your code
 - Consulting and help with web development (static websites, JavaScript, HTML, CSS frameworks)
-- **If you have questions about code you wrote or want to write, please contact us or come
+- **If you have questions about code you wrote or want to write, please [contact us](/contact) or come
   and talk to us**
 
 {{ enddiv() }}
@@ -57,6 +58,5 @@ staff, research groups, funding, collaborations, and attention.
 ## What we plan to do as next steps
 
 - Establish office hours
-- [Short presentation slide deck](https://cicero.xyz/v3/remark/0.14.0/github.com/uit-no/rse-presentations/main/2022-rse-intro.md/) for research groups
 - Short video which describes what we do and want to do
-- Set up a newsletter
+- Set up a newsletter to stay informed about courses and events
