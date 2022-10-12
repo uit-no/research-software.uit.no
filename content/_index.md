@@ -59,4 +59,4 @@ staff, research groups, funding, collaborations, and attention.
 - Establish office hours
 - [Short presentation slide deck](https://cicero.xyz/v3/remark/0.14.0/github.com/uit-no/rse-presentations/main/2022-rse-intro.md/) for research groups
 - Short video which describes what we do and want to do
-- Set up newsletter
+- Set up a newsletter
