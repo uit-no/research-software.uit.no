@@ -10,7 +10,7 @@ and teaching computing.
 
 {{ div() }}
 
-[Radovan Bast](https://bast.fr) is a research software engineer with
+**[Radovan Bast](https://bast.fr)** is a research software engineer with
 background in theoretical chemistry.  He's worked in France, Stockholm, and
 now Tromsø at the border between science, software, and computational support
 and enjoys supporting multi-disciplinary research.  He now works as part of
@@ -24,7 +24,7 @@ many years with Fortran and C(++).
 
 {{ div() }}
 
-Jørn Dietze is almost finished with a Ph.D in bioinformatics.
+**Jørn Dietze** is almost finished with a Ph.D in bioinformatics.
 He is working with high-performance computing systems and
 has experience with programming in Python, Julia, and a little bit of C.
 He is part of [NRIS](https://documentation.sigma2.no/)
