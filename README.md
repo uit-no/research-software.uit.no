@@ -1,6 +1,6 @@
 # Research software engineering group website
 
-- https://uit-no.github.io/rse/
+- https://research-software.uit.no
 
 
 ### How the GitHub Pages part works
