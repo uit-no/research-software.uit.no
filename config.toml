@@ -25,11 +25,11 @@ highlight_theme = "cheerfully-light"
 [extra]
 
 navigation = [
-  { name = "Home", path = "/" },
-  { name = "About us", path = "/about/" },
-  { name = "Courses", path = "/courses/" },
-  { name = "Blog", path = "/blog/" },
-  { name = "Contact", path = "/contact/" },
+  { name = "Home", target = "/" },
+  { name = "About us", target = "/about/" },
+  { name = "Courses", target = "/courses/" },
+  { name = "Blog", target = "/blog/" },
+  { name = "Contact", target = "/contact/" },
 ]
 
 twitter_image = "https://raw.githubusercontent.com/uit-no/rse/main/content/logo1.png"

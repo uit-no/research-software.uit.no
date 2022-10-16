@@ -1,8 +1,12 @@
 <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
   <div class="uk-navbar-right">
     <ul class="uk-navbar-nav uk-visible@s">
-      {% for link in config.extra.navigation %}
-        <li><a href="{{ get_url(path=link.path) }}">{{ link.name }}</a></li>
+      {% for item in config.extra.navigation %}
+        {% if item.target is starting_with("http") %}
+          <li><a href="{{ item.target }}" target="_blank">{{ item.name }}</a></li>
+        {% else %}
+          <li><a href="{{ get_url(path=item.target) }}">{{ item.name }}</a></li>
+        {% endif %}
       {% endfor %}
     </ul>
     <a href="#" class="uk-navbar-toggle uk-hidden@s" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
@@ -12,8 +16,12 @@
 <div id="sidenav" uk-offcanvas="flip: true" class="uk-offcanvas">
   <div class="uk-offcanvas-bar">
     <ul class="uk-nav">
-      {% for link in config.extra.navigation %}
-        <li><a href="{{ get_url(path=link.path) }}">{{ link.name }}</a></li>
+      {% for item in config.extra.navigation %}
+        {% if item.target is starting_with("http") %}
+          <li><a href="{{ item.target }}" target="_blank">{{ item.name }}</a></li>
+        {% else %}
+          <li><a href="{{ get_url(path=item.target) }}">{{ item.name }}</a></li>
+        {% endif %}
       {% endfor %}
     </ul>
   </div>
