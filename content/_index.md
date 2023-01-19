@@ -25,6 +25,11 @@ staff, research groups, funding, collaborations, and attention.
 
 {{ enddiv() }}
 
+## Office hours
+Want help with anything code related visit us during our
+office hours.
+
+*Wednesdays 14:00-15:00 @ Modulbygget A209*
 
 ## What we offer
 
@@ -57,6 +62,5 @@ staff, research groups, funding, collaborations, and attention.
 
 ## What we plan to do as next steps
 
-- Establish office hours
 - Short video which describes what we do and want to do
 - Set up a newsletter to stay informed about courses and events
