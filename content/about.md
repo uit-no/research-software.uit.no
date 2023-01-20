@@ -33,6 +33,12 @@ at the University of Tromsø, Norway, and the
 
 {{ enddiv() }}
 
+{{ div() }}
+
+**Bente Barge** is a Ph.D student in computational chemistry and part-time member of the HPC group at the University of Tromsø, Norway. Coding has been an important part of her Ph.D and her interest in research software development has evolved during her time in academia.
+
+{{ enddiv() }}
+
 {{ enddiv() }}
 
 ---
