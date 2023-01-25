@@ -25,11 +25,13 @@ staff, research groups, funding, collaborations, and attention.
 
 {{ enddiv() }}
 
-## Office hours
-Want help with anything code related visit us during our
-office hours.
 
-*Wednesdays 14:00-15:00 @ Modulbygget A209*
+## Office hours
+
+Want help with anything code related?  Visit us during our
+office hours **every Wednesday 14:00 - 15:00** in
+[room A209 in Modulbygget](https://use.mazemap.com/#v=1&zlevel=2&center=18.972617,69.683509&zoom=16.3&campusid=5&sharepoitype=poi&sharepoi=174370).
+
 
 ## What we offer
 
