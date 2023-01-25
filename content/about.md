@@ -10,6 +10,8 @@ and teaching computing.
 
 {{ div() }}
 
+**Bente Barge** is a Ph.D student in computational chemistry and part-time member of the HPC group at the University of Tromsø, Norway. Coding has been an important part of her Ph.D and her interest in research software development has evolved during her time in academia.
+
 **[Radovan Bast](https://bast.fr)** is a research software engineer with
 background in theoretical chemistry.  He's worked in France, Stockholm, and
 now Tromsø at the border between science, software, and computational support
@@ -24,21 +26,16 @@ many years with Fortran and C(++).
 
 {{ div() }}
 
+**Magnar Bjørgve** has a background in applied mathematics and theoretical chemistry.
+He is working in the GPU and training team at [NRIS](https://documentation.sigma2.no/)
+at the University of Tromsø, Norway.
+
 **Jørn Dietze** is almost finished with a Ph.D in bioinformatics.
 He is working with high-performance computing systems and
 has experience with programming in Python, Julia, and a little bit of C.
 He is part of [NRIS](https://documentation.sigma2.no/)
 at the University of Tromsø, Norway, and the
 [LUMI User Support Team](https://www.lumi-supercomputer.eu/).
-
-**Magnar Bjørgve** has a background in applied mathematics and theoretical chemistry.
-He is working in the GPU and training team at [NRIS](https://documentation.sigma2.no/)
-at the University of Tromsø, Norway.
-{{ enddiv() }}
-
-{{ div() }}
-
-**Bente Barge** is a Ph.D student in computational chemistry and part-time member of the HPC group at the University of Tromsø, Norway. Coding has been an important part of her Ph.D and her interest in research software development has evolved during her time in academia.
 
 {{ enddiv() }}
 
