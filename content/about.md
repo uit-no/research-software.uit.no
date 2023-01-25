@@ -31,6 +31,9 @@ He is part of [NRIS](https://documentation.sigma2.no/)
 at the University of Tromsø, Norway, and the
 [LUMI User Support Team](https://www.lumi-supercomputer.eu/).
 
+**Magnar Bjørgve** has a background in applied mathematics and theoretical chemistry.
+He is working in the GPU and training team at [NRIS](https://documentation.sigma2.no/)
+at the University of Tromsø, Norway.
 {{ enddiv() }}
 
 {{ enddiv() }}
