@@ -29,6 +29,7 @@ navigation = [
   { name = "About us", target = "/about/" },
   { name = "Vision", target = "/vision/" },
   { name = "Courses", target = "/courses/" },
+  { name = "Resources", target = "/resources/" },
   { name = "Blog", target = "/blog/" },
   { name = "Contact", target = "/contact/" },
 ]
