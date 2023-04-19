@@ -3,7 +3,7 @@
 
 # Contact
 
-<a href="mailto:radovan.bast@uit.no" uk-icon="icon: mail">radovan.bast@uit.no</a>
+<a href="mailto:rse@uit.no" uk-icon="icon: mail">rse@uit.no</a>
 
 
 ## Where to find us on the campus
