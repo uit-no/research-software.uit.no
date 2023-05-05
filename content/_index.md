@@ -66,10 +66,3 @@ us](/contact) or come and talk to us**
 [Short presentation slide deck](https://cicero.xyz/v3/remark/0.14.0/github.com/uit-no/rse-presentations/main/2022-rse-intro.md/) for research groups
 
 {{ enddiv() }}
-
----
-
-## What we plan to do as next steps
-
-- Short video which describes what we do and want to do
-- Set up a newsletter to stay informed about courses and events
