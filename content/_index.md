@@ -7,7 +7,7 @@
 
 {{ div(attributes='class="uk-width-auto@m"') }}
 
-<img src="logo1.png" width="150px"/>
+<img src="logo1.png" alt="RSE at UiT logo" width="150px"/>
 
 {{ enddiv() }}
 
