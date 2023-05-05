@@ -45,4 +45,4 @@ at the University of Tromsø, Norway, and the
 
 **And you?** If you are interested in this work, please contact us.
 
-<img src="/cake.jpg" width="500px"/>
+<img src="/cake.jpg" alt="photo of the cake from the group inauguration event" width="500px"/>
