@@ -30,7 +30,7 @@ navigation = [
   { name = "Vision", target = "/vision/" },
   { name = "Courses", target = "/courses/" },
   { name = "Resources", target = "/resources/" },
-  { name = "Blog", target = "/blog/" },
+  { name = "Projects", target = "/projects/" },
   { name = "Contact", target = "/contact/" },
 ]
 

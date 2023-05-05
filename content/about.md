@@ -44,3 +44,5 @@ at the University of Tromsø, Norway, and the
 ---
 
 **And you?** If you are interested in this work, please contact us.
+
+<img src="/cake.jpg" width="500px"/>
