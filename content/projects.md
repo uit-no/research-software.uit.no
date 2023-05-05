@@ -31,3 +31,10 @@ Here we have helped a researcher who is moving their development environment
 from Matlab to Python with setting up an editor, configuring it with GitHub
 Copilot, installing Anaconda, and setting up a Conda environment for their
 project.
+
+
+## Helping out with a Python course for Bioinformatics
+
+We have contributed one lesson to a two-weeks Python course ["Introduction to
+Python in the Life
+Sciences"](https://github.com/Bioinformatics-teaching-UiT/Python_2023).
