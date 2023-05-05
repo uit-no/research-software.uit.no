@@ -24,7 +24,7 @@ __Save time on your project by getting quick and comprehensive help by experts._
 {{ enddiv() }}
 
 
-{{ div(attributes='class="uk-card uk-card-primary uk-card-body"') }}
+{{ div(attributes='class="uk-card uk-card-secondary uk-card-body"') }}
 ## Office hours: Every Wednesday 14:00 - 16:00
 
 Need help with anything code related?  Visit us during our office hours.
