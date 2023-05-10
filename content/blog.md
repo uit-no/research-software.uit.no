@@ -1,9 +1,11 @@
 +++
 +++
 
+
 # Blog posts
 
-## Magnar first quarter atUiT's Research Software Engineering Office Hours: Supporting Our University Community
+## Magnar first quarter at UiT's Research Software Engineering Office Hours *10/05/2023*
+### Supporting Our University Community
 
 At UiT, we understand the importance of offering support and guidance in research software development and usage. To address this need, our IT department has recently introduced "Research Software Engineering" (RSE) office hours in room A209 at Modulbygget, held every Wednesday from 14:00 to 16:00. In this blog post, I'll share some of the projects and services I've personally worked on as part of our RSE team and how we strive to assist students and staff at UiT.
 Establishing a Point of Contact:
