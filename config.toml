@@ -26,12 +26,12 @@ highlight_theme = "cheerfully-light"
 
 navigation = [
   { name = "Home", target = "/" },
-  { name = "Blog", target = "/blog/" },
   { name = "About us", target = "/about/" },
   { name = "Vision", target = "/vision/" },
   { name = "Courses", target = "/courses/" },
   { name = "Resources", target = "/resources/" },
   { name = "Projects", target = "/projects/" },
+  { name = "Blog", target = "/blog/" },
   { name = "Contact", target = "/contact/" },
 ]
 
