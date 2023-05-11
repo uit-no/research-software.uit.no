@@ -15,15 +15,30 @@ To ensure smooth communication and timely assistance, we've created a dedicated 
 Notable Projects and Services I've Contributed To:
 As a member of the RSE team, I have had the opportunity to contribute to several exciting projects, demonstrating our commitment to providing valuable support to the university community. Here are a few highlights:
 1. Exploring Ansys and OpenFOAM on National HPC Resources:
-2. I've investigated the potential of utilizing Ansys and OpenFOAM, two popular computational fluid dynamics (CFD) tools, on the national HPC resources. Currently, I'm collaborating with a user to implement OpenFOAM in their research, streamlining the process and offering valuable insights.
-3. Assessing Mathematica on National HPC Resources:
-4. I'm also looking into the feasibility of using Mathematica, a powerful computational software for various scientific disciplines, on the national HPC resources. This project is ongoing, and I'm excited to share our findings in the future.
-5. Guiding R Code Users and a Biology Student:
-6. I've provided guidance on using the R programming language, including assistance with debugging code. In one instance, I've worked with a biology student, discussing how data and code can be presented for their master project. Our team is equipped to help researchers with diverse programming backgrounds and offers tailored support for their specific needs.
-7. Assisting with GitHub Copilot Setup:
-8. As a team, we've helped users set up GitHub Copilot, an AI-powered code completion tool that can significantly improve programming efficiency. Researchers can take advantage of this cutting-edge technology to enhance their work.
-9. Supporting Python Code Debugging and Optimization:
-10. I've been involved in debugging and optimizing Python code, ensuring that researchers can work more efficiently and produce accurate, high-quality results.
+   I've investigated the potential of utilizing Ansys and OpenFOAM, two popular
+   computational fluid dynamics (CFD) tools, on the national HPC resources.
+   Currently, I'm collaborating with a user to implement OpenFOAM in their
+   research, streamlining the process and offering valuable insights.
+2. Assessing Mathematica on National HPC Resources:
+   I'm also looking into the feasibility of using Mathematica, a powerful
+   computational software for various scientific disciplines, on the national
+   HPC resources. This project is ongoing, and I'm excited to share our
+   findings in the future.
+3. Guiding R Code Users and a Biology Student:
+   I've provided guidance on using the R programming language, including
+   assistance with debugging code. In one instance, I've worked with a biology
+   student, discussing how data and code can be presented for their master
+   project. Our team is equipped to help researchers with diverse programming
+   backgrounds and offers tailored support for their specific needs.
+4. Assisting with GitHub Copilot Setup:
+   As a team, we've helped users set up GitHub Copilot, an AI-powered code
+   completion tool that can significantly improve programming efficiency.
+   Researchers can take advantage of this cutting-edge technology to enhance
+   their work.
+5. Supporting Python Code Debugging and Optimization:
+   I've been involved in debugging and optimizing Python code, ensuring that
+   researchers can work more efficiently and produce accurate, high-quality
+   results.
 
 My experience as part of the RSE team at UiT's Research Software Engineering office hours has allowed me to contribute valuable support to students and staff, helping them navigate the complexities of research software and programming. I'm proud to be part of a team committed to empowering our university community by providing assistance in a wide range of areas, from software setup to code optimization.
 
