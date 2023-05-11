@@ -4,7 +4,7 @@
 # Projects
 
 Here we summarize ongoing and completed projects, small and large. If you want to
-learn more about what we do check out our [blog](blog).
+learn more about what we do check out our [blog](@/blog.md).
 
 ## Porting a Fortran project to CMake
 
