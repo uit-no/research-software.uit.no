@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <article class="uk-article">
+
+    <h1 class="uk-article-title"><a class="uk-link-reset" href="">{{ page.title }}</a></h1>
+
+    <p class="uk-article-meta">
+      <h2 class="uk-article-title">
+        {{ page.extra.subtitle }}
+      </h2>
+      {{ page.date | date(format="%B %d, %Y") }}
+      {% if page.extra.authors %}
+        - {{ page.extra.authors }}
+      {% endif %}
+    </p>
+    {% if page.description %}
+    <p class="uk-article-meta">
+      {{ page.description }}
+    </p>
+    {% endif %}
+
+    <hr>
+
+    {{ page.content | safe }}
+
+  </article>
+{% endblock content %}

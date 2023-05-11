@@ -1,11 +1,11 @@
 +++
+title = "Supporting Our University Community"
+date = "2023-05-10"
+
+[extra]
+authors = "Magnar Bjørgve"
+subtitle = "Magnar's first quarter at UiT's Research Software Engineering Office Hours"
 +++
-
-
-# Blog posts
-
-## Magnar first quarter at UiT's Research Software Engineering Office Hours *10/05/2023*
-### Supporting Our University Community
 
 At UiT, we understand the importance of offering support and guidance in research software development and usage. To address this need, our IT department has recently introduced "Research Software Engineering" (RSE) office hours in room A209 at Modulbygget, held every Wednesday from 14:00 to 16:00. In this blog post, I'll share some of the projects and services I've personally worked on as part of our RSE team and how we strive to assist students and staff at UiT.
 Establishing a Point of Contact:
@@ -44,7 +44,4 @@ My experience as part of the RSE team at UiT's Research Software Engineering off
 
 If you're a student or staff member at UiT and need assistance with research software or programming, don't hesitate to visit us during office hours in room A209 at Modulbygget on Wednesdays from 14:00 to 16:00, or reach out to us at rse@uit.no. We look forward to helping you achieve your research goals! Remember to stay tuned for more blog posts from my colleagues, detailing their own experiences and the projects they've been working on.
 
-Magnar Bjørgve -
-Research Software Engineer
-
-<img src="/rse-blog1.png" alt="AI art based on blogpost" width="500px"/>
+<img src="/blog/2023-supporting-our-university-community.png" alt="AI art based on blogpost" width="500px"/>
