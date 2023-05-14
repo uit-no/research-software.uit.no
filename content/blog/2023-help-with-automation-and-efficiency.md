@@ -9,7 +9,7 @@ authors = "Radovan Bast"
 
 In this project we have worked on five issues which are very typical for many R
 and Python projects and which we consider "the bread and butter" of our
-research software engineering support work.
+research software engineering support work:
 - Too much manual work is needed to process each out of many analyses
 - Code repetition
 - Memory bottleneck
@@ -38,12 +38,12 @@ library(Seurat)
 # correctly here means that the values of the seurat_clusters
 # are all represented in the levels of the integrated_samples
 check_ident <- function(seurat_object) {
-  unique_levels <- unique(as.numeric(levels(integrated_samples)))
-  unique_clusters <- unique(integrated_samples@meta.data$seurat_clusters)
-
-  if (!all(unique_clusters %in% unique_levels)) {
-    stop("ERROR: Ident is not correctly set up")
-  }
+    unique_levels <- unique(as.numeric(levels(integrated_samples)))
+    unique_clusters <- unique(integrated_samples@meta.data$seurat_clusters)
+ 
+    if (!all(unique_clusters %in% unique_levels)) {
+        stop("ERROR: Ident is not correctly set up")
+    }
 }
 
 # load the sample
@@ -59,22 +59,22 @@ check_ident(integrated_samples)
 The code to create a grid of plots was repetitive:
 ```r
 plot <- cowplot::plot_grid(
-  scater::plotReducedDim(cluster_0_SCE, 'Method 1', colour_by = I(clusters$clusters[, 'k.10_cluster'])) + ggtitle('k = 10'),
-  scater::plotReducedDim(cluster_0_SCE, 'Method 1', colour_by = I(clusters$clusters[, 'k.20_cluster'])) + ggtitle('k = 20'),
-  scater::plotReducedDim(cluster_0_SCE, 'Method 1', colour_by = I(clusters$clusters[, 'k.30_cluster'])) + ggtitle('k = 30'),
-  scater::plotReducedDim(cluster_0_SCE, 'Method 1', colour_by = I(clusters$clusters[, 'k.40_cluster'])) + ggtitle('k = 40'),
-  scater::plotReducedDim(cluster_0_SCE, 'Method 1', colour_by = I(clusters$clusters[, 'k.50_cluster'])) + ggtitle('k = 50'),
-  nrow = 2, ncol = 3, rel_heights = c(0.5, 0.5)
-  )
+    scater::plotReducedDim(cluster_0_SCE, 'Method 1', colour_by = I(clusters$clusters[, 'k.10_cluster'])) + ggtitle('k = 10'),
+    scater::plotReducedDim(cluster_0_SCE, 'Method 1', colour_by = I(clusters$clusters[, 'k.20_cluster'])) + ggtitle('k = 20'),
+    scater::plotReducedDim(cluster_0_SCE, 'Method 1', colour_by = I(clusters$clusters[, 'k.30_cluster'])) + ggtitle('k = 30'),
+    scater::plotReducedDim(cluster_0_SCE, 'Method 1', colour_by = I(clusters$clusters[, 'k.40_cluster'])) + ggtitle('k = 40'),
+    scater::plotReducedDim(cluster_0_SCE, 'Method 1', colour_by = I(clusters$clusters[, 'k.50_cluster'])) + ggtitle('k = 50'),
+    nrow = 2, ncol = 3, rel_heights = c(0.5, 0.5)
+    )
 plot
 
 plot <- cowplot::plot_grid(
-  scater::plotReducedDim(cluster_0_SCE, 'Method 2', colour_by = I(clusters$clusters[, 'k.10_cluster'])) + ggtitle('k = 10'),
-  scater::plotReducedDim(cluster_0_SCE, 'Method 2', colour_by = I(clusters$clusters[, 'k.20_cluster'])) + ggtitle('k = 20'),
-  scater::plotReducedDim(cluster_0_SCE, 'Method 2', colour_by = I(clusters$clusters[, 'k.30_cluster'])) + ggtitle('k = 30'),
-  scater::plotReducedDim(cluster_0_SCE, 'Method 2', colour_by = I(clusters$clusters[, 'k.40_cluster'])) + ggtitle('k = 40'),
-  scater::plotReducedDim(cluster_0_SCE, 'Method 2', colour_by = I(clusters$clusters[, 'k.50_cluster'])) + ggtitle('k = 50'),
-  nrow = 2, ncol = 3, rel_heights = c(0.5, 0.5))
+    scater::plotReducedDim(cluster_0_SCE, 'Method 2', colour_by = I(clusters$clusters[, 'k.10_cluster'])) + ggtitle('k = 10'),
+    scater::plotReducedDim(cluster_0_SCE, 'Method 2', colour_by = I(clusters$clusters[, 'k.20_cluster'])) + ggtitle('k = 20'),
+    scater::plotReducedDim(cluster_0_SCE, 'Method 2', colour_by = I(clusters$clusters[, 'k.30_cluster'])) + ggtitle('k = 30'),
+    scater::plotReducedDim(cluster_0_SCE, 'Method 2', colour_by = I(clusters$clusters[, 'k.40_cluster'])) + ggtitle('k = 40'),
+    scater::plotReducedDim(cluster_0_SCE, 'Method 2', colour_by = I(clusters$clusters[, 'k.50_cluster'])) + ggtitle('k = 50'),
+    nrow = 2, ncol = 3, rel_heights = c(0.5, 0.5))
 plot
 ```
 
@@ -86,16 +86,16 @@ We have helped rewriting this to:
 k_values <- c(10, 20, 30, 40, 50)
 
 plot_list = lapply(k_values, function(k)
-  scater::plotReducedDim(cluster_SCE, "Method 1", colour_by = I(clusters$clusters[, paste0("k.", k, "_cluster")])) +
-  ggtitle(paste0("k = ", k))
-  )
+    scater::plotReducedDim(cluster_SCE, "Method 1", colour_by = I(clusters$clusters[, paste0("k.", k, "_cluster")])) +
+    ggtitle(paste0("k = ", k))
+    )
 plot_grid <- cowplot::plot_grid(plotlist = plot_list, nrow = 2, ncol = 3, rel_heights = c(0.5, 0.5))
 plot_grid
 
 plot_list = lapply(k_values, function(k)
-  scater::plotReducedDim(cluster_SCE, "Method 2", colour_by = I(clusters$clusters[, paste0("k.", k, "_cluster")])) +
-  ggtitle(paste0("k = ", k))
-  )
+    scater::plotReducedDim(cluster_SCE, "Method 2", colour_by = I(clusters$clusters[, paste0("k.", k, "_cluster")])) +
+    ggtitle(paste0("k = ", k))
+    )
 plot_grid <- cowplot::plot_grid(plotlist = plot_list, nrow = 2, ncol = 3, rel_heights = c(0.5, 0.5))
 plot_grid
 ```
@@ -130,12 +130,12 @@ only on a laptop but also on a supercomputing cluster. The time consuming step
 happens inside a triple-loop (this is a simplified code, not the actual code):
 ```r
 time_consuming_function <- function(i, j, k) {
-  result <- 0
-  # here is some time consuming computation
-  # ...
-  # result <- result + ...
-  # ...
-  result
+    result <- 0
+    # here is some time consuming computation
+    # ...
+    # result <- result + ...
+    # ...
+    result
 }
 
 i_parameters <- c(10, 20, 30, 40, 50, 60, 70, 80, 90, 100)
@@ -147,14 +147,14 @@ num_computations <- 0
 
 for(i in i_parameters)
 {
-  for(j in j_parameters)
-  {
-    for(k in k_parameters)
+    for(j in j_parameters)
     {
-      result <- result + time_consuming_function(i, j, k)
-      num_computations <- num_computations + 1
+        for(k in k_parameters)
+        {
+            result <- result + time_consuming_function(i, j, k)
+            num_computations <- num_computations + 1
+        }
     }
-  }
 }
 
 cat("we performed", num_computations, "computations\n")
@@ -166,19 +166,19 @@ to the "outside" and to introduce a command line interface:
 library(optparse)
 
 option_list <- list(
-  make_option(c("--i-parameter", "-i"), type = "integer", help = "help text about the i parameter", default = 1),
-  make_option(c("--j-parameter", "-j"), type = "integer", help = "help text about the j parameter", default = 1)
+    make_option(c("--i-parameter", "-i"), type = "integer", help = "help text about the i parameter", default = 1),
+    make_option(c("--j-parameter", "-j"), type = "integer", help = "help text about the j parameter", default = 1)
 )
 
 args <- parse_args(OptionParser(option_list = option_list))
 
 time_consuming_function <- function(i, j, k) {
-  result <- 0
-  # here is some time consuming computation
-  # ...
-  # result <- result + ...
-  # ...
-  result
+    result <- 0
+    # here is some time consuming computation
+    # ...
+    # result <- result + ...
+    # ...
+    result
 }
 
 # iterating over i and j moved "outside"
@@ -192,8 +192,8 @@ num_computations <- 0
 
 for(k in k_parameters)
 {
-  result <- result + time_consuming_function(args$i, args$j, k)
-  num_computations <- num_computations + 1
+    result <- result + time_consuming_function(args$i, args$j, k)
+    num_computations <- num_computations + 1
 }
 
 cat("we performed", num_computations, "computations\n")
