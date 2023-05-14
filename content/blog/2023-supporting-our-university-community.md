@@ -1,5 +1,5 @@
 +++
-title = "Supporting Our University Community"
+title = "Supporting our university community"
 description = "Magnar's first quarter at UiT's Research Software Engineering Office Hours"
 date = "2023-05-10"
 
