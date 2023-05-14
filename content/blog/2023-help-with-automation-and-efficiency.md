@@ -243,7 +243,7 @@ reproducible R environments](https://github.com/bast/contain-R).
 
 This is the Apptainer/Singularity container definition file that we have used
 for testing and debugging:
-```
+```bash
 Bootstrap: docker
 From: satijalab/seurat:latest
 
