@@ -1,10 +1,10 @@
 +++
 title = "Supporting Our University Community"
+description = "Magnar's first quarter at UiT's Research Software Engineering Office Hours"
 date = "2023-05-10"
 
 [extra]
 authors = "Magnar Bjørgve"
-subtitle = "Magnar's first quarter at UiT's Research Software Engineering Office Hours"
 +++
 
 At UiT, we understand the importance of offering support and guidance in research software development and usage. To address this need, our IT department has recently introduced "Research Software Engineering" (RSE) office hours in room A209 at Modulbygget, held every Wednesday from 14:00 to 16:00. In this blog post, I'll share some of the projects and services I've personally worked on as part of our RSE team and how we strive to assist students and staff at UiT.
