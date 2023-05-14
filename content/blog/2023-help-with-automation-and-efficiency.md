@@ -10,7 +10,7 @@ authors = "Radovan Bast"
 In this project we have worked on five issues which are very typical for many R
 and Python projects and which we consider "the bread and butter" of our
 research software engineering support work:
-- Too much manual work is needed to process each out of many analyses
+- Too much manual work is needed to process each of the many analyses
 - Code repetition
 - Memory bottleneck
 - Code takes too long to run
@@ -20,7 +20,7 @@ Below we will summarize our steps, lessons learned, and recommendations for
 follow-up steps.
 
 
-## Too much manual work is needed to process each out of many analyses
+## Too much manual work is needed to process each of the many analyses
 
 The analyses have to be carried out by varying a number of parameters but for
 each new variation a new script was created and manually adjusted. We have
