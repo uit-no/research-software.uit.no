@@ -23,24 +23,55 @@ $table-header-cell-color: #666666;
 }
 
 .markdown ul {
-    @extend .uk-list;
-    @extend .uk-list-square;
+  @extend .uk-list;
+  @extend .uk-list-square;
 
 }
 
 $heading-color: #404040;
 
 .markdown h1 {
-    @extend .uk-h2;
-    color: $heading-color;
+  @extend .uk-h2;
+  color: $heading-color;
 }
 
 .markdown h2 {
-    @extend .uk-h3;
-    color: $heading-color;
+  @extend .uk-h3;
+  color: $heading-color;
 }
 
 .markdown h3 {
-    @extend .uk-h4;
-    color: $heading-color;
+  @extend .uk-h4;
+  color: $heading-color;
+}
+.testimonial-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.testimonial {
+  position: relative;
+}
+
+.quotation-mark-left {
+  position: absolute;
+  top: 0;
+  left: -30px;
+  font-size: 48px;
+}
+
+.quotation-mark-right {
+  position: absolute;
+  bottom: 0;
+  right: -30px;
+  font-size: 48px;
+}
+
+.testimonial-content {
+  margin-left: 30px;
+  padding: 0 30px;
+  font-style: italic;
 }
