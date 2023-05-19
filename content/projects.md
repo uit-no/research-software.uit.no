@@ -76,3 +76,13 @@ an AI-powered code completion tool. We provided step-by-step guidance
 throughout the setup process, resolving any issues that arose. By doing so,
 the student was able to utilize this cutting-edge technology to enhance their
 programming efficiently.
+
+
+## Building a GUI
+
+In this project we are helping a researcher in creating a Graphical User Interface (GUI). The researcher have an existing Python program with command line interface but wish to make the program more accessible for users unfamiliar with command line. Together with the researcher, we have decided on creating the GUI using the Python library ‘PyQt’ and we are sharing our experience with research software development with the researcher.
+
+
+## Getting started with Git, best practices and Xarray.
+
+The user is getting started with Git and we have provided support and answered Git-related questions. We have also discussed best practices and introduced the user to Black, Flake8, and docstring guides for cleaning up code, as well as creating top-level functions in scripts and importing functions via symlink. In addition, the user had challenges with Python and Xarray in their research, which we together solved.
