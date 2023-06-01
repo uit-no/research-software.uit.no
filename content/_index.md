@@ -25,7 +25,8 @@ __Save time on your project by getting quick and comprehensive help by experts._
 
 
 {{ div(attributes='class="uk-card uk-card-secondary uk-card-body"') }}
-# There will be no office hours on Wednesday, the 7th of June. We will be back on the 14th of June.
+# No office on June 7. We will be back June 14. We will take a summer break in July and beginning of August and will restart August 16.
+
 ## Office hours: Every Wednesday 13:00 - 15:00
 
 Need help with anything code related?  Visit us during our office hours.
