@@ -113,7 +113,7 @@ we recommend to choose one of these two licenses:
 - Choose a license early in the project, even before you publish it. Later in
   the project it may become complicated to change it.
 - Add a `LICENSE` file to your repository containing the license text in plain text.
-- Follow the checklist from https://reuse.software (good information about so-called SPDX identifiers).
+- Follow the checklist from <https://reuse.software> (good information about so-called SPDX identifiers).
 - Do not invent your own license. Choose one of the standard licenses, otherwise compatibility is not clear:
   - [Joinup Licensing Assistant - Find and compare software licenses](https://joinup.ec.europa.eu/collection/eupl/solution/joinup-licensing-assistant/jla-find-and-compare-software-licenses)
   - [Joinup Licensing Assistant - Compatibility Checker](https://joinup.ec.europa.eu/collection/eupl/solution/joinup-licensing-assistant/jla-compatibility-checker)
