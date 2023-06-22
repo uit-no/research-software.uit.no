@@ -106,8 +106,8 @@ we recommend to choose one of these two licenses:
   interoperable, reciprocal (derivative work must publish and provide back the
   modified source code), and compatible with many standard licenses. It is a good choice
   if you want to make sure that you have access to changes and improvements applied
-  to your code so that you can integrate them back and reuse them in your own work. This
-  is the share-alike principle.
+  to your code so that you can integrate them back and reuse them in your own work
+  or you want some competitive advantage (right to relicense) over other users of your work.
 - **MIT License** if ease of reuse is more important for
   you than derivative work providing modifications back: Others will be able
   to do whatever they want as long as they include the original copyright and
