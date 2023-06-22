@@ -68,10 +68,9 @@ own code after changing affiliation/group or job.
 
 ### Why we need to care about derivative work
 
-You find some great code or data that you want to reuse for your own
-publication. This is good for the original author - you will cite them. Maybe
-other people who cite you will cite them.
-
+Imagine the following frequent scenario: You find some great code or data that
+you want to reuse for your own publication. This is good for the original
+author - you will cite them. Maybe other people who cite you will cite them.
 You need to modify the code a little bit, or you remix the data a bit. But
 then, when it comes time to publish, you realize there is no license to the
 original work. Thus, you can't release the new stuff you made!
