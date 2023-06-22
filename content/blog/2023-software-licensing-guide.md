@@ -117,6 +117,11 @@ investigator):
 - Whether there is unknown/mixed ownership: If there are multiple persons or
   organizations as owners, all must agree to the license.
 
+Do not invent your own license. Choose one of the standard licenses, otherwise
+compatibility is not clear:
+  - [Joinup Licensing Assistant - Find and compare software licenses](https://joinup.ec.europa.eu/collection/eupl/solution/joinup-licensing-assistant/jla-find-and-compare-software-licenses)
+  - [Joinup Licensing Assistant - Compatibility Checker](https://joinup.ec.europa.eu/collection/eupl/solution/joinup-licensing-assistant/jla-compatibility-checker)
+
 Assuming that all the above is no problem and no overriding guidelines exist,
 we recommend to choose one of these two licenses:
 - **European Union Public Licence, Version 1.2 or later (EUPL)**
@@ -136,22 +141,24 @@ we recommend to choose one of these two licenses:
 
 ## Practical recommendations
 
-- Choose a license early in the project, even before you publish it. Later in
-  the project it may become complicated to change it.
+(reworking this section)
+
 - Add a `LICENSE` file to your repository containing the license text in plain text.
 - Follow the checklist from <https://reuse.software> (good information about so-called SPDX identifiers).
-- Do not invent your own license. Choose one of the standard licenses, otherwise compatibility is not clear:
-  - [Joinup Licensing Assistant - Find and compare software licenses](https://joinup.ec.europa.eu/collection/eupl/solution/joinup-licensing-assistant/jla-find-and-compare-software-licenses)
-  - [Joinup Licensing Assistant - Compatibility Checker](https://joinup.ec.europa.eu/collection/eupl/solution/joinup-licensing-assistant/jla-compatibility-checker)
-- Keep track of where things come from.
-  Before using and adapting somebody else's code, clarify their license. If
-  their code does not have a license, contact the authors and ask them to
-  clarify the license of their code.
-- Work as if the repo is public even though it is still private:
-  This is to avoid surprises about code in the history with incompatible
-  license years later when we decide to open the project.
-- Open core: You don't have to open source all your work. Core can be open
-  and on a public branch. The unpublished stuff can be on a private repository.
+
+
+## Towards open source
+
+Choose a license early in the project, even before you publish it. Later in the
+project it may become complicated to change it.  Agreeing on a software license
+does not mean that you have to make it open immediately.  You can also follow
+the "open core" approach: You don't have to open source all your work. Core can
+be open and on a public branch. The unpublished stuff can be on a private
+repository.
+
+However, we recommend to work as if the code is public even though it still may
+be private: This is to avoid surprises about code in the history with
+incompatible license years later when you decide to open the project.
 
 
 ## Make it persistent and citable
