@@ -167,24 +167,27 @@ we recommend one of the following two licenses:
   good choice.
 
 Practical steps:
-- Create a `LICENSES/` folder.
+- Create a `LICENSES/` folder ([real-life example](https://github.com/bast/runtest/tree/main/LICENSES)).
 - Put the unmodified license text
   (i.e., the license text template without any copyright notices) in plain
-  text format into the folder.  Here are the two above licenses in plain
-  text:
+  text format into the folder  ([real-life
+  example](https://github.com/bast/runtest/tree/main/LICENSES)).  Here are
+  the two above licenses in plain text:
   [EUPL](https://joinup.ec.europa.eu/sites/default/files/custom-page/attachment/2020-03/EUPL-1.2%20EN.txt)
   and [MIT](https://en.wikipedia.org/wiki/MIT_License#License_terms) (but the
   latter contains a copyright notice which we rather want to have on top of
   files).
 - Add copyright and license information to each file following
   <https://reuse.software/tutorial/> which uses a standard format with
-  so-called [SPDX identifiers](https://spdx.org/licenses/). Example:
+  so-called [SPDX identifiers](https://spdx.org/licenses/). Example below
+  ([real-life
+  example](https://github.com/bast/runtest/blob/3b210d2e9bdbdc1903a1dab9da32e161d390092d/runtest/tuple_comparison.py#L1-L3)):
   ```python
   # SPDX-FileCopyrightText: 2023 Jane Doe <jane@example.com>
   #
   # SPDX-License-Identifier: EUPL-1.2
   ```
-- Create a [CITATION.cff file](https://citation-file-format.github.io/) (more about it below).
+- Create a [CITATION.cff file](https://citation-file-format.github.io/) ([real-life example](https://github.com/bast/runtest/blob/main/CITATION.cff); more about it below).
 
 
 ## Towards open source
@@ -206,10 +209,10 @@ incompatible license years later when you decide to open the project.
 Choosing a license, adding a license file, and putting your code on GitHub or
 GitLab is good start, but to ensure FAIR research software for long term
 access, we recommend to go two steps further:
-- Add a [CITATION.cff file](https://citation-file-format.github.io/)
+- Add a [CITATION.cff file](https://citation-file-format.github.io/) ([real-life example](https://github.com/bast/runtest/blob/main/CITATION.cff))
 - Get a [digital object identifier
   (DOI)](https://en.wikipedia.org/wiki/Digital_object_identifier) for your code
-  on [DataverseNO](https://dataverse.no/) or [Zenodo](https://zenodo.org/)
+  on [DataverseNO](https://dataverse.no/) or [Zenodo](https://zenodo.org/) ([real-life example](https://zenodo.org/record/8003695))
 
 Additionally, UiT and other major national (RCN Open Science) and European
 funders (EU Open Science) require open access to publications and research data
