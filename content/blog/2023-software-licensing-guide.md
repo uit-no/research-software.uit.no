@@ -138,13 +138,18 @@ we recommend to choose one of these two licenses:
   licence notice in any copy of the software/source. For small and short-lived projects
   this can be a good choice.
 
-
-## Practical recommendations
-
-(reworking this section)
-
+Practical steps:
 - Add a `LICENSE` file to your repository containing the license text in plain text.
-- Follow the checklist from <https://reuse.software> (good information about so-called SPDX identifiers).
+  - Here are the two above licenses in plain text: [EUPL](https://joinup.ec.europa.eu/sites/default/files/custom-page/attachment/2020-03/EUPL-1.2%20EN.txt)
+    and [MIT](https://en.wikipedia.org/wiki/MIT_License#License_terms)
+  - Here are two real-life examples:
+    - <https://github.com/NordicHPC/jobgraph/blob/main/LICENSE>
+    - <https://github.com/bast/huge/blob/main/LICENSE>
+- In addition, you can add copyright and license information to each file following
+  <https://reuse.software/tutorial/> which uses a standard format with
+  so-called [SPDX identifiers](https://spdx.org/licenses/). This is not
+  required to communicate the license terms and not required to document the
+  copyright but it can help the reader to not miss the information.
 
 
 ## Towards open source
