@@ -224,7 +224,7 @@ contact the University Library at
 
 ## How about data?
 
-Citing from the [UiT research data portal](https://en.uit.no/research/research-dataportal/art?p_document_id=726373):
+Citing from the [UiT Research Data Portal](https://en.uit.no/research/research-dataportal/art?p_document_id=726373):
 - "As long as there are no legal, ethical, security, or financial grounds to do
   otherwise, the researcher must make research data readily available for
   further use to all relevant users."
@@ -236,8 +236,7 @@ Citing from the [UiT research data portal](https://en.uit.no/research/research-d
 By default, [UiT's open research data
 archive](https://dataverse.no/dataverse/uit) recommends the [Creative Commons
 CC0 license](https://creativecommons.org/share-your-work/public-domain/cc0).
-The [research data
-portal](https://en.uit.no/research/research-dataportal/art?p_document_id=726373)
+The [UiT Research Data Portal](https://en.uit.no/research/research-dataportal/art?p_document_id=726373)
 contains information and guides on why and how to add such a license to your
 data.
 
