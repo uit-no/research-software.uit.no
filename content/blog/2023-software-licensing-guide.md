@@ -178,7 +178,7 @@ We recommend to go two steps further:
 
 ## How about data?
 
-Citing from the [research data portal](https://en.uit.no/research/research-dataportal/art?p_document_id=726373):
+Citing from the [UiT research data portal](https://en.uit.no/research/research-dataportal/art?p_document_id=726373):
 - "As long as there are no legal, ethical, security, or financial grounds to do
   otherwise, the researcher must make research data readily available for
   further use to all relevant users."
