@@ -143,6 +143,26 @@ We recommend to go two steps further:
   on [DataverseNO](https://dataverse.no/) or [Zenodo](https://zenodo.org/)
 
 
+## How about data?
+
+Citing from the [research data portal](https://en.uit.no/research/research-dataportal/art?p_document_id=726373):
+- "As long as there are no legal, ethical, security, or financial grounds to do
+  otherwise, the researcher must make research data readily available for
+  further use to all relevant users."
+- "Research data shall be equipped with licenses for access, reuse, and
+  redistribution."
+- "The licenses should be universally recognized, with as minimal restrictions
+  on data access, re-use, and redistribution as possible."
+
+By default, [UiT's open research data
+archive](https://dataverse.no/dataverse/uit) recommends the [Creative Commons
+CC0 license](https://creativecommons.org/share-your-work/public-domain/cc0).
+The [research data
+portal](https://en.uit.no/research/research-dataportal/art?p_document_id=726373)
+contains information and guides on why and how to add such a license to your
+data.
+
+
 ## Questions and contact
 
 Unsure which license to choose?  Unsure how to proceed with sharing your code
