@@ -66,6 +66,26 @@ own code after changing affiliation/group or job.
 
 ## Which license to choose
 
+### Why we need to care about derivative work
+
+You find some great code or data that you want to reuse for your own
+publication. This is good for the original author - you will cite them. Maybe
+other people who cite you will cite them.
+
+You need to modify the code a little bit, or you remix the data a bit. But
+then, when it comes time to publish, you realize there is no license to the
+original work. Thus, you can't release the new stuff you made!
+
+Now you have a problem:
+- You manage to publish the paper but others cannot build on your software and data and
+  you don't get as many citations as you could.
+- Or, you cannot publish it at all if the journal requires that papers should
+  come with data and software so that they are reproducible.
+
+Next time you are smarter and check the license before building on someone
+else's work.  And others may approach your work the same way.
+
+
 ### If your work is derivative work
 
 Your code is derivative work if you have started from an existing code and
