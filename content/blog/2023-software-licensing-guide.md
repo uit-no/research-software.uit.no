@@ -104,7 +104,7 @@ Practical steps (as an example reusing a project with MIT or BSD license;
 following the [REUSE software recommendations](https://reuse.software/faq/)):
 - Do not edit the original `LICENSE` file of the project which you reuse
   but rather create a `LICENSES/` folder and "put the unmodified license text
-  (i.e., the license text template **without any copyright notices**) in your
+  (i.e., the license text template without any copyright notices) in your
   `LICENSES/` folder" (<https://reuse.software/faq/#license-templates>). This
   way if you reuse code from multiple projects, you can keep there multiple
   license files.
@@ -161,11 +161,13 @@ we recommend to choose one of these two licenses:
 Practical steps:
 - Create a `LICENSES/` folder.
 - Put the unmodified license text
-  (i.e., the license text template **without any copyright notices**) in plain
+  (i.e., the license text template without any copyright notices) in plain
   text format into the folder.  Here are the two above licenses in plain
   text:
   [EUPL](https://joinup.ec.europa.eu/sites/default/files/custom-page/attachment/2020-03/EUPL-1.2%20EN.txt)
-  and [MIT](https://en.wikipedia.org/wiki/MIT_License#License_terms)
+  and [MIT](https://en.wikipedia.org/wiki/MIT_License#License_terms) (but the
+  latter contains a copyright notice which we rather want to have on top of
+  files).
 - Add copyright and license information to each file following
   <https://reuse.software/tutorial/> which uses a standard format with
   so-called [SPDX identifiers](https://spdx.org/licenses/). Example:
