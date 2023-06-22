@@ -17,6 +17,13 @@ form the basis for a research software licensing guide at
 
 </div>
 
+<div class="uk-alert-primary" uk-alert>
+
+This guide is shared under the [Creative Commons CC0
+license](https://creativecommons.org/share-your-work/public-domain/cc0).
+
+</div>
+
 <!-- toc -->
 
 
