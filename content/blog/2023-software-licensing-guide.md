@@ -185,11 +185,10 @@ we recommend one of the following two licenses:
   good choice.
 
 Practical steps:
-- Create a `LICENSES/` folder ([real-life example](https://github.com/bast/runtest/tree/main/LICENSES)).
+- Create a `LICENSES/` folder ([example](https://github.com/bast/runtest/tree/main/LICENSES)).
 - Put the unmodified license text
   (i.e., the license text template without any copyright notices) in plain
-  text format into the folder  ([real-life
-  example](https://github.com/bast/runtest/tree/main/LICENSES)).  Here are
+  text format into the folder  ([example](https://github.com/bast/runtest/tree/main/LICENSES)).  Here are
   the two above licenses in plain text:
   [EUPL](https://joinup.ec.europa.eu/sites/default/files/custom-page/attachment/2020-03/EUPL-1.2%20EN.txt)
   and [MIT](https://en.wikipedia.org/wiki/MIT_License#License_terms) (but the
@@ -198,8 +197,7 @@ Practical steps:
 - Add copyright and license information to each file following
   <https://reuse.software/tutorial/> which uses a standard format with
   so-called [SPDX identifiers](https://spdx.org/licenses/). Example below
-  ([real-life
-  example](https://github.com/bast/runtest/blob/3b210d2e9bdbdc1903a1dab9da32e161d390092d/runtest/tuple_comparison.py#L1-L3)):
+  ([example](https://github.com/bast/runtest/blob/3b210d2e9bdbdc1903a1dab9da32e161d390092d/runtest/tuple_comparison.py#L1-L3)):
   ```python
   # SPDX-FileCopyrightText: 2023 Jane Doe <jane@example.com>
   #
@@ -211,7 +209,8 @@ Practical steps:
   the advantage of following it is that the
   [reuse-tool](https://github.com/fsfe/reuse-tool) makes it then easy to verify
   and update license headers if you have many files from different sources.
-- Create a [CITATION.cff file](https://citation-file-format.github.io/) ([real-life example](https://github.com/bast/runtest/blob/main/CITATION.cff); more about it below).
+- Create a [CITATION.cff file](https://citation-file-format.github.io/)
+  ([example](https://github.com/bast/runtest/blob/main/CITATION.cff); more about it below).
 - For really small projects with one or two files the above may seem excessive
   and some projects choose to not have copyright information on top of their
   file sand they only have one `LICENSE` file and a `CITATION.cff` file and that is
@@ -224,10 +223,10 @@ Choosing a license, adding a license file, and putting your code on GitHub or
 GitLab is good start, but to ensure FAIR (findable, accessible, interoperable,
 and reusable) research software for long term access, we recommend to go two
 steps further:
-- Add a [CITATION.cff file](https://citation-file-format.github.io/) ([real-life example](https://github.com/bast/runtest/blob/main/CITATION.cff))
+- Add a [CITATION.cff file](https://citation-file-format.github.io/) ([example](https://github.com/bast/runtest/blob/main/CITATION.cff))
 - Get a [digital object identifier
   (DOI)](https://en.wikipedia.org/wiki/Digital_object_identifier) for your code
-  on [DataverseNO](https://dataverse.no/) or [Zenodo](https://zenodo.org/) ([real-life example](https://zenodo.org/record/8003695))
+  on [DataverseNO](https://dataverse.no/) or [Zenodo](https://zenodo.org/) ([example](https://zenodo.org/record/8003695))
 
 Additionally, UiT and other major national ([RCN Open Science](https://www.forskningsradet.no/en/research-policy-strategy/open-science/)) and European
 funders ([EU Open Science](https://research-and-innovation.ec.europa.eu/strategy/strategy-2020-2024/our-digital-future/open-science_en)) require open access to publications and research data
