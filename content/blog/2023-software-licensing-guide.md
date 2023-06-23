@@ -4,7 +4,7 @@ description = ""
 date = "2023-06-21"
 
 [extra]
-authors = "Radovan Bast"
+authors = "Radovan Bast and Kathleen A. Smart"
 +++
 
 <div class="uk-alert-danger" uk-alert>
