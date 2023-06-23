@@ -133,7 +133,13 @@ following the [REUSE software recommendations](https://reuse.software/faq/)):
   #
   # SPDX-License-Identifier: MIT
   ```
-- For the BSD and MIT licenses you do not need to state your changes but it can
+  The [REUSE](https://reuse.software/) initiative was started by the [Free
+  Software Foundation Europe](https://fsfe.org/) to make licensing of software
+  projects easier.  It is OK if you prefer to not follow this strict format but
+  the advantage of following it is that the
+  [reuse-tool](https://github.com/fsfe/reuse-tool) makes it then easy to verify
+  and update license headers if you have many files from different sources.
+- For the BSD and MIT licenses you are not obliged to state your changes but it can
   still be helpful for others if you do. You can state your changes in the
   header of the files you have modified. It can be helpful to state
   bigger-picture changes in the README file of the project.
@@ -199,7 +205,17 @@ Practical steps:
   #
   # SPDX-License-Identifier: EUPL-1.2
   ```
+  The [REUSE](https://reuse.software/) initiative was started by the [Free
+  Software Foundation Europe](https://fsfe.org/) to make licensing of software
+  projects easier.  It is OK if you prefer to not follow this strict format but
+  the advantage of following it is that the
+  [reuse-tool](https://github.com/fsfe/reuse-tool) makes it then easy to verify
+  and update license headers if you have many files from different sources.
 - Create a [CITATION.cff file](https://citation-file-format.github.io/) ([real-life example](https://github.com/bast/runtest/blob/main/CITATION.cff); more about it below).
+- For really small projects with one or two files the above may seem excessive
+  and some projects choose to not have copyright information on top of their
+  file sand they only have one `LICENSE` file and a `CITATION.cff` file and that is
+  OK for really small projects.
 
 
 ## Make it persistent and citable
