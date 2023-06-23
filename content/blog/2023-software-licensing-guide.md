@@ -205,8 +205,9 @@ Practical steps:
 ## Make it persistent and citable
 
 Choosing a license, adding a license file, and putting your code on GitHub or
-GitLab is good start, but to ensure FAIR research software for long term
-access, we recommend to go two steps further:
+GitLab is good start, but to ensure FAIR (findable, accessible, interoperable,
+and reusable) research software for long term access, we recommend to go two
+steps further:
 - Add a [CITATION.cff file](https://citation-file-format.github.io/) ([real-life example](https://github.com/bast/runtest/blob/main/CITATION.cff))
 - Get a [digital object identifier
   (DOI)](https://en.wikipedia.org/wiki/Digital_object_identifier) for your code
