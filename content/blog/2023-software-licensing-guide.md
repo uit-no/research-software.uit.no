@@ -222,19 +222,21 @@ policies, please see: [UiT Research Data
 Portal](https://en.uit.no/research/research-dataportal), [UiT Regulations on
 Research Data](https://uit.no/regelverk/sentraleregler#kapittel_734648), or
 contact the University Library at
-[forskning@ub.uit.no](mailto:forskning@ub.uit.no). 
+[researchdata@uit.no](mailto:researchdata@uit.no). 
 
 
 ## How about data?
 
-Citing from the [UiT Research Data Portal](https://en.uit.no/research/research-dataportal/art?p_document_id=726373):
-- "As long as there are no legal, ethical, security, or financial grounds to do
-  otherwise, the researcher must make research data readily available for
-  further use to all relevant users."
+Citing from the [Principles and guidelines for management of research data at
+UiT](https://uit.no/regelverk/sentraleregler#v-pills-742423):
+- "The researcher shall make research data openly available for further use to
+  all relevant users, providing there are no legal, ethical, security or
+  commercial reasons for not doing so."
 - "Research data shall be equipped with licenses for access, reuse, and
   redistribution."
-- "The licenses should be universally recognized, with as minimal restrictions
-  on data access, re-use, and redistribution as possible."
+- "The licenses should be internationally recognised and place as few
+  restrictions as possible on the access, reuse and redistribution of the
+  data."
 
 By default, [UiT's open research data
 archive](https://dataverse.no/dataverse/uit) recommends the [Creative Commons
