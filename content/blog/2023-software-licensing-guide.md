@@ -213,7 +213,7 @@ Practical steps:
   ([example](https://github.com/bast/runtest/blob/main/CITATION.cff); more about it below).
 - For really small projects with one or two files the above may seem excessive
   and some projects choose to not have copyright information on top of their
-  file sand they only have one `LICENSE` file and a `CITATION.cff` file and that is
+  files and they only have one `LICENSE` file and a `CITATION.cff` file and that is
   OK for really small projects.
 
 
