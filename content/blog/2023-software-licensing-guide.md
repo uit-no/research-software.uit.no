@@ -27,7 +27,7 @@ license](https://creativecommons.org/share-your-work/public-domain/cc0).
 <!-- toc -->
 
 
-## Scope: Is my code/script/notebook/file "research software"?
+## What is "research software"?
 
 We consider any code, script, notebook, or file, regardless of size, as
 "research software" if it is needed to generate, visualize, or reproduce
@@ -47,6 +47,23 @@ Examples of "research software" for the purpose of this guide:
 
 
 ## Why software licenses matter
+
+Imagine the following frequent scenario: You find some great code or data that
+you want to reuse for your own publication. This is good for the original
+author - you will cite them. Maybe other people who cite you will cite them.
+You need to modify the code a little bit, or you remix the data a bit. But
+then, when it comes time to publish, you realize there is no license to the
+original work. Thus, you can't release the new stuff you made!
+
+Now you have a problem:
+- You manage to publish the paper without the software/data but others cannot
+  build on your software and data and
+  you don't get as many citations as you could.
+- Or, you cannot publish it at all if the journal requires that papers should
+  come with data and software so that they are reproducible.
+
+Next time you are smarter and check the license before building on someone
+else's work.  And others may approach your work the same way.
 
 Open science is built upon sharing of research data and software in a FAIR
 (findable, accessible, interoperable, and reusable) manner. For research data,
@@ -70,26 +87,21 @@ license can also be good insurance for you against being locked out of your
 own code after changing affiliation/group or job.
 
 
-## Which license to choose
+## When should I add a license?
 
-### Why we need to care about derivative work
+Choose a license early in the project, even before you publish it. Later in the
+project it may become complicated to change it.  Agreeing on a software license
+does not mean that you have to make it open immediately.  You can also follow
+the "open core" approach: You don't have to open source all your work. Core can
+be open and on a public branch. Unpublished code can be on a private
+repository.
 
-Imagine the following frequent scenario: You find some great code or data that
-you want to reuse for your own publication. This is good for the original
-author - you will cite them. Maybe other people who cite you will cite them.
-You need to modify the code a little bit, or you remix the data a bit. But
-then, when it comes time to publish, you realize there is no license to the
-original work. Thus, you can't release the new stuff you made!
+However, we recommend to work as if the code is public even though it still may
+be private: This is to avoid surprises about code in the history with
+incompatible license years later when you decide to open the project.
 
-Now you have a problem:
-- You manage to publish the paper but others cannot build on your software and data and
-  you don't get as many citations as you could.
-- Or, you cannot publish it at all if the journal requires that papers should
-  come with data and software so that they are reproducible.
 
-Next time you are smarter and check the license before building on someone
-else's work.  And others may approach your work the same way.
-
+## How do I add a license to my work?
 
 ### If your work is derivative work
 
@@ -188,20 +200,6 @@ Practical steps:
   # SPDX-License-Identifier: EUPL-1.2
   ```
 - Create a [CITATION.cff file](https://citation-file-format.github.io/) ([real-life example](https://github.com/bast/runtest/blob/main/CITATION.cff); more about it below).
-
-
-## Towards open source
-
-Choose a license early in the project, even before you publish it. Later in the
-project it may become complicated to change it.  Agreeing on a software license
-does not mean that you have to make it open immediately.  You can also follow
-the "open core" approach: You don't have to open source all your work. Core can
-be open and on a public branch. Unpublished code can be on a private
-repository.
-
-However, we recommend to work as if the code is public even though it still may
-be private: This is to avoid surprises about code in the history with
-incompatible license years later when you decide to open the project.
 
 
 ## Make it persistent and citable
