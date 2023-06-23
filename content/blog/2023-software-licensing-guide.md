@@ -214,8 +214,8 @@ access, we recommend to go two steps further:
   (DOI)](https://en.wikipedia.org/wiki/Digital_object_identifier) for your code
   on [DataverseNO](https://dataverse.no/) or [Zenodo](https://zenodo.org/) ([real-life example](https://zenodo.org/record/8003695))
 
-Additionally, UiT and other major national (RCN Open Science) and European
-funders (EU Open Science) require open access to publications and research data
+Additionally, UiT and other major national ([RCN Open Science](https://www.forskningsradet.no/en/research-policy-strategy/open-science/)) and European
+funders ([EU Open Science](https://research-and-innovation.ec.europa.eu/strategy/strategy-2020-2024/our-digital-future/open-science_en)) require open access to publications and research data
 (including research software) as early as possible, so self-archiving your
 research software satisfies these requirements. For more information on these
 policies, please see: [UiT Research Data
