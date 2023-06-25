@@ -8,9 +8,11 @@
     <h1 class="uk-article-title"><a class="uk-link-reset" href="">{{ page.title }}</a></h1>
 
     <p class="uk-article-meta">
-      <h3 class="uk-article-title">
-        {{ page.description }}
-      </h3>
+      {% if page.description %}
+        <h3 class="uk-article-title">
+          {{ page.description }}
+        </h3>
+      {% endif %}
       {{ page.date | date(format="%B %d, %Y") }}
       {% if page.extra.authors %}
         - {{ page.extra.authors }}
