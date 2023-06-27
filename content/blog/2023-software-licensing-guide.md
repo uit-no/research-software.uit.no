@@ -141,6 +141,9 @@ an example incorporating a function or two from another project):
   the advantage of following it is that the
   [reuse-tool](https://github.com/fsfe/reuse-tool) makes it then easy to verify
   and update license headers if you have many files from different sources.
+- If it does not make sense to have several files in your project (e.g. when incorporating
+  something into a notebook), then add a note/comment
+  about the license and where the code came from on top of the function.
 - Although it is not dictated by the license but it can still be nice to
   acknowledge the incorporated functions/code in your README/documentation and to cite
   their work if you publish a paper about your code.
