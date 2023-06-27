@@ -118,15 +118,17 @@ If the original code does not have a license, you may not distribute your
 derivative code. You can try to contact the authors and ask them to clarify
 the license of their code.
 
-Practical steps (as an example reusing a project with MIT or BSD license;
-following the [REUSE software recommendations](https://reuse.software/faq/)):
-- Do not edit the original `LICENSE` file of the project which you reuse
-  but rather create a `LICENSES/` folder and "put the unmodified license text
+Practical steps for **incorporating something small into your own project** with a license
+that allows you to do so (as
+an example incorporating a function or two from another project):
+- Create a `LICENSES/` folder in your project and "put the unmodified license text
   (i.e., the license text template without any copyright notices) in your
   `LICENSES/` folder" (<https://reuse.software/faq/#license-templates>). This
   way if you reuse code from multiple projects, you can keep there multiple
   license files.
-- On top of the file(s) which you have incorporated into your project add (and
+- Put the code that you incorporate into a separate file or separate files. This makes
+  it later easier to see what was incorporated, and what was written from scratch.
+  On top of the file(s) which you have incorporated into your project add (and
   adapt) the following header ([more examples](https://reuse.software/faq/)):
   ```python
   # SPDX-FileCopyrightText: 2023 Jane Doe <jane@example.com>
@@ -139,10 +141,22 @@ following the [REUSE software recommendations](https://reuse.software/faq/)):
   the advantage of following it is that the
   [reuse-tool](https://github.com/fsfe/reuse-tool) makes it then easy to verify
   and update license headers if you have many files from different sources.
+- Although it is not dictated by the license but it can still be nice to
+  acknowledge the incorporated functions/code in your README/documentation and to cite
+  their work if you publish a paper about your code.
+- Some licenses are more permissive (you can keep your changes private) but some licenses
+  require you to publish the changes (share-alike).
+
+Practical steps for making **changes to an existing project** with a license
+that allows you to do so:
+- If the project is on GitHub or GitLab or similar, first fork the project
+  (copy it into your user space where you can make changes).
 - For the BSD and MIT licenses you are not obliged to state your changes but it can
   still be helpful for others if you do. You can state your changes in the
   header of the files you have modified. It can be helpful to state
   bigger-picture changes in the README file of the project.
+- Some licenses are more permissive (you can keep your changes private) but some licenses
+  require you to publish the changes (share-alike).
 
 
 ### If your work is not derivative work
