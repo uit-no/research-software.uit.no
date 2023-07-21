@@ -105,6 +105,8 @@ incompatible license years later when you decide to open the project.
 
 ### If your work is derivative work
 
+(here we will add a decision tree/ flow-chart)
+
 Your code is derivative work if you have started from an existing code and
 made changes to it or if you incorporated an existing code into your code.
 
@@ -201,6 +203,10 @@ we recommend one of the following two licenses:
   of the software/source. For small and short-lived projects this can be a
   good choice.
 
+Note that with the exception of CC0 (i.e. public domain dedication)
+[CC](https://creativecommons.org/) licenses are not appropriate for software
+(although they can be used for software documentation).
+
 Practical steps:
 - Create a `LICENSES/` folder ([example](https://github.com/bast/runtest/tree/main/LICENSES)).
 - Put the unmodified license text
@@ -280,6 +286,12 @@ CC0 license](https://creativecommons.org/share-your-work/public-domain/cc0).
 The [UiT Research Data Portal](https://en.uit.no/research/research-dataportal/art?p_document_id=726373)
 contains information and guides on why and how to add such a license to your
 data.
+
+The [Horizon Europe
+guideline](https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/guidance/programme-guide_horizon_en.pdf)
+specifies that data should be CC0 or CC-BY.  Metadata must be CC0. The
+Norwegian Research council does currently not specify licenses. The omnipresent
+rule is "as open as possible, as closed as necessary".
 
 
 ## Questions and contact
