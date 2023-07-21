@@ -245,6 +245,11 @@ steps further:
   (DOI)](https://en.wikipedia.org/wiki/Digital_object_identifier) for your code
   on [DataverseNO](https://dataverse.no/) or [Zenodo](https://zenodo.org/) ([example](https://zenodo.org/record/8003695))
 
+[Software Heritage](https://www.softwareheritage.org/) and
+[CodeMeta](https://codemeta.github.io/) exist as an alternative ecosystem that
+is currently receiving some attention on a European level. Comparison and links
+to converters can be found in <https://zenodo.org/record/8086413>.
+
 Additionally, UiT and other major national ([RCN Open Science](https://www.forskningsradet.no/en/research-policy-strategy/open-science/)) and European
 funders ([EU Open Science](https://research-and-innovation.ec.europa.eu/strategy/strategy-2020-2024/our-digital-future/open-science_en)) require open access to publications and research data
 (including research software) as early as possible, so self-archiving your
