@@ -294,3 +294,4 @@ data, contact the library at [researchdata@uit.no](mailto:researchdata@uit.no).
 - [Joinup Licensing Assistant - Compatibility Checker](https://joinup.ec.europa.eu/collection/eupl/solution/joinup-licensing-assistant/jla-compatibility-checker)
 - [Social coding lesson material](https://coderefinery.github.io/social-coding/) by [CodeRefinery](https://coderefinery.org/)
 - [Citation File Format (CFF)](https://citation-file-format.github.io/)
+- [License Selector](https://ufal.github.io/public-license-selector/)
