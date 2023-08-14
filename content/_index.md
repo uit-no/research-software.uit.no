@@ -25,7 +25,7 @@ __Save time on your project by getting quick and comprehensive help by experts._
 
 
 {{ div(attributes='class="uk-card uk-card-secondary uk-card-body"') }}
-# We will take a summer break from June 21 and will restart August 16.
+# We will take a summer break from June 21 and will restart August ~~16~~ 23.
 ## Office hours: Every Wednesday 13:00 - 15:00
 
 Need help with anything code related?  Visit us during our office hours.
