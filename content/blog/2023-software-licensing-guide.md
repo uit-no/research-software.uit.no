@@ -312,3 +312,10 @@ data, contact the library at [researchdata@uit.no](mailto:researchdata@uit.no).
 - [Social coding lesson material](https://coderefinery.github.io/social-coding/) by [CodeRefinery](https://coderefinery.org/)
 - [Citation File Format (CFF)](https://citation-file-format.github.io/)
 - [License Selector](https://ufal.github.io/public-license-selector/)
+
+
+## Acknowledgements
+
+We are very grateful to Korbinian Michael Bösl, Richard Darst, Luca Ferranti,
+Noortje Haugstvedt, and Jenny Ostrop, for their comments and suggestions which
+significantly improved this document.
