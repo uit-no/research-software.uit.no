@@ -249,7 +249,16 @@ steps further:
 - Add a [CITATION.cff file](https://citation-file-format.github.io/) ([example](https://github.com/bast/runtest/blob/main/CITATION.cff))
 - Get a [digital object identifier
   (DOI)](https://en.wikipedia.org/wiki/Digital_object_identifier) for your code
-  on [DataverseNO](https://dataverse.no/) or [Zenodo](https://zenodo.org/) ([example](https://zenodo.org/record/8003695))
+  on [Zenodo](https://zenodo.org/) ([example](https://zenodo.org/record/8003695)).
+
+The reason why we currently recommend [Zenodo](https://zenodo.org/) over
+[DataverseNO](https://dataverse.no/) **for software products** is that it is
+easier to update versions.  DataverseNO currently does not allow to assign
+different licenses on a file-level which may result in license conflicts
+(possible case: publishing software under CC0 on DataverseNO and having it
+under a more restrictive license on GitHub at the same time). We believe that
+linking from the DataverseNO entry to the software as "related dataset" is a
+better option.
 
 [Software Heritage](https://www.softwareheritage.org/) and
 [CodeMeta](https://codemeta.github.io/) exist as an alternative ecosystem that
@@ -293,6 +302,10 @@ specifies that data should be CC0 or CC-BY.  Metadata must be CC0. The
 Norwegian Research council does currently not specify licenses. The omnipresent
 rule is "as open as possible, as closed as necessary".
 
+We wish to emphasize that using a restrictive license with the intention to
+protect privacy of the data is not a good substitute for having the data
+sufficiently anonymized.
+
 
 ## Questions and contact
 
@@ -312,6 +325,7 @@ data, contact the library at [researchdata@uit.no](mailto:researchdata@uit.no).
 - [Social coding lesson material](https://coderefinery.github.io/social-coding/) by [CodeRefinery](https://coderefinery.org/)
 - [Citation File Format (CFF)](https://citation-file-format.github.io/)
 - [License Selector](https://ufal.github.io/public-license-selector/)
+- [GitHub licensing guide](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
 
 
 ## Acknowledgements
