@@ -86,3 +86,23 @@ In this project we are helping a researcher in creating a Graphical User Interfa
 ## Getting started with Git, best practices and Xarray.
 
 The user is getting started with Git and we have provided support and answered Git-related questions. We have also discussed best practices and introduced the user to Black, Flake8, and docstring guides for cleaning up code, as well as creating top-level functions in scripts and importing functions via symlink. In addition, the user had challenges with Python and Xarray in their research, which we together solved.
+
+
+## Electron Density Calculations with Custom Python Scripting
+
+A researcher needed help in writing a Python script to read electron
+density data from a CHGCAR file produced by VASP software. We
+provided guidance on setting up Python using an environment.yml file
+and advised on the optimal structure of the code. As a result, the
+researcher successfully calculated the integral of the electron
+density within a specified radius around an atom.
+
+## Unlocking Advanced Research Capabilities through Customized Software Installation
+
+A researcher required specialized support for setting up a Python environment to run and
+modify the vampyr and mrcpp software packages. We provided comprehensive guidance on
+environment setup and facilitated the installation of these software packages from source.
+This enabled the researcher to go beyond the limitations of the official releases, offering
+them the flexibility to run and modify the codes for their specific research needs. The
+collaboration enhanced the researcher's computational capabilities, paving the way for more
+sophisticated and tailored research outcomes

@@ -9,11 +9,12 @@ Most courses we do are developed and organized together with
 
 ## Upcoming courses we recommend
 
-- [Best practices on NRIS clusters -- May 9-11, 2023](https://documentation.sigma2.no/training/events/2023-05-best-practices-on-NRIS-clusters.html)
-
+- [Code Refinery workshop -- September 19-21 and 26-38, 2023](https://coderefinery.org/workshops/upcoming/)
+- [NRIS HPC onboarding -- 3-5 October, 2023](https://documentation.sigma2.no/training/events/2023-10-hpc-on-boarding.html)
 
 ## Recent courses we co-organized
 
+- [Best practices on NRIS clusters -- May 9-11, 2023](https://documentation.sigma2.no/training/events/2023-05-best-practices-on-NRIS-clusters.html)
 - [Code Refinery workshop -- March 21-23 and 28-30, 2023](https://coderefinery.org/workshops/upcoming/)
 - [NRIS HPC intro course -- April 18-20, 2023](https://documentation.sigma2.no/training/events/2023-04-hpc-on-boarding.html)
 - [CodeRefinery workshop -- September 20-22 and 27-29, 2022](https://coderefinery.github.io/2022-09-20-workshop/)
