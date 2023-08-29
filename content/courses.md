@@ -6,11 +6,15 @@
 Most courses we do are developed and organized together with
 [CodeRefinery](https://coderefinery.org/).
 
+You can also join our [email newsletter](@/contact.md) to stay up-to-date about
+courses and events.
+
 
 ## Upcoming courses we recommend
 
 - [Code Refinery workshop -- September 19-21 and 26-38, 2023](https://coderefinery.org/workshops/upcoming/)
 - [NRIS HPC onboarding -- 3-5 October, 2023](https://documentation.sigma2.no/training/events/2023-10-hpc-on-boarding.html)
+
 
 ## Recent courses we co-organized
 
