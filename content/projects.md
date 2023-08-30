@@ -6,6 +6,15 @@
 Here we summarize ongoing and completed projects, small and large. If you want to
 learn more about what we do check out our [blog](/blog/).
 
+
+## Solving a Python problem with regular expressions
+
+This was a 2 hours project where we helped writing a prototype Python code
+which would traverse a file tree and using a regular expression would extract a
+set of variables from the file names which would later be used for data
+queries.
+
+
 ## Porting a Fortran project to CMake
 
 The goal of this project is to compile a code that was written 4 years ago and
