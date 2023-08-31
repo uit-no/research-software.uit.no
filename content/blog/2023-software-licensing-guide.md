@@ -246,7 +246,7 @@ Choosing a license, adding a license file, and putting your code on GitHub or
 GitLab is good start, but to ensure FAIR (findable, accessible, interoperable,
 and reusable) research software for long term access, we recommend to go two
 steps further:
-- Add a [CITATION.cff file](https://citation-file-format.github.io/) ([example](https://github.com/bast/runtest/blob/main/CITATION.cff))
+- Add a file called [CITATION.cff](https://citation-file-format.github.io/) ([example](https://github.com/bast/runtest/blob/main/CITATION.cff)).
 - Get a [digital object identifier
   (DOI)](https://en.wikipedia.org/wiki/Digital_object_identifier) for your code
   on [Zenodo](https://zenodo.org/) ([example](https://zenodo.org/record/8003695)).
