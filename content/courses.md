@@ -16,6 +16,8 @@ courses and events.
 - [NRIS HPC onboarding -- October 3-5, 2023](https://documentation.sigma2.no/training/events/2023-10-hpc-on-boarding.html)
 - [FAIR Data Visualisation -- October 17-19 and 23, 2023, Tromsø Breivika campus](https://uit.no/tavla/artikkel/823818/fair_data_visualisation)
 
+<img src="/fair-data-visualisation.png" alt="Graphics announcing the FAIR Data Visualisation course at UiT" width="500px"/>
+
 
 ## Recent courses we co-organized
 
