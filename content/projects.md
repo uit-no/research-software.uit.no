@@ -7,6 +7,22 @@ Here we summarize ongoing and completed projects, small and large. If you want t
 learn more about what we do check out our [blog](/blog/).
 
 
+## Translating a legacy Visual Basic program to Python
+
+In this ongoing project we help a researcher to translate and restructure an
+old legacy VB6 code base for biological food web modelling to modern object
+oriented python.  The goals of this project are to improve maintainability and
+ease extensibility of the code by developing a new structure.
+
+
+## Running bioinformatics workflows on data hosted on NERD
+
+Together with the researcher, we are evaluating different methods to run
+genomic and transcriptomic workflows with large datasets with regards to ease
+of use, performance and extensibility. We plan to offer the solution to other
+researchers as a quick and easy way of getting started with NRIS resources.
+
+
 ## Solving a Python problem with regular expressions
 
 This was a 2 hours project where we helped writing a prototype Python code
