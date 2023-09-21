@@ -15,7 +15,7 @@ oriented python.  The goals of this project are to improve maintainability and
 ease extensibility of the code by developing a new structure.
 
 
-## Running bioinformatics workflows on data hosted on NERD
+## Running bioinformatics workflows on data hosted on NIRD
 
 Together with the researcher, we are evaluating different methods to run
 genomic and transcriptomic workflows with large datasets with regards to ease
