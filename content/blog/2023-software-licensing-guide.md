@@ -116,7 +116,7 @@ this case we recommend to use these two resources:
 - [Joinup Licensing Assistant - Find and compare software licenses](https://joinup.ec.europa.eu/collection/eupl/solution/joinup-licensing-assistant/jla-find-and-compare-software-licenses)
 - [Joinup Licensing Assistant - Compatibility Checker](https://joinup.ec.europa.eu/collection/eupl/solution/joinup-licensing-assistant/jla-compatibility-checker)
 
-If the original code does not have a license, you may not distribute your
+If the original code does not have a license, you may not be able to distribute your
 derivative code. You can try to contact the authors and ask them to clarify
 the license of their code.
 
