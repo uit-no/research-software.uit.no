@@ -20,7 +20,7 @@ suggestions, and corrections to
 <div class="uk-alert-primary" uk-alert>
 
 This guide is shared under the [Creative Commons CC0
-license](https://creativecommons.org/share-your-work/public-domain/cc0).
+waiver](https://creativecommons.org/share-your-work/public-domain/cc0).
 
 </div>
 
@@ -65,7 +65,7 @@ Now you have a problem:
 Next time you are smarter and check the license before building on someone
 else's work.  And others may approach your work the same way.
 
-Open science is built upon sharing of research data and software in a FAIR
+Open science is built upon sharing of research data and software in a [FAIR](https://www.go-fair.org/fair-principles/)
 (findable, accessible, interoperable, and reusable) manner. For research data,
 reuse entails applying an open data license (generally using [Creative Commons
 licenses](https://creativecommons.org/)), but sharing of software requires licenses with more specific
@@ -81,7 +81,7 @@ under which code can be reused and redistributed:
 - you may not be able to publish derivative work based on somebody else's code
   or even your own code (e.g. after changing jobs)
 
-This means that **clarifying license terms is essential for derivative work
+This means that **clarifying terms of use is essential for derivative work
 based on your research to be even publishable**. Choosing an open source
 license can also be good insurance for you against being locked out of your
 own code after changing affiliation/group or job.
@@ -107,7 +107,7 @@ incompatible license years later when you decide to open the project.
 
 (here we will add a decision tree/ flow-chart)
 
-Your code is derivative work if you have started from an existing code and
+Your code is derivative work if you have started (partially) from an existing code and
 made changes to it or if you incorporated an existing code into your code.
 
 If your code is derivative work, then **you need to check the license of the
@@ -117,7 +117,9 @@ this case we recommend to use these two resources:
 - [Joinup Licensing Assistant - Compatibility Checker](https://joinup.ec.europa.eu/collection/eupl/solution/joinup-licensing-assistant/jla-compatibility-checker)
 
 If the original code does not have a license, you may not be able to distribute your
-derivative code. You can try to contact the authors and ask them to clarify
+derivative code.
+Even if it doesn't have a license, it still might have terms of use, which might or might not be compatible with a standard license.
+You can try to contact the authors and ask them to clarify
 the license of their code.
 
 Practical steps for **incorporating something small into your own project** with a license
@@ -150,7 +152,7 @@ an example incorporating a function or two from another project):
   acknowledge the incorporated functions/code in your README/documentation and to cite
   their work if you publish a paper about your code.
 - Some licenses are more permissive (you can keep your changes private) but some licenses
-  require you to publish the changes (share-alike).
+  require you to publish the changes ("share-alike" or "copy-left").
 
 Practical steps for making **changes to an existing project** with a license
 that allows you to do so:
@@ -173,7 +175,8 @@ change) libraries, plug-ins, and packages, which are distributed via platforms
 like PyPI, Conda, CRAN, Crates, ... this is typically not considered derivative work.
 
 Before you may choose a license, clarify the following points with, for
-example, your supervisor, collaborators, or principal investigator:
+example, your supervisor, principal investigator, collaborators, or research
+support service:
 - Does your work contract, grant, or collaboration agreement dictate a
   specific license?
 - Is there an intent to commercialize the code?
@@ -214,9 +217,8 @@ Practical steps:
   text format into the folder  ([example](https://github.com/bast/runtest/tree/main/LICENSES)).  Here are
   the two above licenses in plain text:
   [EUPL](https://joinup.ec.europa.eu/sites/default/files/custom-page/attachment/2020-03/EUPL-1.2%20EN.txt)
-  and [MIT](https://en.wikipedia.org/wiki/MIT_License#License_terms) (but the
-  latter contains a copyright notice which we rather want to have on top of
-  files).
+  and [MIT](https://en.wikipedia.org/wiki/MIT_License#License_terms) (we recommend
+  to use the MIT license text without the copyright header).
 - Add copyright and license information to each file following
   <https://reuse.software/tutorial/> which uses a standard format with
   so-called [SPDX identifiers](https://spdx.org/licenses/). Example below
@@ -289,9 +291,8 @@ UiT](https://uit.no/regelverk/sentraleregler#v-pills-742423):
   restrictions as possible on the access, reuse and redistribution of the
   data."
 
-By default, [UiT's open research data
-archive](https://dataverse.no/dataverse/uit) recommends the [Creative Commons
-CC0 license](https://creativecommons.org/share-your-work/public-domain/cc0).
+By default, the [UiT collection in DataverseNO](https://dataverse.no/dataverse/uit) recommends the [Creative Commons
+CC0 waiver](https://creativecommons.org/share-your-work/public-domain/cc0).
 The [UiT Research Data Portal](https://en.uit.no/research/research-dataportal/art?p_document_id=726373)
 contains information and guides on why and how to add such a license to your
 data.
@@ -299,12 +300,15 @@ data.
 The [Horizon Europe
 guideline](https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/guidance/programme-guide_horizon_en.pdf)
 specifies that data should be CC0 or CC-BY.  Metadata must be CC0. The
-Norwegian Research council does currently not specify licenses. The omnipresent
+recommendations of the
+Norwegian Research council can be found in the report
+["Hvordan skal vi dele forskningdata"](https://www.forskningsradet.no/siteassets/publikasjoner/2021/hvordan-skal-vi-dele-forskningsdata.v2.pdf) (p. 40).
+The overall principle
 rule is "as open as possible, as closed as necessary".
 
 We wish to emphasize that using a restrictive license with the intention to
 protect privacy of the data is not a good substitute for having the data
-sufficiently anonymized.
+sufficiently protected in other ways.
 
 
 ## Questions and contact
@@ -314,7 +318,7 @@ or reusing somebody else's code?  The [research software engineering (RSE)
 group](https://research-software.uit.no/) at [UiT](https://uit.no/) is here to
 help you. You can contact us at [rse@uit.no](mailto:rse@uit.no) or come to our
 office hours. For questions regarding sharing of publications and research
-data, contact the library at [researchdata@uit.no](mailto:researchdata@uit.no).
+data, contact us at [researchdata@uit.no](mailto:researchdata@uit.no).
 
 
 ## Great resources
@@ -331,6 +335,13 @@ data, contact the library at [researchdata@uit.no](mailto:researchdata@uit.no).
 
 ## Acknowledgements
 
-We are very grateful to Korbinian Michael Bösl, Richard Darst, Luca Ferranti,
-Noortje Haugstvedt, and Jenny Ostrop, for their comments and suggestions which
+We are very grateful to
+Korbinian Michael Bösl,
+Philipp Conzett,
+Richard Darst,
+Luca Ferranti,
+Noortje Haugstvedt,
+and
+Jenny Ostrop,
+for their comments and suggestions which
 significantly improved this document.
