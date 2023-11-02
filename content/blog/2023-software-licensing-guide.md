@@ -1,6 +1,6 @@
 +++
 title = "Draft: Research software licensing guide"
-description = ""
+description = "A practical guide on why software licenses matter and how to choose one and what practical steps to take"
 date = "2023-06-21"
 
 [extra]
