@@ -37,7 +37,7 @@ We got this information with `git log --oneline --graph`.
 {{ div() }}
 
 On **computer B** we have the following Git history:
-```
+```hl_lines=1-2
 * e6287b6 (HEAD -> main) another local modification
 * 1120a75 one local modification
 * 69bf25c another improvement
@@ -133,7 +133,7 @@ are the same but the commit hashes differ:
 {{ div() }}
 
 Git history on **computer A**:
-```
+```hl_lines=1-2
 * 87fe580 (HEAD -> main) another local modification
 * 175d42c one local modification
 * 69bf25c another improvement
@@ -146,7 +146,7 @@ Git history on **computer A**:
 {{ div() }}
 
 Git history on **computer B**:
-```
+```hl_lines=1-2
 * e6287b6 (HEAD -> main) another local modification
 * 1120a75 one local modification
 * 69bf25c another improvement
