@@ -15,7 +15,7 @@ changes through GitHub or GitLab or similar servers.
 
 To have a concrete example, let us assume that we have two computers
 (**computer A** and **computer B**) which are far away and they can only talk
-to each other via email. Both hold a Git repository which tracks some data or
+to each other **via email**. Both hold a Git repository which tracks some data or
 code and both Git repository have the same starting point (they have a common
 history).
 
@@ -23,21 +23,20 @@ history).
 
 {{ div() }}
 
-On **computer A** we have the following Git history (`git log --oneline --graph`):
+On **computer A** we have the following Git history:
 ```
 * 69bf25c (HEAD -> main) another improvement
 * b202aa5 adding more data to my repo
 * 5670bc4 initial commit
 ```
+We got this information with `git log --oneline --graph`.
 `69bf25c` is the newest commit and `5670bc4` the oldest.
 
 {{ enddiv() }}
 
 {{ div() }}
 
-The Git history on **computer B** has the same starting point (first 3 commits)
-but we created two more commits which we wish to later share with the other
-computer:
+On **computer B** we have the following Git history:
 ```
 * e6287b6 (HEAD -> main) another local modification
 * 1120a75 one local modification
@@ -45,6 +44,9 @@ computer:
 * b202aa5 adding more data to my repo
 * 5670bc4 initial commit
 ```
+The Git history on **computer B** has the same starting point (first 3 commits)
+but we created two more commits which we wish to later share with the other
+computer:
 
 {{ enddiv() }}
 
@@ -64,28 +66,27 @@ On **computer B** we create a bundle from the entire `main` branch:
 $ git bundle create project.bundle main
 ```
 
-It can be useful to also tag the commit from which we created the bundle:
+It can be useful to also tag the commit from which we created the bundle
+so that we know where to bundle from next time:
 ```bash
 $ git tag -f last-export-on-computer-B
 ```
 
 The generated `project.bundle` file is the one that we can email over to the other computer.
 
-On **computer A** we can pull changes from the bundle into the `main` branch:
+On **computer A** we can now pull changes from the bundle into the `main` branch:
 ```bash
 $ git pull project.bundle main --rebase
 ```
 
 The `--rebase` part makes sure that we move any local changes we might have to
-the end.
-
-We can verify the result with `git log --oneline --graph`.
-
-If **computer A** has commits that **computer B** does not have, we can do the
+the end.  We can verify the result with `git log --oneline --graph`.  If
+**computer A** has commits that **computer B** does not have, we can do the
 same in reverse: create a bundle, tag the commit from which we created the
 bundle, email the bundle over and apply it there (pull from it there).
 
-Using the tags allows you to bundling commits only since that tag instead of all commits.
+Using the tags allows you to bundling commits only since that tag instead of
+all commits:
 ```bash
 $ git bundle create project.bundle last-export-on-computer-B..main
 ```
@@ -103,7 +104,7 @@ waiting for too long.
 ## Using [git format-patch](https://git-scm.com/docs/git-format-patch)
 
 Also here we start with **computer B** having two commits more. So let's create patches
-from the two commits:
+from the two most recent commits:
 ```bash
 $ git format-patch -2
 
