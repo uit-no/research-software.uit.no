@@ -1,5 +1,46 @@
 {% extends "base.html" %}
 
 {% block content %}
-  {{ section.content | safe }}
+  <h1>
+    Research software engineering (RSE) group at
+    <a href="https://uit.no">UiT</a>
+  </h1>
+
+  <div uk-grid>
+    <div class="uk-width-auto@m">
+      {% set logo = resize_image(path="logo/logo1.png", width=100, op="fit_width") %}
+      <img src="{{ logo.url }}"
+           alt="RSE logo" class="pull-left mr-2"/>
+    </div>
+
+    <div class="uk-width-1-3@m">
+      {% set md = get_page(path="index/slogan.md") %}
+      {{ md.content | safe }}
+    </div>
+
+    <div class="uk-width-1-3@m">
+      <div uk-slideshow="autoplay: true; autoplay-interval: 5000; animation: fade; ratio: 16:8">
+        <ol class="uk-slideshow-items">
+          {% set data = load_data(path="content/feedback.toml") %}
+          {% for feedback in data.feedback %}
+            <h3>"{{ feedback.text }}"</h3>
+          {% endfor %}
+        </ol>
+      </div>
+      <p>
+        (<a href="/testimonials">more testimonials</a>)
+      </p>
+    </div>
+  </div>
+
+  <div class="uk-card uk-card-secondary uk-card-body uk-margin-large-top">
+    {% set md = get_page(path="index/office-hours.md") %}
+    {{ md.content | safe }}
+  </div>
+
+  <h2>What we offer</h2>
+  <div class="uk-column-1-2@l">
+    {% set md = get_page(path="index/what-we-offer.md") %}
+    {{ md.content | safe }}
+  </div>
 {% endblock content %}
