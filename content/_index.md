@@ -78,7 +78,16 @@ us](/contact) or come and talk to us**
 
 {{ div(attributes='class="testimonial-content"') }}
 
-The Research Software Engineering Group has been of great help to me in starting to use Git and organizing my code. I joined the Code Refinery workshops, which provided a good introduction to Git. In the time that followed, the RSE group was available to answer Git-related questions, making it easier for me to apply Git to my own research work. The RSE group also introduced me to tools like Black, Flake8, and docstring guides for cleaning up code, as well as creating top-level functions in scripts and importing functions via symlink. The sessions have been a combination of in-person help and group discussions, both of which have worked out well. The group is always welcoming and eager to help with any problems you may have.
+The Research Software Engineering Group has been of great help to me in
+starting to use Git and organizing my code. I joined the Code Refinery
+workshops, which provided a good introduction to Git. In the time that
+followed, the RSE group was available to answer Git-related questions, making
+it easier for me to apply Git to my own research work. The RSE group also
+introduced me to tools like Black, Flake8, and docstring guides for cleaning up
+code, as well as creating top-level functions in scripts and importing
+functions via symlink. The sessions have been a combination of in-person help
+and group discussions, both of which have worked out well. The group is always
+welcoming and eager to help with any problems you may have.
 
 {{ enddiv() }}
 
