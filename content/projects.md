@@ -10,6 +10,14 @@ learn more about what we do check out our [blog](/blog/).
 
 {{ div(attributes='class="uk-column-1-2@l"') }}
 
+## Helping two students installing Python software for a course
+
+Two students approached us to help installing software and dependencies which
+they needed to attend a computational course.  We solved this with Conda and by
+adjusting wrong paths. It also required a non-trivial work-around with a
+symbolic link to a library which could not be found by the software.
+
+
 ## Translating a legacy Visual Basic program to Python
 
 In this ongoing project we help a researcher to translate and restructure an
