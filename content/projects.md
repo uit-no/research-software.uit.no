@@ -23,6 +23,7 @@ Let us summarize our steps:
   more flexibility to potentially parallelize over the pairs.
 - We moved the project to GitHub to simplify collaboration and to introduce a
   code review workflow.
+- We started tracking issues and ideas in GitHub issue threads instead of via email.
 - We identified the computationally intensive steps.
 - Most of the code consisted of merging large tables which we re-implemented using a Pandas
   inner join. This significantly simplified the code.
