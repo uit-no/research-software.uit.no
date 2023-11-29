@@ -3,9 +3,12 @@
 
 # Projects
 
+{{ div(attributes='class="uk-card uk-card-secondary uk-card-body"') }}
 Here we summarize ongoing and completed projects, small and large. If you want to
 learn more about what we do check out our [blog](/blog/).
+{{ enddiv() }}
 
+{{ div(attributes='class="uk-column-1-2@l"') }}
 
 ## Translating a legacy Visual Basic program to Python
 
@@ -152,3 +155,5 @@ functionality within the Canvas learning management system, such as question
 banks and quizzes. In addition we provided a hands-on tutorial on how to use
 R/exams to efficiently generate a large amount of multiple choice questions and
 how to upload them to Canvas question banks. 
+
+{{ enddiv() }}
