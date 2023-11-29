@@ -61,9 +61,8 @@ Modulbygget](https://use.mazemap.com/#v=1&zlevel=2&center=18.972617,69.683509&zo
   - Moving from local computer to cloud or high-performance computing (using e.g. [NRIS resources](https://documentation.sigma2.no/index.html))
 
 **If you have questions about code you wrote or want to write, please [contact
-us](/contact) or come and talk to us**
-
-[Short presentation slide deck](https://cicero.xyz/v3/remark/0.14.0/github.com/uit-no/rse-presentations/main/rse-intro.md/) for research groups
+us](/contact) or come and talk to us**.
+Or check our [short presentation slide deck](https://cicero.xyz/v3/remark/0.14.0/github.com/uit-no/rse-presentations/main/rse-intro.md/) for research groups.
 
 {{ enddiv() }}
 
