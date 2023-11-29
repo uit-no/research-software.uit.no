@@ -9,6 +9,32 @@ learn more about what we do check out our [blog](/blog/).
 {{ enddiv() }}
 
 {{ div(attributes='class="uk-column-1-2@l"') }}
+## Speeding up a Python code from 4 weeks to below an hour
+
+In this project we reworked a Python code (in a Jupyter Notebook) which was
+originally written in MATLAB. The code was processing 18000 files containing
+satellite data and this took 4 weeks. At the end of the project we could do
+this in below an hour, with less code.
+
+Let us summarize our steps:
+- Files were processed in pairs but instead of going through all pairs we
+  decided to focus on one pair only and re-introduce the iteration over all
+  pairs at the end. This gave us better focus, shorter test and debug loop, and
+  more flexibility to potentially parallelize over the pairs.
+- We moved the project to GitHub to simplify collaboration and to introduce a
+  code review workflow.
+- We identified the computationally intensive steps.
+- Most of the code consisted of merging large tables which we re-implemented using a Pandas
+  inner join. This significantly simplified the code.
+- We moved filtering steps to earlier in the code so that we do computations on
+  filtered data instead of first computing data which we might throw away
+  later.
+- We abstracted repeating code into functions and moved the functions outside
+  of the notebook so that they can be tested and improved independently. The
+  functions got then imported into the notebook.
+- We delegated data cleaning to Pandas instead of performing it "manually".
+- We parallelized over data chunks which can be processed independently.
+
 
 ## Helping two students installing Python software for a course
 
