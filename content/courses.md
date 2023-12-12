@@ -12,7 +12,6 @@ courses and events.
 
 ## Upcoming courses and events we recommend
 
-- Nov 7-10, 2023, online: [Python for Scientific Computing](https://scicomp.aalto.fi/training/scip/python-for-scicomp-2023/)
 
 
 ## Recent courses we co-organized
