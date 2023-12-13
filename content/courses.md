@@ -12,10 +12,11 @@ courses and events.
 
 ## Upcoming courses and events we recommend
 
-- Nov 7-10, 2023, online: [Python for Scientific Computing](https://scicomp.aalto.fi/training/scip/python-for-scicomp-2023/)
 
 
 ## Recent courses we co-organized
+
+- Nov 7-10, 2023, online: [Python for Scientific Computing](https://scicomp.aalto.fi/training/scip/python-for-scicomp-2023/)
 
 - October 17-19 and 23, 2023, Tromsø Breivika campus: [FAIR Data Visualisation](https://uit.no/tavla/artikkel/823818/fair_data_visualisation)
 
