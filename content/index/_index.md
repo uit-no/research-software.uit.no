@@ -25,7 +25,7 @@ __Save time on your project by getting quick and comprehensive help by experts._
 
 
 {{ div(attributes='class="uk-card uk-card-secondary uk-card-body"') }}
-## &#127876; We pause office hours December 6 to January 3 &#127877;
+## Welcome to office hours wednesdays 13-15
 
 Need help with anything code related?  Visit us during our office hours.
 Every Wednesday 13:00 - 15:00 in [room A209 in
