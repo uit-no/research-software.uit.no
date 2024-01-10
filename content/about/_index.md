@@ -10,8 +10,6 @@ and teaching computing.
 
 {{ div() }}
 
-**Bente Barge** is a Ph.D student in computational chemistry and part-time member of the HPC group at the University of Tromsø, Norway. Coding has been an important part of her Ph.D and her interest in research software development has evolved during her time in academia.
-
 **[Radovan Bast](https://bast.fr)** is a research software engineer with
 background in theoretical chemistry. He's worked in France, Stockholm, and now
 Tromsø at the border between science, software, and computational support and
@@ -46,4 +44,23 @@ at the University of Tromsø, Norway, and the
 
 **And you?** If you are interested in this work, please contact us.
 
+{{ div(attributes='class="uk-child-width-expand@m" uk-grid') }}
+
+{{ div() }}
+
 <img src="/about/cake.jpg" alt="photo of the cake from the group inauguration event" width="500px"/>
+
+{{ enddiv() }}
+
+{{ div() }}
+
+## Former group members
+
+**Bente Barge** is a Ph.D student in computational chemistry and part-time
+member of the HPC group at the University of Tromsø, Norway. Coding has been an
+important part of her Ph.D and her interest in research software development
+has evolved during her time in academia.
+
+{{ enddiv() }}
+
+{{ enddiv() }}
