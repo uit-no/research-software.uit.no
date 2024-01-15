@@ -27,3 +27,4 @@
 **If you have questions about code you wrote or want to write, please [contact
 us](/contact) or come and talk to us**.
 Or check our [short presentation slide deck](https://cicero.xyz/v3/remark/0.14.0/github.com/uit-no/rse-presentations/main/rse-intro.md/) for research groups.
+Or try the [even shorter slide deck](https://cicero.xyz/v3/remark/0.14.0/github.com/uit-no/rse-presentations/main/rse-intro-short.md/).
