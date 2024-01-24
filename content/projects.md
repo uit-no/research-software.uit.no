@@ -37,6 +37,11 @@ Let us summarize our steps:
 - We parallelized over data chunks which can be processed independently.
 
 
+## Helping a student getting an R script to run
+
+In this short project we helped with the dependency installation step.
+
+
 ## Helping two students installing Python software for a course
 
 Two students approached us to help installing software and dependencies which
