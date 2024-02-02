@@ -38,6 +38,7 @@ at the University of Tromsø, Norway, and the
 
 {{ enddiv() }}
 
+**Gregor Decristoforo** gained experience in parallel programming and research software engineering during his PhD in computational physics. As a Postdoc at UiT he set up and maintained the [Complex Systems Modelling](https://github.com/uit-cosmo) Github organization. Gregor has experience in Python, C++ and CUDA and is currently learning R and Rust.
 {{ enddiv() }}
 
 ---
