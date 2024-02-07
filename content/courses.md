@@ -11,7 +11,7 @@ courses and events.
 
 
 ## Upcoming courses and events we recommend
-
+- [Code Refinery workshop -- March 12-14 and 19-21, 2023]([https://coderefinery.org/workshops/upcoming/](https://coderefinery.github.io/2024-03-12-workshop/))
 
 
 ## Recent courses we co-organized
