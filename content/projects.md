@@ -9,6 +9,7 @@ learn more about what we do check out our [blog](/blog/).
 {{ enddiv() }}
 
 {{ div(attributes='class="uk-column-1-2@l"') }}
+
 ## Speeding up a Python code from 4 weeks to below an hour
 
 In this project we reworked a Python code (in a Jupyter Notebook) which was
@@ -195,5 +196,49 @@ functionality within the Canvas learning management system, such as question
 banks and quizzes. In addition we provided a hands-on tutorial on how to use
 R/exams to efficiently generate a large amount of multiple choice questions and
 how to upload them to Canvas question banks. 
+
+
+## Help with speeding up an R script by dividing it into independent chunks
+
+The challenge here is to compute in parallel but using random numbers. This is
+not completely trivial since we need to carefully use the random number seed.
+This project is on-going.
+
+
+## Code to position a medical device
+
+In this project we write code to help with device positioning for [Transcranial
+magnetic
+stimulation](https://en.wikipedia.org/wiki/Transcranial_magnetic_stimulation).
+
+We do this in Python and Rust but also use containers. Soon we will write a
+blog post and a paper on this.
+
+
+## Organizing, speeding up, and packaging a Python code which analyses island shapes
+
+This involves profiling and organizing the code. Soon we will work on making
+the code more robust, faster, and more re-usable. Finally we will together work
+on packaging the project to PyPI.
+
+
+## Help with Matplotlib
+
+This was a small project but also small things can take lots of time.
+
+
+## Help with R and ggplot2 when plotting water depths
+
+Here we sat together and studied and simplified an R Studio project for
+plotting measurements along water depths.
+
+
+## Moving a machine learning pipeline from the laptop to the cluster
+
+This project involved re-organizing the Python code so that independent runs
+can run concurrently. To make the project easier to move from one computer to
+another, we have containerized the run. We have also added a command-line
+interface to the code to make it easier to study parameter-sweeps without
+editing the source code every time.
 
 {{ enddiv() }}
