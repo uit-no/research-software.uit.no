@@ -11,12 +11,8 @@ and teaching computing.
 {{ div() }}
 
 **[Radovan Bast](https://bast.fr)** is a research software engineer with
-background in theoretical chemistry. He's worked in France, Stockholm, and now
-Tromsø at the border between science, software, and computational support and
-enjoys supporting multi-disciplinary research. He now works as part of
-[Norwegian Research Infrastructure Services](https://documentation.sigma2.no/)
-at the University of Tromsø (UiT), and leads the
-[CodeRefinery](https://coderefinery.org) project. At UiT he leads the
+background in theoretical chemistry. He leads the
+[CodeRefinery](https://coderefinery.org) project.  At UiT he leads the
 high-performance computing group and the research software engineering group.
 These days mostly programming in Python, Rust, R, and JavaScript but has spent
 many years with Fortran, C(++), and CMake.
