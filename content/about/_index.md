@@ -11,23 +11,25 @@ and teaching computing.
 {{ div() }}
 
 **[Radovan Bast](https://bast.fr)** is a research software engineer with
-background in theoretical chemistry. He's worked in France, Stockholm, and now
-Tromsø at the border between science, software, and computational support and
-enjoys supporting multi-disciplinary research. He now works as part of
-[Norwegian Research Infrastructure Services](https://documentation.sigma2.no/)
-at the University of Tromsø (UiT), and leads the
-[CodeRefinery](https://coderefinery.org) project. At UiT he leads the
+background in theoretical chemistry. He leads the
+[CodeRefinery](https://coderefinery.org) project.  At UiT he leads the
 high-performance computing group and the research software engineering group.
 These days mostly programming in Python, Rust, R, and JavaScript but has spent
 many years with Fortran, C(++), and CMake.
+
+**Magnar Bjørgve** has a background in applied mathematics and theoretical chemistry.
+He is working in the GPU and training team at [NRIS](https://documentation.sigma2.no/)
+at the University of Tromsø, Norway.
 
 {{ enddiv() }}
 
 {{ div() }}
 
-**Magnar Bjørgve** has a background in applied mathematics and theoretical chemistry.
-He is working in the GPU and training team at [NRIS](https://documentation.sigma2.no/)
-at the University of Tromsø, Norway.
+**Gregor Decristoforo** gained experience in parallel programming and research
+software engineering during his PhD in computational physics. As a Postdoc at
+UiT he set up and maintained the [Complex Systems
+Modelling](https://github.com/uit-cosmo) Github organization. Gregor has
+experience in Python, C++ and CUDA and is currently learning R and Rust.
 
 **Jørn Dietze** is almost finished with a Ph.D in bioinformatics.
 He is working with high-performance computing systems and
@@ -38,7 +40,6 @@ at the University of Tromsø, Norway, and the
 
 {{ enddiv() }}
 
-**Gregor Decristoforo** gained experience in parallel programming and research software engineering during his PhD in computational physics. As a Postdoc at UiT he set up and maintained the [Complex Systems Modelling](https://github.com/uit-cosmo) Github organization. Gregor has experience in Python, C++ and CUDA and is currently learning R and Rust.
 {{ enddiv() }}
 
 ---
