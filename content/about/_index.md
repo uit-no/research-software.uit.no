@@ -63,6 +63,12 @@ member of the HPC group at the University of Tromsø, Norway. Coding has been an
 important part of her Ph.D and her interest in research software development
 has evolved during her time in academia.
 
+**Geir Villy Isaksen** was in our group when we started this when we were only
+two persons. We are grateful for his contributions to the group, the artwork,
+work on the website, and outreach.
+
+{{ enddiv() }}
+
 {{ enddiv() }}
 
 {{ enddiv() }}
