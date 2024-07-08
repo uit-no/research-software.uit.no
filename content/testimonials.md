@@ -37,3 +37,42 @@
   had received from the RSE group especially that from Radovan who helped me
   re-think the way I program. I felt that the RSE group members are so
   welcoming and excited to help learn and relearn new things together."*
+
+- *"As an environmental chemist, I’ve spent years working with a large research
+  code written in Visual Basic 6 (VB6). My programming skills have been limited
+  to trial and error in VB6. When we finally decided to translate our code from
+  VB6 to Python for long-term sustainability, I came across RSE by coincidence.
+  At that point, I had no idea where to start learning Python or how to approach
+  the code effectively. I was uncertain about how much assistance RSE could
+  provide for this daunting task.*
+  
+  *However, my experience with RSE turned out to be incredibly positive. From the
+  outset, they were approachable, friendly, and helpful. They patiently guided me
+  through Python basics and introduced me to essential tools like docstring
+  guidelines, testing, pylint, black, profiling and git. While I did most of the
+  programming myself, they provided strategic advice on code architecture and
+  structure, covering both simple concepts and more intricate ones. Most
+  importantly, they introduced me to a programming mindset—how to think when
+  designing code, what to prioritize, and the importance of principles like DRY
+  code, code smells, and classes screaming to get out.* 
+  
+  *From dealing with a massive spaghetti codebase in VB6 – once so convoluted that
+  I had to print it out on paper to trace loops and connections, I now have a
+  more robust, flexible, sustainable and modern codebase in an object-oriented
+  design.* 
+  
+  *Collaborating with RSE opened up a whole new world for me. I learned things I
+  wish I’d known a decade ago. Not only did they assist with the challenging task
+  of porting my code from VB6 to Python, but they also helped me become a better,
+  more independent programmer. It felt like having a personal programming
+  coach—one who not only knows the technical aspects but can also communicate
+  effectively with non-programmers. Their patience in addressing my questions and
+  mistakes was invaluable. I doubt I would have found anyone else who could have
+  helped me with the same enthusiasm and dedication as RSE.* 
+  
+  *The collaboration with the RSE team transformed the porting process into an
+  enjoyable, fun and rewarding experience. I can’t praise them enough, especially
+  Jørn, whom I met with regularly for almost a year. I’m forever grateful for
+  everything he taught (and continues to teach) me. I sincerely hope our
+  collaboration continues, and if you’re considering reaching out to them, don’t
+  hesitate—just do it. And bring cookies!* 
