@@ -12,15 +12,16 @@ courses and events.
 
 ## Upcoming courses and events
 
-- [HPC on-boarding: April 9-11, 2024](https://documentation.sigma2.no/training/events/2024-04-hpc-on-boarding.html)
+- [FAIR Data Visualisation course at UiT](https://uit.no/tavla/artikkel/850361/fair_data_visualisation_-_phd_course_2_ects), November 11-15 and 22, 2024
+- [RTromsø, the R user group a UiT](https://uit-no.github.io/rtromso/)
+- We plan a "Python for Scientific Computing" course, probably November 5-7
+
+
+## Recent courses/events we organized or co-organized
+
 - [Tuesday Tools & Techniques for HPC](https://scicomp.aalto.fi/training/scip/ttt4hpc-2024/): April 16 and 23, May 7 and 14 (4 sessions in total)
-- [RTromsø, the R user group a UiT](https://uit-no.github.io/rtromso/): first meeting April 17
 - RSE outreach event with the Systems Epidemiology group April 25
-- We plan a "Python for Scientific Computing" course, probably again in November
-
-
-## Recent courses we co-organized
-
+- [HPC on-boarding: April 9-11, 2024](https://documentation.sigma2.no/training/events/2024-04-hpc-on-boarding.html)
 - March 12-14 and 19-21, 2024, online: [CodeRefinery workshop](https://coderefinery.github.io/2024-03-12-workshop/)
 - Nov 7-10, 2023, online: [Python for Scientific Computing](https://scicomp.aalto.fi/training/scip/python-for-scicomp-2023/)
 - October 17-19 and 23, 2023, Tromsø Breivika campus: [FAIR Data Visualisation](https://uit.no/tavla/artikkel/823818/fair_data_visualisation)
