@@ -9,3 +9,15 @@ text = """
 The execution time for my script went down from 4 weeks to below an hour which
 was really cool!
 """
+
+[[feedback]]
+text = """
+It felt like having a personal programming coach—one who not only knows the
+technical aspects but can also communicate effectively with non-programmers.
+"""
+
+[[feedback]]
+text = """
+If you’re considering reaching out to them, don’t hesitate — just do it. And
+bring cookies!
+"""
