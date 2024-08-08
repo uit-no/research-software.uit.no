@@ -102,7 +102,8 @@ export SIRIUS_PASSWORD="**********"
 
 ## Slurm script to run the workflow
 
-Save the following file as `run-umetaflow.sh`:
+Save the following file as `run-umetaflow.sh`
+(please adjust `--account=nn____k`):
 ```bash
 #!/usr/bin/env bash
 
@@ -151,9 +152,6 @@ The job script creates a Conda environment and activates it "on the fly".  This
 takes only perhaps 3 or 5 minutes of the job run time. The disadvantage of this
 approach is that the environment disappears after the job finishes and is
 re-created at each run.
-
-Also here you need to adapt `--account=nn____k` and the paths to the Conda
-environment.
 
 Note that in contrast to the
 [snakemake_UmetaFlow](https://github.com/biosustain/snakemake_UmetaFlow)
