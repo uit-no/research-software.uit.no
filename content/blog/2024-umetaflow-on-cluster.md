@@ -19,7 +19,15 @@ container side and "too much" outside of the container and decided to install
 UMetaFlow and its dependencies more directly, without a container, and by using
 a Conda environment.
 
-Below is a step-by-step guide on how we did it.
+We then created an install script to set up the Conda environment. However,
+this took hours on the network file system because of the thousands of tiny
+files.  Sometimes it timed out, and sometimes it crashed with surprising
+errors.
+
+Therefore, we experimented with an approach where we set up the Conda
+environment "on the fly" on the local disk of a compute node.
+
+Below is a step-by-step guide on how we ended up using it.
 
 <!-- toc -->
 
@@ -55,7 +63,7 @@ This script automatically places the SIRIUS binary and libraries in the
 `resources` directory.
 
 
-## Installing the Conda environment
+## Conda environment definition file
 
 Save the following file as `environment.yml`:
 ```yaml
@@ -82,39 +90,6 @@ dependencies:
     - ms2query
 ```
 
-The next step is to create a new environment from this definition file.  This
-step can take 2 hours and therefore we run it as a job on the cluster.  Save
-the file as `install-environment.sh`:
-```bash
-#!/usr/bin/env bash
-
-#SBATCH --account=nn____k
-#SBATCH --job-name=installation
-#SBATCH --time=0-08:00:00
-#SBATCH --mem-per-cpu=2G
-#SBATCH --ntasks=1
-
-# settings to catch errors in bash scripts
-set -euf -o pipefail
-
-# adapt these
-my_conda_storage=/cluster/projects/nn____k/conda
-environment_file="environment.yml"
-environment_name="umetaflow"
-
-# typically no need to modify anything below
-# using mamba here since it is potentially faster than conda
-# to resolve the dependencies
-module load Mamba/4.14.0-0
-export CONDA_PKGS_DIRS=${my_conda_storage}/package-cache
-mamba env create --prefix ${my_conda_storage}/${environment_name} --file ${environment_file}
-```
-
-Adapt `--account=nn____k` and `my_conda_storage` and then submit the job with:
-```bash
-$ sbatch install-environment.sh
-```
-
 
 ## Create a file that holds the credentials for SIRIUS
 
@@ -136,21 +111,46 @@ Save the following file as `run-umetaflow.sh`:
 #SBATCH --time=0-01:00:00
 #SBATCH --mem-per-cpu=6G
 #SBATCH --ntasks=4
+#SBATCH --gres=localscratch:20G
 
 # settings to catch errors in bash scripts
 set -euf -o pipefail
 
-module load Miniconda3/22.11.1-1
-source ${EBROOTMINICONDA3}/bin/activate
+# function to install and activate the environment "on the fly"
+# requires setting --gres=localscratch (above)
+# advantages: no impact on the network file system or home quota, often 100x faster install
+# disadvantages: a bit wasteful in terms of network and additional 1-5 minutes for each job
+install_and_activate_environment() {
+    local environment_file=$1
 
-# adapt this line to match the environment created further above
-conda activate /cluster/projects/nn____k/conda/umetaflow
+    # install latest micromamba into local scratch
+    cd ${LOCALSCRATCH}
+    curl -Ls https://micro.mamba.pm/api/micromamba/linux-64/latest | tar -xvj bin/micromamba
+    export MAMBA_ROOT_PREFIX=${LOCALSCRATCH}/mamba-prefix
+    eval "$(${LOCALSCRATCH}/bin/micromamba shell hook -s posix)"
+
+    # install and activate the environment
+    export TMPDIR=${LOCALSCRATCH}
+    time micromamba -y env create --prefix ${LOCALSCRATCH}/environment/ --file ${environment_file}
+    micromamba activate ${LOCALSCRATCH}/environment/
+
+    cd ${SLURM_SUBMIT_DIR}
+}
+
+# install and activate
+install_and_activate_environment "${SLURM_SUBMIT_DIR}/environment.yml"
+echo "successful conda installation!"
 
 # this sets email and password for sirius
 source credentials.sh
 
 snakemake --cores ${SLURM_NTASKS}
 ```
+
+The job script creates a Conda environment and activates it "on the fly".  This
+takes only perhaps 3 or 5 minutes of the job run time. The disadvantage of this
+approach is that the environment disappears after the job finishes and is
+re-created at each run.
 
 Also here you need to adapt `--account=nn____k` and the paths to the Conda
 environment.
