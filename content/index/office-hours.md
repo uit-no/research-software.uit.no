@@ -7,4 +7,5 @@ Need help with anything code related? Visit us during our office hours,
 (almost) every Wednesday 13:00 - 15:00 in [room A210 in
 Modulbygget](https://link.mazemap.com/3Ouh4mlf).
 
-Next office hours in 2024: **Aug 7**, **Aug 14**, **Aug 21**, **Aug 28**, **Sep 4**, **Sep 11**, (and later more).
+Next office hours in 2024: **Sep 18**, **Sep 25**, **Oct 02**, **Oct 9**, **Oct
+16**, **Oct 23**, **Oct 30**, **Nov 11**, (and later more).
