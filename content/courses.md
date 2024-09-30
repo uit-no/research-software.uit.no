@@ -12,17 +12,15 @@ courses and events.
 
 ## Upcoming courses and events
 
-- [CodeRefinery workshop](https://coderefinery.github.io/2024-09-10-workshop/), September 10-12, 17-19, 2024
-- We plan to contribute to a
-  [build systems course Oct 8-11](https://www.kth.se/form/build-systems-course-and-hackathon-part-i)
-  on topics around Make, Autotools, CMake, EasyBuild, Spack, and containers
-- We plan a "Python for Scientific Computing" course, probably November 5-7
-- [FAIR Data Visualisation course at UiT](https://uit.no/tavla/artikkel/850361/fair_data_visualisation_-_phd_course_2_ects), November 11-15 and 22, 2024
+- [Build Systems Course and Hackathon (online)](https://www.kth.se/form/build-systems-course-and-hackathon-part-i), October 8-11, 2024
+- [Python for Scientific Computing (online)](https://www.aalto.fi/en/events/python-for-scientific-computing-5-7november2024), November 5-7, 2024
+- [FAIR Data Visualisation course at UiT](https://uit.no/tavla/artikkel/850361/fair_data_visualisation_-_phd_course_2_ects), December 9-13 and 16, 2024
 - [RTromsø, the R user group a UiT](https://uit-no.github.io/rtromso/)
 
 
 ## Recent courses/events we organized or co-organized
 
+- [CodeRefinery workshop](https://coderefinery.github.io/2024-09-10-workshop/), September 10-12, 17-19, 2024
 - [Tuesday Tools & Techniques for HPC](https://scicomp.aalto.fi/training/scip/ttt4hpc-2024/): April 16 and 23, May 7 and 14 (4 sessions in total)
 - RSE outreach event with the Systems Epidemiology group April 25
 - [HPC on-boarding: April 9-11, 2024](https://documentation.sigma2.no/training/events/2024-04-hpc-on-boarding.html)
