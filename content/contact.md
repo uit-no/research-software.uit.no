@@ -25,5 +25,4 @@ We plan to send out an email newsletter about courses and events every 1-3 month
 
 ## Where to find us on the campus
 
-<iframe src="https://use.mazemap.com/#v=1&zlevel=2&center=18.972380,69.683702&zoom=20.6&campusid=5&sharepoitype=poi&sharepoi=174371" width="90%" height="700px">
-</iframe>
+<iframe width="600" height="420" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0"src="https://use.mazemap.com/embed.html#v=1&config=uit&campusid=5&zlevel=1&center=18.972728,69.683616&zoom=19.4&sharepoitype=poi&sharepoi=176994&utm_medium=iframe" style={{ border: '1px solid grey' }} allow="geolocation"></iframe>
