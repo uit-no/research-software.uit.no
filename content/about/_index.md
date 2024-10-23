@@ -40,6 +40,17 @@ at the University of Tromsø, Norway, and the
 
 {{ enddiv() }}
 
+{{ div() }}
+
+**Gabriel Gerez** is almost finished with his PhD in Theoretical chemistry. 
+He is currently part of the Software team providing support with installation 
+and use of scientific software in the clusters. He is part of the 
+Research software engineering (RSE) group at UiT where he helps researchers with
+issues such as code design and scalability of software to HPC. Gabriel is experienced 
+in developing code in C++ and Python.
+
+{{ enddiv() }}
+
 {{ enddiv() }}
 
 ---
