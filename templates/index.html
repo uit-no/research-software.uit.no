@@ -23,7 +23,7 @@
         <ol class="uk-slideshow-items">
           {% set data = load_data(path="content/feedback.toml") %}
           {% for feedback in data.feedback %}
-            <h3>"{{ feedback.text }}"</h3>
+            <h2>"{{ feedback.text }}"</h2>
           {% endfor %}
         </ol>
       </div>
