@@ -3,7 +3,6 @@ name: Build/deploy website
 env:
   ZOLA_VERSION: "0.19.2"
   CNAME: "research-software.uit.no"
-"
 
 on:
   push:
