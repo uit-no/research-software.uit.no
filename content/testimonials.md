@@ -76,3 +76,46 @@
   everything he taught (and continues to teach) me. I sincerely hope our
   collaboration continues, and if you’re considering reaching out to them, don’t
   hesitate—just do it. And bring cookies!"
+
+- I've been working with and am still working with open sourcing of a Fortran
+  source code which would be near impossible without the software engineering
+  support group.
+
+- I have been using the online cluster to run my OpenFOAM simulations for my
+  PhD research, and I couldn't be happier with the support provided.
+  The support team is knowledgeable and responsive, always ready to help me
+  navigate through any challenges I face.  I highly recommend this service to
+  any researcher looking for reliable and efficient computational resources.
+
+- Great support. Saved me weeks and weeks of time. Super
+  helpful and friendly.
+
+- RSE helped me adapt my analysis to run on the HPC computing cluster at UiT.
+  This cut the time to run my analysis from many days down to hours.
+
+- I got help from the RSE Group structuring my code, which has been very
+  helpful for the specific project, but also for future projects.
+
+- The RSE group members are really smart and innovative when it comes to coding
+  and they’re able to communicate these solutions and the reasoning behind them
+  in a way that makes sense for me so that I can apply it in my future coding
+  activities.
+
+- The RSE team made an incredible effort to both understand my problem, and
+  explain possible solutions to it in a way that I (as a relatively
+  non-technical person) could understand. When I contacted RSE, I was trying to
+  estimate a model with Bayesian estimation techniques on highly skewed data.
+  The code took forever to run, and locked up my computer. I couldn't work on
+  anything else for several hours (sometimes days) when I ran the code. The
+  analysis was exploratory, meaning that I had to run several versions of the
+  model to find the right one. With the help from RSE, I found a way to speed
+  up the code to just a few minutes. This enabled me to trouble shoot the model
+  and move forward in my analysis. Without them, I would not have been able to
+  finish the analysis! Thanks a million!
+
+- The support offered by the research and software engineering team at UiT is
+  immensely useful to anyone who wants to integrate coding into their research.
+  Direct access to knowledgeable people allows for quick and personal
+  assistance that helped me turn an idea into reality.  In my case, the support
+  was focused on optimizing code and as a result I was able to generate results
+  within minutes instead of hours.
