@@ -21,7 +21,7 @@
     <div class="uk-width-1-3@m">
       <div uk-slideshow="autoplay: true; autoplay-interval: 5000; animation: fade; ratio: 16:8">
         <ol class="uk-slideshow-items">
-          {% set data = load_data(path="content/feedback.toml") %}
+          {% set data = load_data(path="content/feedback.yml") %}
           {% for feedback in data.feedback %}
             <h2>"{{ feedback.text }}"</h2>
           {% endfor %}
