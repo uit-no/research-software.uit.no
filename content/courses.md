@@ -12,12 +12,13 @@ courses and events.
 
 ## Upcoming courses and events
 
-- [FAIR Data Visualisation course at UiT](https://uit.no/tavla/artikkel/850361/fair_data_visualisation_-_phd_course_2_ects), December 9-13 and 16, 2024
-- [RTromsø, the R user group a UiT](https://uit-no.github.io/rtromso/)
+Don't worry there will be more workshops in 2025. Soon we will announce the dates for the next CodeRefinery workshop. Stay tuned!
 
 
 ## Recent courses/events we organized or co-organized
 
+- [FAIR Data Visualisation course at UiT](https://uit.no/tavla/artikkel/850361/fair_data_visualisation_-_phd_course_2_ects), December 9-13 and 16, 2024
+- [RTromsø, the R user group a UiT](https://uit-no.github.io/rtromso/)
 - [Python for Scientific Computing (online)](https://www.aalto.fi/en/events/python-for-scientific-computing-5-7november2024), November 5-7, 2024
 - [Build Systems Course and Hackathon (online)](https://www.kth.se/form/build-systems-course-and-hackathon-part-i), October 8-11, 2024
 - [CodeRefinery workshop](https://coderefinery.github.io/2024-09-10-workshop/), September 10-12, 17-19, 2024
