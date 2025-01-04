@@ -1,5 +1,5 @@
 +++
-title = "Using pixi and uv on a supercomputer"
+title = "Using Pixi and uv on a supercomputer"
 description = "A step-by-step guide on how to run Python code in an environment managed by Pixi or uv on a supercomputer"
 date = "2025-01-04"
 
