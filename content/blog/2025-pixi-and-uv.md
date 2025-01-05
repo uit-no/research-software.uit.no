@@ -184,7 +184,7 @@ UV_VERSION="0.5.14"
 # group but don't put it in your home
 # just for the sake of demonstration it is now placed in ${USERWORK} but
 # project space would be better
-export UV_CACHE_DIR=/cluster/work/users/bast/experiment/cache
+export UV_CACHE_DIR=${USERWORK}/cache
 
 # if uv does not exist, download it
 if [ ! -e uv ]; then
