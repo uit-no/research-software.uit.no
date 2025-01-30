@@ -11,11 +11,11 @@ and teaching computing.
 {{ div() }}
 
 **[Radovan Bast](https://bast.fr)** is a research software engineer with
-background in theoretical chemistry. He leads the
-[CodeRefinery](https://coderefinery.org) project.  At UiT he leads the
-high-performance computing group and the research software engineering group.
-These days mostly programming in Python, Rust, R, and JavaScript but has spent
-many years with Fortran, C(++), and CMake.
+background in theoretical chemistry. His work focus is on the
+[CodeRefinery](https://coderefinery.org) project and the
+research software engineering group.  These days mostly programming in Python,
+Rust, R, and JavaScript but has spent many years with Fortran, C(++), and
+CMake.
 
 **Magnar Bjørgve** has a background in applied mathematics and theoretical chemistry.
 He is working in the GPU and training team at [NRIS](https://documentation.sigma2.no/)
