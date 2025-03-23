@@ -10,7 +10,7 @@ and teaching computing.
 
 {{ div() }}
 
-**[Radovan Bast](https://bast.fr)** is a research software engineer with
+**[Radovan Bast](https://radovan.xyz)** is a research software engineer with
 background in theoretical chemistry. His work focus is on the
 [CodeRefinery](https://coderefinery.org) project and the
 research software engineering group.  These days mostly programming in Python,
