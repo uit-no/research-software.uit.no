@@ -10,13 +10,6 @@ and teaching computing.
 
 {{ div() }}
 
-**[Radovan Bast](https://radovan.xyz)** is a research software engineer with
-background in theoretical chemistry. His work focus is on the
-[CodeRefinery](https://coderefinery.org) project and the
-research software engineering group.  These days mostly programming in Python,
-Rust, R, and JavaScript but has spent many years with Fortran, C(++), and
-CMake.
-
 **Magnar Bjørgve** has a background in applied mathematics and theoretical chemistry.
 He is working in the GPU and training team at [NRIS](https://documentation.sigma2.no/)
 at the University of Tromsø, Norway.
@@ -64,6 +57,11 @@ in developing code in C++ and Python.
 {{ div() }}
 
 ## Former group members
+
+**[Radovan Bast](https://radovan.xyz)** got this group started and
+is now writing Rust and Fortran and focusing
+on computational geometry and computational fluid dynamics at
+[Oceanbox](https://oceanbox.io).
 
 **Bente Barge** is a Ph.D student in computational chemistry and part-time
 member of the HPC group at the University of Tromsø, Norway. Coding has been an
