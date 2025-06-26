@@ -5,8 +5,8 @@ navigation:
     target: /services/
   - name: About us
     target: /about/
-  - name: Vision
-    target: /vision/
+  # - name: Vision
+  #   target: /vision/
   - name: Courses
     target: /courses/
   - name: Resources
