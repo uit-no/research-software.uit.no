@@ -11,7 +11,7 @@
 - __Individual Consultations__:
     Schedule one-on-one meetings with an RSE engineer for personalized assistance with your projects.
 
-    _Cost_: First hour free; afterwards the cost is 600 kr/hr (5-hour minimum).
+    _Cost_: Initial consultation free; afterwards the cost is 600 kr/hr (5-hour minimum).
 
 - __Extended Collaborations__:
     Contract one or more Research Software Engineers in either part-time or full-time positions, subject to availability.
