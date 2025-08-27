@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ config.title }}</title>
+    <link rel="shortcut icon" href="{{ get_url(path="img/favicon.ico") }}">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- taken from https://www.syncoda.nl/posts/zola_tips/macros/ -->
+	<!-- Actually redirects the user's browser -->
+	<meta http-equiv="refresh" content="0; url={{ redirect_url | safe }}">
+	<!-- Informs search engines that they should index redirect_url for this page/URL -->
+        <link rel="canonical" href="{{ redirect_url | safe }}">
+<!-- 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.23.2/dist/css/uikit.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.2/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.2/dist/js/uikit-icons.min.js"></script>
+
+    <link href="{{ get_url(path="style.css") }}" rel="stylesheet">
+    <link href="{{ get_url(path="fonts.css") }}" rel="stylesheet"> -->
+  </head>
+
+  <body>
+    <div class="uk-container uk-container-small uk-margin-large-bottom">
+
+      <div class="markdown">
+        {% block content %}
+        {% endblock content %}
+      </div>
+
+      <hr>
+
+    </div>
+  </body>
+</html>
