@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Research software engineering group at UiT</title>
+    <link rel="shortcut icon" href="https://research-software.uit.no/img/favicon.ico">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.23.12/dist/css/uikit.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.12/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.12/dist/js/uikit-icons.min.js"></script>
+
+    
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/uit-no/rse/main/content/logo1.png" />
+
+
+
+  <meta name="description" content="A step-by-step guide on how to run Python code in an environment managed by Pixi or uv on a supercomputer" />
+  <meta name="twitter:description" content="A step-by-step guide on how to run Python code in an environment managed by Pixi or uv on a supercomputer" />
+
+
+
+  <meta name="twitter:title" content="Using Pixi and uv on a supercomputer" />
+
+
+
+    <link href="https://research-software.uit.no/style.css" rel="stylesheet">
+    <link href="https://research-software.uit.no/fonts.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="uk-container uk-container-small uk-margin-large-bottom">
+
+      
+
+<nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+  <ul class="uk-navbar-nav uk-visible@s">
+    
+      
+        <li><a href="https://research-software.uit.no">Home</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/services">Services</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/about">About us</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/courses">Courses</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/resources">Resources</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/projects">Projects</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/blog">Blog</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/testimonials">Testimonials</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/contact">Contact</a></li>
+      
+    
+  </ul>
+  <a href="#" class="uk-navbar-toggle uk-hidden@s" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
+</nav>
+
+<div id="sidenav" uk-offcanvas="flip: true" class="uk-offcanvas">
+  <div class="uk-offcanvas-bar">
+    <ul class="uk-nav">
+      
+        
+          <li><a href="https://research-software.uit.no">Home</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/services">Services</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/about">About us</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/courses">Courses</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/resources">Resources</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/projects">Projects</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/blog">Blog</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/testimonials">Testimonials</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/contact">Contact</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+      <div class="markdown">
+        
+  <article class="uk-article">
+
+    <h1 class="uk-article-title"><a class="uk-link-reset" href="">Using Pixi and uv on a supercomputer</a></h1>
+
+    <p class="uk-article-meta">
+      
+        <h2>
+          A step-by-step guide on how to run Python code in an environment managed by Pixi or uv on a supercomputer
+        </h2>
+      
+      January 04, 2025
+      
+        - Radovan Bast
+      
+    </p>
+
+    <hr>
+
+    
+    
+        <ul>
+        
+            <li>
+                <a href="https://research-software.uit.no/blog/2025-pixi-and-uv/#motivation">Motivation</a>
+                
+            </li>
+        
+            <li>
+                <a href="https://research-software.uit.no/blog/2025-pixi-and-uv/#installing-a-conda-environment-with-pixi">Installing a Conda environment with Pixi</a>
+                
+            </li>
+        
+            <li>
+                <a href="https://research-software.uit.no/blog/2025-pixi-and-uv/#creating-a-virtual-environment-using-uv">Creating a virtual environment using uv</a>
+                
+            </li>
+        
+        </ul>
+    
+
+<img src="/blog/2025-pixi-and-uv.jpg" alt="Using the back-to-the-future meme: Pixi and uv? Your kids are gonna love it" width="500px"/>
+<h2 id="motivation">Motivation</h2>
+<p>Python projects often depend on a variety of libraries and tools.  The two
+standard ways to manage these dependencies are Conda environments (many tools
+exist to manage those) and pip (virtual environments).</p>
+<p>One difficulty on a supercomputer with a network file system is that installing
+dependencies can be slow and can create tens of thousands of files which can be
+slow to access. We need to be very careful where to write these files and where
+we manage cache files.</p>
+<p>In this blog post, I will show how to manage dependencies using
+<a href="https://pixi.sh/">Pixi</a> (modern take on managing Conda environments) and
+<a href="https://docs.astral.sh/uv/">uv</a> (modern take on managing virtual
+environments). <strong>These tools are modern, open source, cross-platform, super
+fast, and designed for ergonomic use and reproducibility.</strong> I believe that it
+is not too early to start using them.</p>
+<p>Reproducibility is what we want and therefore we will <strong>define our environments
+using files</strong> (<code>environment.yml</code> for Pixi and <code>requirements.txt</code> for uv).</p>
+<h2 id="installing-a-conda-environment-with-pixi">Installing a Conda environment with Pixi</h2>
+<p>My starting point are three files:</p>
+<pre style="background-color:#f5f5f5;color:#1f1f1f;"><code><span>.
+</span><span>├── environment.yml
+</span><span>├── example.py
+</span><span>└── run.sh
+</span><span>
+</span><span>0 directories, 3 files
+</span></code></pre>
+<p>My example <code>environment.yml</code> file happens to contain the following:</p>
+<pre data-lang="yaml" style="background-color:#f5f5f5;color:#1f1f1f;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span style="color:#7f902a;">name</span><span>: </span><span style="color:#d07711;">course
+</span><span style="color:#7f902a;">channels</span><span>:
+</span><span>  - </span><span style="color:#d07711;">conda-forge
+</span><span style="color:#7f902a;">dependencies</span><span>:
+</span><span>  - </span><span style="color:#d07711;">python &lt;= 3.12
+</span><span>  - </span><span style="color:#d07711;">jupyterlab
+</span><span>  - </span><span style="color:#d07711;">altair-all
+</span><span>  - </span><span style="color:#d07711;">vega_datasets
+</span><span>  - </span><span style="color:#d07711;">pandas
+</span><span>  - </span><span style="color:#d07711;">numpy
+</span><span>  - </span><span style="color:#d07711;">scalene
+</span><span>  - </span><span style="color:#d07711;">ruff
+</span><span>  - </span><span style="color:#d07711;">icecream
+</span></code></pre>
+<p>We don't need to really see the content of <code>example.py</code>. It is the file that I
+wish to run in the environment defined by <code>environment.yml</code>.</p>
+<p>The <code>run.sh</code> file is the interesting part:</p>
+<pre data-lang="bash" style="background-color:#f5f5f5;color:#1f1f1f;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#7f8989;">#!/usr/bin/env bash
+</span><span>
+</span><span style="color:#7f8989;">#SBATCH --account=nn9997k
+</span><span style="color:#7f8989;">#SBATCH --job-name=&#39;test&#39;
+</span><span style="color:#7f8989;">#SBATCH --time=0-00:10:00
+</span><span style="color:#7f8989;">#SBATCH --mem-per-cpu=2G
+</span><span style="color:#7f8989;">#SBATCH --ntasks=1
+</span><span>
+</span><span style="color:#7f8989;"># how to adapt this for your project:
+</span><span style="color:#7f8989;"># - change the account (above)
+</span><span style="color:#7f8989;"># - check and adjust PIXI_CACHE_DIR (below)
+</span><span style="color:#7f8989;"># - place this script in your project folder, not in your home
+</span><span>
+</span><span style="color:#7f8989;"># use safe bash settings
+</span><span style="color:#b39f04;">set </span><span style="color:#5597d6;">-euf -o</span><span> pipefail
+</span><span>
+</span><span style="color:#5597d6;">PIXI_VERSION</span><span style="color:#72ab00;">=</span><span style="color:#d07711;">&quot;v0.39.4&quot;
+</span><span>
+</span><span style="color:#7f8989;"># we have to re-define the cache directory otherwise it writes files to
+</span><span style="color:#7f8989;"># ~/.cache and fills home quota
+</span><span style="color:#7f8989;"># it would make sense to use one cache for all projects or your entire research
+</span><span style="color:#7f8989;"># group but don&#39;t put it in your home
+</span><span style="color:#7f8989;"># just for the sake of demonstration it is now placed in ${USERWORK} but
+</span><span style="color:#7f8989;"># project space would be better
+</span><span style="color:#668f14;">export </span><span style="color:#5597d6;">PIXI_CACHE_DIR</span><span style="color:#72ab00;">=</span><span style="color:#d07711;">${</span><span style="color:#acb3c2;">USERWORK</span><span style="color:#d07711;">}/cache
+</span><span>
+</span><span style="color:#7f8989;"># if pixi does not exist, download it
+</span><span style="color:#72ab00;">if </span><span style="color:#b39f04;">[ </span><span style="color:#72ab00;">! </span><span style="color:#5597d6;">-e</span><span> pixi </span><span style="color:#b39f04;">]</span><span style="color:#72ab00;">; then
+</span><span>    </span><span style="color:#5597d6;">wget -qO-</span><span> https://github.com/prefix-dev/pixi/releases/download/${</span><span style="color:#5597d6;">PIXI_VERSION</span><span>}/pixi-x86_64-unknown-linux-musl.tar.gz </span><span style="color:#72ab00;">| </span><span style="color:#5597d6;">tar -xz
+</span><span style="color:#72ab00;">fi
+</span><span>
+</span><span style="color:#7f8989;"># create pixi.toml from environment.yml
+</span><span style="color:#72ab00;">if </span><span style="color:#b39f04;">[ </span><span style="color:#72ab00;">! </span><span style="color:#5597d6;">-e</span><span> pixi.toml </span><span style="color:#b39f04;">]</span><span style="color:#72ab00;">; then
+</span><span>    </span><span style="color:#5597d6;">./pixi</span><span> init</span><span style="color:#5597d6;"> --import</span><span> environment.yml
+</span><span style="color:#72ab00;">fi
+</span><span>
+</span><span style="color:#7f8989;"># finally here is your example code running inside the environment
+</span><span style="color:#5597d6;">./pixi</span><span> run python example.py
+</span></code></pre>
+<p>I send it to the queue with <code>sbatch run.sh</code>. First time I run this script, it
+will download <code>pixi</code>, create a <code>pixi.toml</code> file from <code>environment.yml</code>, and
+install dependencies.</p>
+<p>The second time I run this script, it will not need to re-install dependencies
+and the run will take a minute less. In other words it is not a
+problem to have the installation as part of the job but you can also split this
+into two scripts: one for installation and one for running the code.</p>
+<p>This is how my folder looks after the run:</p>
+<pre style="background-color:#f5f5f5;color:#1f1f1f;"><code><span>.
+</span><span>├── environment.yml
+</span><span>├── example.py
+</span><span>├── .gitattributes
+</span><span>├── .gitignore
+</span><span>├── .pixi
+</span><span>├── pixi
+</span><span>├── pixi.lock
+</span><span>├── pixi.toml
+</span><span>├── run.sh
+</span><span>└── slurm-13566209.out
+</span><span>
+</span><span>1 directory, 9 files
+</span></code></pre>
+<p>The <code>.pixi</code> folder contains the environment. The environment is defined by
+<code>pixi.toml</code> and the lock file is <code>pixi.lock</code>.</p>
+<h2 id="creating-a-virtual-environment-using-uv">Creating a virtual environment using uv</h2>
+<p>Like in the previous example, I start with three files:</p>
+<pre style="background-color:#f5f5f5;color:#1f1f1f;"><code><span>.
+</span><span>├── example.py
+</span><span>├── requirements.txt
+</span><span>└── run.sh
+</span><span>
+</span><span>0 directories, 3 files
+</span></code></pre>
+<p>This time I will install dependencies defined in the file <code>requirements.txt</code>
+which happens to contain the following:</p>
+<pre style="background-color:#f5f5f5;color:#1f1f1f;"><code><span>numpy
+</span><span>matplotlib
+</span><span>pandas
+</span></code></pre>
+<p>The interesting part is again the <code>run.sh</code> file:</p>
+<pre data-lang="bash" style="background-color:#f5f5f5;color:#1f1f1f;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#7f8989;">#!/usr/bin/env bash
+</span><span>
+</span><span style="color:#7f8989;">#SBATCH --account=nn9997k
+</span><span style="color:#7f8989;">#SBATCH --job-name=&#39;test&#39;
+</span><span style="color:#7f8989;">#SBATCH --time=0-00:10:00
+</span><span style="color:#7f8989;">#SBATCH --mem-per-cpu=2G
+</span><span style="color:#7f8989;">#SBATCH --ntasks=1
+</span><span>
+</span><span style="color:#7f8989;"># how to adapt this for your project:
+</span><span style="color:#7f8989;"># - change the account (above)
+</span><span style="color:#7f8989;"># - check and adjust UV_CACHE_DIR (below)
+</span><span style="color:#7f8989;"># - place this script in your project folder, not in your home
+</span><span>
+</span><span style="color:#7f8989;"># use safe bash settings
+</span><span style="color:#b39f04;">set </span><span style="color:#5597d6;">-euf -o</span><span> pipefail
+</span><span>
+</span><span style="color:#5597d6;">UV_VERSION</span><span style="color:#72ab00;">=</span><span style="color:#d07711;">&quot;0.5.14&quot;
+</span><span>
+</span><span style="color:#7f8989;"># we have to re-define the cache directory otherwise it writes files to
+</span><span style="color:#7f8989;"># ~/.cache and fills home quota
+</span><span style="color:#7f8989;"># it would make sense to use one cache for all projects or your entire research
+</span><span style="color:#7f8989;"># group but don&#39;t put it in your home
+</span><span style="color:#7f8989;"># just for the sake of demonstration it is now placed in ${USERWORK} but
+</span><span style="color:#7f8989;"># project space would be better
+</span><span style="color:#668f14;">export </span><span style="color:#5597d6;">UV_CACHE_DIR</span><span style="color:#72ab00;">=</span><span style="color:#d07711;">${</span><span style="color:#acb3c2;">USERWORK</span><span style="color:#d07711;">}/cache
+</span><span>
+</span><span style="color:#7f8989;"># if uv does not exist, download it
+</span><span style="color:#72ab00;">if </span><span style="color:#b39f04;">[ </span><span style="color:#72ab00;">! </span><span style="color:#5597d6;">-e</span><span> uv </span><span style="color:#b39f04;">]</span><span style="color:#72ab00;">; then
+</span><span>    </span><span style="color:#5597d6;">wget -q</span><span> https://github.com/astral-sh/uv/releases/download/${</span><span style="color:#5597d6;">UV_VERSION</span><span>}/uv-x86_64-unknown-linux-musl.tar.gz</span><span style="color:#5597d6;"> -O</span><span> - </span><span style="color:#72ab00;">| </span><span style="color:#5597d6;">tar</span><span> xz</span><span style="color:#5597d6;"> --strip-components</span><span style="color:#72ab00;">=</span><span>1</span><span style="color:#5597d6;"> -C</span><span> . uv-x86_64-unknown-linux-musl/uv
+</span><span style="color:#72ab00;">fi
+</span><span>
+</span><span style="color:#7f8989;"># create a fresh virtual environment unless it exists
+</span><span style="color:#72ab00;">if </span><span style="color:#b39f04;">[ </span><span style="color:#72ab00;">! </span><span style="color:#5597d6;">-d</span><span> venv </span><span style="color:#b39f04;">]</span><span style="color:#72ab00;">; then
+</span><span>    </span><span style="color:#5597d6;">./uv</span><span> venv venv
+</span><span style="color:#72ab00;">fi
+</span><span>
+</span><span style="color:#7f8989;"># activate the environment
+</span><span style="color:#b39f04;">source</span><span> venv/bin/activate
+</span><span>
+</span><span style="color:#7f8989;"># synchronize environment with requirements.txt
+</span><span style="color:#7f8989;"># in other words: install dependencies into the venv
+</span><span style="color:#5597d6;">./uv</span><span> pip sync requirements.txt
+</span><span>
+</span><span style="color:#7f8989;"># run the example code
+</span><span style="color:#5597d6;">./uv</span><span> run python example.py
+</span></code></pre>
+<p>I send it to the queue with <code>sbatch run.sh</code>. First time I run this script, it
+will download <code>uv</code>, create the virtual environment <code>venv</code>, and install
+dependencies defined in <code>requirements.txt</code>.</p>
+<p>The second time I run this script, it will not need to re-install dependencies
+and the run will take a minute less. In other words it is not a
+problem to have the installation as part of the job but you can also split this
+into two scripts: one for installation and one for running the code.</p>
+<p>This is how my folder looks after the run:</p>
+<pre style="background-color:#f5f5f5;color:#1f1f1f;"><code><span>.
+</span><span>├── example.py
+</span><span>├── requirements.txt
+</span><span>├── run.sh
+</span><span>├── slurm-13566280.out
+</span><span>├── uv
+</span><span>└── venv
+</span><span>
+</span><span>1 directory, 5 files
+</span></code></pre>
+<p>The <code>venv</code> folder contains the environment. It is good that the environment is close to the calculation
+since both belong together to make the calculation reproducible.</p>
+
+
+  </article>
+
+      </div>
+
+      <hr>
+
+      <ul class="uk-iconnav">
+  <li class="uk-margin-large-right">
+    <a href="mailto:rse@uit.no" uk-icon="icon: mail">rse@uit.no</a>
+  </li>
+  <li class="uk-margin-large-right">
+    <a href="https://github.com/uit-no/research-software.uit.no" target="_blank" uk-icon="icon: github">github.com/uit-no/research-software.uit.no</a>
+  </li>
+</ul>
+
+
+    </div>
+  </body>
+</html>

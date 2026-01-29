@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Research software engineering group at UiT</title>
+    <link rel="shortcut icon" href="https://research-software.uit.no/img/favicon.ico">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.23.12/dist/css/uikit.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.12/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.12/dist/js/uikit-icons.min.js"></script>
+
+    
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/uit-no/rse/main/content/logo1.png" />
+
+
+
+  <meta name="description" content="A step-by-step guide on how we built it inside a SingularityCE&#x2F;Apptainer container" />
+  <meta name="twitter:description" content="A step-by-step guide on how we built it inside a SingularityCE&#x2F;Apptainer container" />
+
+
+
+  <meta name="twitter:title" content="Building SNOWPACK in a container" />
+
+
+
+    <link href="https://research-software.uit.no/style.css" rel="stylesheet">
+    <link href="https://research-software.uit.no/fonts.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="uk-container uk-container-small uk-margin-large-bottom">
+
+      
+
+<nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+  <ul class="uk-navbar-nav uk-visible@s">
+    
+      
+        <li><a href="https://research-software.uit.no">Home</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/services">Services</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/about">About us</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/courses">Courses</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/resources">Resources</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/projects">Projects</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/blog">Blog</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/testimonials">Testimonials</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/contact">Contact</a></li>
+      
+    
+  </ul>
+  <a href="#" class="uk-navbar-toggle uk-hidden@s" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
+</nav>
+
+<div id="sidenav" uk-offcanvas="flip: true" class="uk-offcanvas">
+  <div class="uk-offcanvas-bar">
+    <ul class="uk-nav">
+      
+        
+          <li><a href="https://research-software.uit.no">Home</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/services">Services</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/about">About us</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/courses">Courses</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/resources">Resources</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/projects">Projects</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/blog">Blog</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/testimonials">Testimonials</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/contact">Contact</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+      <div class="markdown">
+        
+  <article class="uk-article">
+
+    <h1 class="uk-article-title"><a class="uk-link-reset" href="">Building SNOWPACK in a container</a></h1>
+
+    <p class="uk-article-meta">
+      
+        <h2>
+          A step-by-step guide on how we built it inside a SingularityCE&#x2F;Apptainer container
+        </h2>
+      
+      November 02, 2023
+      
+        - Radovan Bast
+      
+    </p>
+
+    <hr>
+
+    <p>For a project with the <a href="https://en.uit.no/enhet/ig">Department of Geosciences</a>
+at <a href="https://uit.no/">UiT</a> we needed to build and test
+<a href="https://snowpack.slf.ch/">SNOWPACK</a>, an open source snowpack and ground
+surface model.</p>
+<h2 id="tools">Tools</h2>
+<p>We decided to do this using a <a href="https://sylabs.io/singularity/">SingularityCE</a>/<a href="https://apptainer.org/">Apptainer</a> container
+with the motivation:</p>
+<ul>
+<li>It encourages us to document the installation process.</li>
+<li>We have a baseline which we can refer to from different computers and
+operating systems.</li>
+<li>Later, once we decide to move computations to a cluster/supercomputer, it
+will be easier to deploy there having it already containerized.</li>
+</ul>
+<h2 id="building-the-container">Building the container</h2>
+<p>We use the following container definition file and call this file <code>snowpack.def</code>:</p>
+<pre style="background-color:#f5f5f5;color:#1f1f1f;"><code><span>Bootstrap: docker
+</span><span>From: ubuntu:22.04
+</span><span>
+</span><span>%post
+</span><span>    export DEBIAN_FRONTEND=noninteractive
+</span><span>    apt-get update -y
+</span><span>    apt-get install -y wget
+</span><span>
+</span><span>    wget https://gitlabext.wsl.ch/snow-models/snowpack/-/package_files/428/download -O Snowpack-3.6.0-x86_64.deb
+</span><span>    dpkg -i Snowpack-3.6.0-x86_64.deb
+</span><span>
+</span><span>%runscript
+</span><span>    snowpack $@
+</span><span>
+</span><span>%help
+</span><span>    Example usage:
+</span><span>    $ ./snowpack.sif -c io_res1exp.ini -e 1996-06-17T00:00
+</span></code></pre>
+<p>From the above definition file we build the image <code>snowpack.sif</code>, either using <code>singularity</code> or
+<code>apptainer</code> (at the time of writing both are equivalent in functionality for
+our purposes here):</p>
+<pre data-lang="bash" style="background-color:#f5f5f5;color:#1f1f1f;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#5597d6;">singularity</span><span> build</span><span style="color:#5597d6;"> --fakeroot</span><span> snowpack.sif snowpack.def
+</span></code></pre>
+<p>The generated image <code>snowpack.sif</code> can now be moved to other computers that
+have
+<a href="https://sylabs.io/singularity/">SingularityCE</a>/<a href="https://apptainer.org/">Apptainer</a>
+installed and run there.</p>
+<h2 id="example-run">Example run</h2>
+<p>First we need to download a configuration file and two input files:</p>
+<pre data-lang="bash" style="background-color:#f5f5f5;color:#1f1f1f;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#5597d6;">wget</span><span> https://code.wsl.ch/snow-models/snowpack/-/raw/master/doc/examples/cfgfiles/io_res1exp.ini
+</span><span>
+</span><span style="color:#5597d6;">mkdir -p</span><span> input output
+</span><span>
+</span><span style="color:#5597d6;">wget</span><span> https://code.wsl.ch/snow-models/snowpack/-/raw/master/doc/examples/input/MST96.sno</span><span style="color:#5597d6;">  -O</span><span> input/MST96.sno
+</span><span style="color:#5597d6;">wget</span><span> https://code.wsl.ch/snow-models/snowpack/-/raw/master/doc/examples/input/MST96.smet</span><span style="color:#5597d6;"> -O</span><span> input/MST96.smet
+</span></code></pre>
+<p>With the above commands, our directory now looks like this:</p>
+<pre style="background-color:#f5f5f5;color:#1f1f1f;"><code><span>.
+</span><span>├── input
+</span><span>│   ├── MST96.smet
+</span><span>│   └── MST96.sno
+</span><span>├── io_res1exp.ini
+</span><span>├── output
+</span><span>├── snowpack.def
+</span><span>└── snowpack.sif
+</span></code></pre>
+<p>Now we can run the example</p>
+<pre data-lang="bash" style="background-color:#f5f5f5;color:#1f1f1f;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#5597d6;">./snowpack.sif -c</span><span> io_res1exp.ini</span><span style="color:#5597d6;"> -e</span><span> 1996-06-17T00:00
+</span></code></pre>
+<p>This generates the following output:</p>
+<pre style="background-color:#f5f5f5;color:#1f1f1f;"><code><span>[i] [2023-11-02T10:48:57] ---&gt; Start SNOWPACK in RESEARCH mode
+</span><span>[i] []                 snowpack compiled on Sep  1 2020 at 22:29:53
+</span><span>[i] []                 Experiment : res
+</span><span>[i] []                 Output dir : ./output
+</span><span>
+</span><span>[i] []                 Run on meteo station MST96
+</span><span>[i] []                 Reading snow cover data for station MST96
+</span><span>[i] []                 Finished initializing station MST96
+</span><span>[i] []                 No file ./output/MST96_res.ini to erase
+</span><span>[i] [2023-11-02T10:48:57] ---&gt; Start simulation for MST96 on 1995-11-01T00:15:00+01:00
+</span><span>[i] []                 End date specified by user: 1996-06-17T00:00:00+01:00
+</span><span>[i] []                 Integration step length: 15.000000 min
+</span><span>[i] [1995-11-16T00:00:00] ---&gt; Station MST96 (1 slope(s)): advanced to 16.11.1995 00:00:00 station time
+</span><span>[i] [1995-12-01T00:00:00] ---&gt; Station MST96 (1 slope(s)): advanced to 01.12.1995 00:00:00 station time
+</span><span>[i] [1995-12-16T00:00:00] ---&gt; Station MST96 (1 slope(s)): advanced to 16.12.1995 00:00:00 station time
+</span><span>[i] [1995-12-31T00:00:00] ---&gt; Station MST96 (1 slope(s)): advanced to 31.12.1995 00:00:00 station time
+</span><span>[i] [1996-01-15T00:00:00] ---&gt; Station MST96 (1 slope(s)): advanced to 15.01.1996 00:00:00 station time
+</span><span>[i] [1996-01-30T00:00:00] ---&gt; Station MST96 (1 slope(s)): advanced to 30.01.1996 00:00:00 station time
+</span><span>[i] [1996-02-14T00:00:00] ---&gt; Station MST96 (1 slope(s)): advanced to 14.02.1996 00:00:00 station time
+</span><span>[i] [1996-02-29T00:00:00] ---&gt; Station MST96 (1 slope(s)): advanced to 29.02.1996 00:00:00 station time
+</span><span>[i] [1996-03-15T00:00:00] ---&gt; Station MST96 (1 slope(s)): advanced to 15.03.1996 00:00:00 station time
+</span><span>[i] [1996-03-30T00:00:00] ---&gt; Station MST96 (1 slope(s)): advanced to 30.03.1996 00:00:00 station time
+</span><span>[i] [1996-04-14T00:00:00] ---&gt; Station MST96 (1 slope(s)): advanced to 14.04.1996 00:00:00 station time
+</span><span>[i] [1996-04-29T00:00:00] ---&gt; Station MST96 (1 slope(s)): advanced to 29.04.1996 00:00:00 station time
+</span><span>[i] [1996-05-14T00:00:00] ---&gt; Station MST96 (1 slope(s)): advanced to 14.05.1996 00:00:00 station time
+</span><span>[i] [1996-05-29T00:00:00] ---&gt; Station MST96 (1 slope(s)): advanced to 29.05.1996 00:00:00 station time
+</span><span>[i] [1996-06-13T00:00:00] ---&gt; Station MST96 (1 slope(s)): advanced to 13.06.1996 00:00:00 station time
+</span><span>[i] []                 Total time to read meteo data : 0.304980 s
+</span><span>[i] []                 Runtime for station MST96: 9.455373 s
+</span><span>
+</span><span>[i] []                 STARTED  running SLF RESEARCH Snowpack Model on Thu Nov  2 10:48:57 2023
+</span><span>                       ========================================================================
+</span><span>                       FINISHED running SLF RESEARCH Snowpack Model on Thu Nov  2 10:49:07 2023
+</span></code></pre>
+
+
+  </article>
+
+      </div>
+
+      <hr>
+
+      <ul class="uk-iconnav">
+  <li class="uk-margin-large-right">
+    <a href="mailto:rse@uit.no" uk-icon="icon: mail">rse@uit.no</a>
+  </li>
+  <li class="uk-margin-large-right">
+    <a href="https://github.com/uit-no/research-software.uit.no" target="_blank" uk-icon="icon: github">github.com/uit-no/research-software.uit.no</a>
+  </li>
+</ul>
+
+
+    </div>
+  </body>
+</html>

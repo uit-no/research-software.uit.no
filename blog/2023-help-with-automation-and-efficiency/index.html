@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Research software engineering group at UiT</title>
+    <link rel="shortcut icon" href="https://research-software.uit.no/img/favicon.ico">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.23.12/dist/css/uikit.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.12/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.12/dist/js/uikit-icons.min.js"></script>
+
+    
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/uit-no/rse/main/content/logo1.png" />
+
+
+
+  <meta name="description" content="Some lessons learned from working with R scripts used in arctic and marine biology research" />
+  <meta name="twitter:description" content="Some lessons learned from working with R scripts used in arctic and marine biology research" />
+
+
+
+  <meta name="twitter:title" content="Help with automation and efficiency with an R project" />
+
+
+
+    <link href="https://research-software.uit.no/style.css" rel="stylesheet">
+    <link href="https://research-software.uit.no/fonts.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="uk-container uk-container-small uk-margin-large-bottom">
+
+      
+
+<nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+  <ul class="uk-navbar-nav uk-visible@s">
+    
+      
+        <li><a href="https://research-software.uit.no">Home</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/services">Services</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/about">About us</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/courses">Courses</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/resources">Resources</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/projects">Projects</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/blog">Blog</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/testimonials">Testimonials</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/contact">Contact</a></li>
+      
+    
+  </ul>
+  <a href="#" class="uk-navbar-toggle uk-hidden@s" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
+</nav>
+
+<div id="sidenav" uk-offcanvas="flip: true" class="uk-offcanvas">
+  <div class="uk-offcanvas-bar">
+    <ul class="uk-nav">
+      
+        
+          <li><a href="https://research-software.uit.no">Home</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/services">Services</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/about">About us</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/courses">Courses</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/resources">Resources</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/projects">Projects</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/blog">Blog</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/testimonials">Testimonials</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/contact">Contact</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+      <div class="markdown">
+        
+  <article class="uk-article">
+
+    <h1 class="uk-article-title"><a class="uk-link-reset" href="">Help with automation and efficiency with an R project</a></h1>
+
+    <p class="uk-article-meta">
+      
+        <h2>
+          Some lessons learned from working with R scripts used in arctic and marine biology research
+        </h2>
+      
+      May 14, 2023
+      
+        - Radovan Bast
+      
+    </p>
+
+    <hr>
+
+    <p>In this project we have worked on five issues which are very typical for many R
+and Python projects and which we consider "the bread and butter" of our
+research software engineering support work:</p>
+
+    
+        <ul>
+        
+            <li>
+                <a href="https://research-software.uit.no/blog/2023-help-with-automation-and-efficiency/#too-much-manual-work-is-needed-to-process-each-of-the-many-analyses">Too much manual work is needed to process each of the many analyses</a>
+                
+            </li>
+        
+            <li>
+                <a href="https://research-software.uit.no/blog/2023-help-with-automation-and-efficiency/#code-repetition">Code repetition</a>
+                
+            </li>
+        
+            <li>
+                <a href="https://research-software.uit.no/blog/2023-help-with-automation-and-efficiency/#memory-bottleneck">Memory bottleneck</a>
+                
+            </li>
+        
+            <li>
+                <a href="https://research-software.uit.no/blog/2023-help-with-automation-and-efficiency/#code-takes-too-long-to-run">Code takes too long to run</a>
+                
+            </li>
+        
+            <li>
+                <a href="https://research-software.uit.no/blog/2023-help-with-automation-and-efficiency/#reproducibility">Reproducibility</a>
+                
+            </li>
+        
+        </ul>
+    
+
+<p>Below we will summarize our steps, lessons learned, and recommendations for
+follow-up steps.</p>
+<h2 id="too-much-manual-work-is-needed-to-process-each-of-the-many-analyses">Too much manual work is needed to process each of the many analyses</h2>
+<p>The analyses have to be carried out by varying a number of parameters but for
+each new variation a new script was created and manually adjusted. We have
+addressed this by first moving all variables to the top of the script. A good
+next step will be to introduce a command-line interface (example is below) so
+that parameters can be changed without changing the code.</p>
+<p>Another problem was that the consistency of data was previously verified
+visually and not automatically. We have reformulated this as a function and now
+the code can check this "by itself":</p>
+<pre data-lang="r" style="background-color:#f5f5f5;color:#1f1f1f;" class="language-r "><code class="language-r" data-lang="r"><span style="color:#b39f04;">library</span><span>(Seurat)
+</span><span>
+</span><span style="color:#7f8989;"># function which checks whether ident is set correctly
+</span><span style="color:#7f8989;"># correctly here means that the values of the seurat_clusters
+</span><span style="color:#7f8989;"># are all represented in the levels of the integrated_samples
+</span><span style="color:#c23f31;">check_ident </span><span style="color:#72ab00;">&lt;- </span><span style="color:#668f14;">function</span><span>(</span><span style="color:#5597d6;">seurat_object</span><span>) {
+</span><span>    unique_levels </span><span style="color:#72ab00;">&lt;- </span><span style="color:#b39f04;">unique</span><span>(</span><span style="color:#b39f04;">as.numeric</span><span>(</span><span style="color:#b39f04;">levels</span><span>(integrated_samples)))
+</span><span>    unique_clusters </span><span style="color:#72ab00;">&lt;- </span><span style="color:#b39f04;">unique</span><span>(integrated_samples</span><span style="color:#72ab00;">@</span><span>meta.data</span><span style="color:#72ab00;">$</span><span>seurat_clusters)
+</span><span> 
+</span><span>    </span><span style="color:#72ab00;">if </span><span>(</span><span style="color:#72ab00;">!</span><span style="color:#b39f04;">all</span><span>(unique_clusters </span><span style="color:#72ab00;">%in%</span><span> unique_levels)) {
+</span><span>        </span><span style="color:#b39f04;">stop</span><span>(</span><span style="color:#d07711;">&quot;ERROR: Ident is not correctly set up&quot;</span><span>)
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#7f8989;"># load the sample
+</span><span>integrated_samples </span><span style="color:#72ab00;">&lt;- </span><span style="color:#b39f04;">readRDS</span><span>(</span><span style="color:#d07711;">&quot;sample.rds&quot;</span><span>)
+</span><span>
+</span><span style="color:#7f8989;"># if ident is not set correctly, script will stop here
+</span><span style="color:#5597d6;">check_ident</span><span>(integrated_samples)
+</span></code></pre>
+<h2 id="code-repetition">Code repetition</h2>
+<p>The code to create a grid of plots was repetitive:</p>
+<pre data-lang="r" style="background-color:#f5f5f5;color:#1f1f1f;" class="language-r "><code class="language-r" data-lang="r"><span>plot </span><span style="color:#72ab00;">&lt;-</span><span> cowplot::</span><span style="color:#5597d6;">plot_grid</span><span>(
+</span><span>    scater::</span><span style="color:#5597d6;">plotReducedDim</span><span>(cluster_0_SCE, </span><span style="color:#d07711;">&#39;Method 1&#39;</span><span>, </span><span style="color:#5597d6;">colour_by </span><span style="color:#72ab00;">= </span><span style="color:#b39f04;">I</span><span>(clusters</span><span style="color:#72ab00;">$</span><span>clusters[, </span><span style="color:#d07711;">&#39;k.10_cluster&#39;</span><span>])) </span><span style="color:#72ab00;">+ </span><span style="color:#5597d6;">ggtitle</span><span>(</span><span style="color:#d07711;">&#39;k = 10&#39;</span><span>),
+</span><span>    scater::</span><span style="color:#5597d6;">plotReducedDim</span><span>(cluster_0_SCE, </span><span style="color:#d07711;">&#39;Method 1&#39;</span><span>, </span><span style="color:#5597d6;">colour_by </span><span style="color:#72ab00;">= </span><span style="color:#b39f04;">I</span><span>(clusters</span><span style="color:#72ab00;">$</span><span>clusters[, </span><span style="color:#d07711;">&#39;k.20_cluster&#39;</span><span>])) </span><span style="color:#72ab00;">+ </span><span style="color:#5597d6;">ggtitle</span><span>(</span><span style="color:#d07711;">&#39;k = 20&#39;</span><span>),
+</span><span>    scater::</span><span style="color:#5597d6;">plotReducedDim</span><span>(cluster_0_SCE, </span><span style="color:#d07711;">&#39;Method 1&#39;</span><span>, </span><span style="color:#5597d6;">colour_by </span><span style="color:#72ab00;">= </span><span style="color:#b39f04;">I</span><span>(clusters</span><span style="color:#72ab00;">$</span><span>clusters[, </span><span style="color:#d07711;">&#39;k.30_cluster&#39;</span><span>])) </span><span style="color:#72ab00;">+ </span><span style="color:#5597d6;">ggtitle</span><span>(</span><span style="color:#d07711;">&#39;k = 30&#39;</span><span>),
+</span><span>    scater::</span><span style="color:#5597d6;">plotReducedDim</span><span>(cluster_0_SCE, </span><span style="color:#d07711;">&#39;Method 1&#39;</span><span>, </span><span style="color:#5597d6;">colour_by </span><span style="color:#72ab00;">= </span><span style="color:#b39f04;">I</span><span>(clusters</span><span style="color:#72ab00;">$</span><span>clusters[, </span><span style="color:#d07711;">&#39;k.40_cluster&#39;</span><span>])) </span><span style="color:#72ab00;">+ </span><span style="color:#5597d6;">ggtitle</span><span>(</span><span style="color:#d07711;">&#39;k = 40&#39;</span><span>),
+</span><span>    scater::</span><span style="color:#5597d6;">plotReducedDim</span><span>(cluster_0_SCE, </span><span style="color:#d07711;">&#39;Method 1&#39;</span><span>, </span><span style="color:#5597d6;">colour_by </span><span style="color:#72ab00;">= </span><span style="color:#b39f04;">I</span><span>(clusters</span><span style="color:#72ab00;">$</span><span>clusters[, </span><span style="color:#d07711;">&#39;k.50_cluster&#39;</span><span>])) </span><span style="color:#72ab00;">+ </span><span style="color:#5597d6;">ggtitle</span><span>(</span><span style="color:#d07711;">&#39;k = 50&#39;</span><span>),
+</span><span>    </span><span style="color:#5597d6;">nrow </span><span style="color:#72ab00;">= </span><span style="color:#b3933a;">2</span><span>, </span><span style="color:#5597d6;">ncol </span><span style="color:#72ab00;">= </span><span style="color:#b3933a;">3</span><span>, </span><span style="color:#5597d6;">rel_heights </span><span style="color:#72ab00;">= </span><span style="color:#b39f04;">c</span><span>(</span><span style="color:#b3933a;">0.5</span><span>, </span><span style="color:#b3933a;">0.5</span><span>)
+</span><span>    )
+</span><span>plot
+</span><span>
+</span><span>plot </span><span style="color:#72ab00;">&lt;-</span><span> cowplot::</span><span style="color:#5597d6;">plot_grid</span><span>(
+</span><span>    scater::</span><span style="color:#5597d6;">plotReducedDim</span><span>(cluster_0_SCE, </span><span style="color:#d07711;">&#39;Method 2&#39;</span><span>, </span><span style="color:#5597d6;">colour_by </span><span style="color:#72ab00;">= </span><span style="color:#b39f04;">I</span><span>(clusters</span><span style="color:#72ab00;">$</span><span>clusters[, </span><span style="color:#d07711;">&#39;k.10_cluster&#39;</span><span>])) </span><span style="color:#72ab00;">+ </span><span style="color:#5597d6;">ggtitle</span><span>(</span><span style="color:#d07711;">&#39;k = 10&#39;</span><span>),
+</span><span>    scater::</span><span style="color:#5597d6;">plotReducedDim</span><span>(cluster_0_SCE, </span><span style="color:#d07711;">&#39;Method 2&#39;</span><span>, </span><span style="color:#5597d6;">colour_by </span><span style="color:#72ab00;">= </span><span style="color:#b39f04;">I</span><span>(clusters</span><span style="color:#72ab00;">$</span><span>clusters[, </span><span style="color:#d07711;">&#39;k.20_cluster&#39;</span><span>])) </span><span style="color:#72ab00;">+ </span><span style="color:#5597d6;">ggtitle</span><span>(</span><span style="color:#d07711;">&#39;k = 20&#39;</span><span>),
+</span><span>    scater::</span><span style="color:#5597d6;">plotReducedDim</span><span>(cluster_0_SCE, </span><span style="color:#d07711;">&#39;Method 2&#39;</span><span>, </span><span style="color:#5597d6;">colour_by </span><span style="color:#72ab00;">= </span><span style="color:#b39f04;">I</span><span>(clusters</span><span style="color:#72ab00;">$</span><span>clusters[, </span><span style="color:#d07711;">&#39;k.30_cluster&#39;</span><span>])) </span><span style="color:#72ab00;">+ </span><span style="color:#5597d6;">ggtitle</span><span>(</span><span style="color:#d07711;">&#39;k = 30&#39;</span><span>),
+</span><span>    scater::</span><span style="color:#5597d6;">plotReducedDim</span><span>(cluster_0_SCE, </span><span style="color:#d07711;">&#39;Method 2&#39;</span><span>, </span><span style="color:#5597d6;">colour_by </span><span style="color:#72ab00;">= </span><span style="color:#b39f04;">I</span><span>(clusters</span><span style="color:#72ab00;">$</span><span>clusters[, </span><span style="color:#d07711;">&#39;k.40_cluster&#39;</span><span>])) </span><span style="color:#72ab00;">+ </span><span style="color:#5597d6;">ggtitle</span><span>(</span><span style="color:#d07711;">&#39;k = 40&#39;</span><span>),
+</span><span>    scater::</span><span style="color:#5597d6;">plotReducedDim</span><span>(cluster_0_SCE, </span><span style="color:#d07711;">&#39;Method 2&#39;</span><span>, </span><span style="color:#5597d6;">colour_by </span><span style="color:#72ab00;">= </span><span style="color:#b39f04;">I</span><span>(clusters</span><span style="color:#72ab00;">$</span><span>clusters[, </span><span style="color:#d07711;">&#39;k.50_cluster&#39;</span><span>])) </span><span style="color:#72ab00;">+ </span><span style="color:#5597d6;">ggtitle</span><span>(</span><span style="color:#d07711;">&#39;k = 50&#39;</span><span>),
+</span><span>    </span><span style="color:#5597d6;">nrow </span><span style="color:#72ab00;">= </span><span style="color:#b3933a;">2</span><span>, </span><span style="color:#5597d6;">ncol </span><span style="color:#72ab00;">= </span><span style="color:#b3933a;">3</span><span>, </span><span style="color:#5597d6;">rel_heights </span><span style="color:#72ab00;">= </span><span style="color:#b39f04;">c</span><span>(</span><span style="color:#b3933a;">0.5</span><span>, </span><span style="color:#b3933a;">0.5</span><span>))
+</span><span>plot
+</span></code></pre>
+<p>We have helped rewriting this to:</p>
+<pre data-lang="r" style="background-color:#f5f5f5;color:#1f1f1f;" class="language-r "><code class="language-r" data-lang="r"><span style="color:#7f8989;"># explanation why a for loop does not work
+</span><span style="color:#7f8989;"># https://stackoverflow.com/questions/39799886/r-assigning-ggplot-objects-to-list-in-loop
+</span><span>
+</span><span>k_values </span><span style="color:#72ab00;">&lt;- </span><span style="color:#b39f04;">c</span><span>(</span><span style="color:#b3933a;">10</span><span>, </span><span style="color:#b3933a;">20</span><span>, </span><span style="color:#b3933a;">30</span><span>, </span><span style="color:#b3933a;">40</span><span>, </span><span style="color:#b3933a;">50</span><span>)
+</span><span>
+</span><span>plot_list </span><span style="color:#72ab00;">= </span><span style="color:#b39f04;">lapply</span><span>(k_values, </span><span style="color:#668f14;">function</span><span>(</span><span style="color:#5597d6;">k</span><span>)
+</span><span>    scater::</span><span style="color:#5597d6;">plotReducedDim</span><span>(cluster_SCE, </span><span style="color:#d07711;">&quot;Method 1&quot;</span><span>, </span><span style="color:#5597d6;">colour_by </span><span style="color:#72ab00;">= </span><span style="color:#b39f04;">I</span><span>(clusters</span><span style="color:#72ab00;">$</span><span>clusters[, </span><span style="color:#b39f04;">paste0</span><span>(</span><span style="color:#d07711;">&quot;k.&quot;</span><span>, k, </span><span style="color:#d07711;">&quot;_cluster&quot;</span><span>)])) </span><span style="color:#72ab00;">+
+</span><span>    </span><span style="color:#5597d6;">ggtitle</span><span>(</span><span style="color:#b39f04;">paste0</span><span>(</span><span style="color:#d07711;">&quot;k = &quot;</span><span>, k))
+</span><span>    )
+</span><span>plot_grid </span><span style="color:#72ab00;">&lt;-</span><span> cowplot::</span><span style="color:#5597d6;">plot_grid</span><span>(</span><span style="color:#5597d6;">plotlist </span><span style="color:#72ab00;">=</span><span> plot_list, </span><span style="color:#5597d6;">nrow </span><span style="color:#72ab00;">= </span><span style="color:#b3933a;">2</span><span>, </span><span style="color:#5597d6;">ncol </span><span style="color:#72ab00;">= </span><span style="color:#b3933a;">3</span><span>, </span><span style="color:#5597d6;">rel_heights </span><span style="color:#72ab00;">= </span><span style="color:#b39f04;">c</span><span>(</span><span style="color:#b3933a;">0.5</span><span>, </span><span style="color:#b3933a;">0.5</span><span>))
+</span><span>plot_grid
+</span><span>
+</span><span>plot_list </span><span style="color:#72ab00;">= </span><span style="color:#b39f04;">lapply</span><span>(k_values, </span><span style="color:#668f14;">function</span><span>(</span><span style="color:#5597d6;">k</span><span>)
+</span><span>    scater::</span><span style="color:#5597d6;">plotReducedDim</span><span>(cluster_SCE, </span><span style="color:#d07711;">&quot;Method 2&quot;</span><span>, </span><span style="color:#5597d6;">colour_by </span><span style="color:#72ab00;">= </span><span style="color:#b39f04;">I</span><span>(clusters</span><span style="color:#72ab00;">$</span><span>clusters[, </span><span style="color:#b39f04;">paste0</span><span>(</span><span style="color:#d07711;">&quot;k.&quot;</span><span>, k, </span><span style="color:#d07711;">&quot;_cluster&quot;</span><span>)])) </span><span style="color:#72ab00;">+
+</span><span>    </span><span style="color:#5597d6;">ggtitle</span><span>(</span><span style="color:#b39f04;">paste0</span><span>(</span><span style="color:#d07711;">&quot;k = &quot;</span><span>, k))
+</span><span>    )
+</span><span>plot_grid </span><span style="color:#72ab00;">&lt;-</span><span> cowplot::</span><span style="color:#5597d6;">plot_grid</span><span>(</span><span style="color:#5597d6;">plotlist </span><span style="color:#72ab00;">=</span><span> plot_list, </span><span style="color:#5597d6;">nrow </span><span style="color:#72ab00;">= </span><span style="color:#b3933a;">2</span><span>, </span><span style="color:#5597d6;">ncol </span><span style="color:#72ab00;">= </span><span style="color:#b3933a;">3</span><span>, </span><span style="color:#5597d6;">rel_heights </span><span style="color:#72ab00;">= </span><span style="color:#b39f04;">c</span><span>(</span><span style="color:#b3933a;">0.5</span><span>, </span><span style="color:#b3933a;">0.5</span><span>))
+</span><span>plot_grid
+</span></code></pre>
+<h2 id="memory-bottleneck">Memory bottleneck</h2>
+<p>One of the scripts fills up the memory (over 30 GB).  Using <a href="https://bast.github.io/R-and-Python/profiling/">memory
+profiling</a> we have identified
+that this happens when de-duplicating records with duplicate row names.</p>
+<p>This is currently done like this:</p>
+<pre data-lang="r" style="background-color:#f5f5f5;color:#1f1f1f;" class="language-r "><code class="language-r" data-lang="r"><span>duplicated_rows </span><span style="color:#72ab00;">&lt;- </span><span style="color:#b39f04;">duplicated</span><span>(</span><span style="color:#b39f04;">rownames</span><span>(data))
+</span><span>
+</span><span>data </span><span style="color:#72ab00;">&lt;-</span><span> data[</span><span style="color:#72ab00;">!</span><span>duplicated_rows, ]
+</span></code></pre>
+<p><a href="https://www.repository.cam.ac.uk/handle/1810/340518">The dataset</a> is
+relatively large and the above step fills the memory, fills the swap disk and
+then the script crashes.</p>
+<p>As next steps we recommend to try <a href="https://dplyr.tidyverse.org/">dplyr</a> to
+filter the duplicate rows and/or to process the huge dataset not in one go but
+in batches and to later recombine results.</p>
+<h2 id="code-takes-too-long-to-run">Code takes too long to run</h2>
+<p>One analysis script takes over a week to run and this is prohibitively long not
+only on a laptop but also on a supercomputing cluster. The time consuming step
+happens inside a triple-loop (this is a simplified code, not the actual code):</p>
+<pre data-lang="r" style="background-color:#f5f5f5;color:#1f1f1f;" class="language-r "><code class="language-r" data-lang="r"><span style="color:#c23f31;">time_consuming_function </span><span style="color:#72ab00;">&lt;- </span><span style="color:#668f14;">function</span><span>(</span><span style="color:#5597d6;">i</span><span>, </span><span style="color:#5597d6;">j</span><span>, </span><span style="color:#5597d6;">k</span><span>) {
+</span><span>    result </span><span style="color:#72ab00;">&lt;- </span><span style="color:#b3933a;">0
+</span><span>    </span><span style="color:#7f8989;"># here is some time consuming computation
+</span><span>    </span><span style="color:#7f8989;"># ...
+</span><span>    </span><span style="color:#7f8989;"># result &lt;- result + ...
+</span><span>    </span><span style="color:#7f8989;"># ...
+</span><span>    result
+</span><span>}
+</span><span>
+</span><span>i_parameters </span><span style="color:#72ab00;">&lt;- </span><span style="color:#b39f04;">c</span><span>(</span><span style="color:#b3933a;">10</span><span>, </span><span style="color:#b3933a;">20</span><span>, </span><span style="color:#b3933a;">30</span><span>, </span><span style="color:#b3933a;">40</span><span>, </span><span style="color:#b3933a;">50</span><span>, </span><span style="color:#b3933a;">60</span><span>, </span><span style="color:#b3933a;">70</span><span>, </span><span style="color:#b3933a;">80</span><span>, </span><span style="color:#b3933a;">90</span><span>, </span><span style="color:#b3933a;">100</span><span>)
+</span><span>j_parameters </span><span style="color:#72ab00;">&lt;- </span><span style="color:#b39f04;">c</span><span>(</span><span style="color:#b3933a;">2</span><span>, </span><span style="color:#b3933a;">4</span><span>, </span><span style="color:#b3933a;">6</span><span>, </span><span style="color:#b3933a;">8</span><span>, </span><span style="color:#b3933a;">10</span><span>, </span><span style="color:#b3933a;">12</span><span>, </span><span style="color:#b3933a;">14</span><span>, </span><span style="color:#b3933a;">16</span><span>, </span><span style="color:#b3933a;">18</span><span>, </span><span style="color:#b3933a;">20</span><span>)
+</span><span>k_parameters </span><span style="color:#72ab00;">&lt;- </span><span style="color:#b39f04;">c</span><span>(</span><span style="color:#b3933a;">5</span><span>, </span><span style="color:#b3933a;">10</span><span>, </span><span style="color:#b3933a;">15</span><span>, </span><span style="color:#b3933a;">20</span><span>, </span><span style="color:#b3933a;">25</span><span>, </span><span style="color:#b3933a;">30</span><span>, </span><span style="color:#b3933a;">35</span><span>, </span><span style="color:#b3933a;">40</span><span>, </span><span style="color:#b3933a;">45</span><span>, </span><span style="color:#b3933a;">50</span><span>)
+</span><span>
+</span><span>result </span><span style="color:#72ab00;">&lt;- </span><span style="color:#b3933a;">0
+</span><span>num_computations </span><span style="color:#72ab00;">&lt;- </span><span style="color:#b3933a;">0
+</span><span>
+</span><span style="color:#72ab00;">for</span><span>(i </span><span style="color:#72ab00;">in</span><span> i_parameters)
+</span><span>{
+</span><span>    </span><span style="color:#72ab00;">for</span><span>(j </span><span style="color:#72ab00;">in</span><span> j_parameters)
+</span><span>    {
+</span><span>        </span><span style="color:#72ab00;">for</span><span>(k </span><span style="color:#72ab00;">in</span><span> k_parameters)
+</span><span>        {
+</span><span>            result </span><span style="color:#72ab00;">&lt;-</span><span> result </span><span style="color:#72ab00;">+ </span><span style="color:#5597d6;">time_consuming_function</span><span>(i, j, k)
+</span><span>            num_computations </span><span style="color:#72ab00;">&lt;-</span><span> num_computations </span><span style="color:#72ab00;">+ </span><span style="color:#b3933a;">1
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b39f04;">cat</span><span>(</span><span style="color:#d07711;">&quot;we performed&quot;</span><span>, num_computations, </span><span style="color:#d07711;">&quot;computations</span><span style="color:#aeb52b;">\n</span><span style="color:#d07711;">&quot;</span><span>)
+</span></code></pre>
+<p>This is a very common example and one strategy is to move one or several loops
+to the "outside" and to introduce a command line interface:</p>
+<pre data-lang="r" style="background-color:#f5f5f5;color:#1f1f1f;" class="language-r "><code class="language-r" data-lang="r"><span style="color:#b39f04;">library</span><span>(optparse)
+</span><span>
+</span><span>option_list </span><span style="color:#72ab00;">&lt;- </span><span style="color:#668f14;">list</span><span>(
+</span><span>    </span><span style="color:#5597d6;">make_option</span><span>(</span><span style="color:#b39f04;">c</span><span>(</span><span style="color:#d07711;">&quot;--i-parameter&quot;</span><span>, </span><span style="color:#d07711;">&quot;-i&quot;</span><span>), </span><span style="color:#5597d6;">type </span><span style="color:#72ab00;">= </span><span style="color:#d07711;">&quot;integer&quot;</span><span>, </span><span style="color:#5597d6;">help </span><span style="color:#72ab00;">= </span><span style="color:#d07711;">&quot;help text about the i parameter&quot;</span><span>, </span><span style="color:#5597d6;">default </span><span style="color:#72ab00;">= </span><span style="color:#b3933a;">1</span><span>),
+</span><span>    </span><span style="color:#5597d6;">make_option</span><span>(</span><span style="color:#b39f04;">c</span><span>(</span><span style="color:#d07711;">&quot;--j-parameter&quot;</span><span>, </span><span style="color:#d07711;">&quot;-j&quot;</span><span>), </span><span style="color:#5597d6;">type </span><span style="color:#72ab00;">= </span><span style="color:#d07711;">&quot;integer&quot;</span><span>, </span><span style="color:#5597d6;">help </span><span style="color:#72ab00;">= </span><span style="color:#d07711;">&quot;help text about the j parameter&quot;</span><span>, </span><span style="color:#5597d6;">default </span><span style="color:#72ab00;">= </span><span style="color:#b3933a;">1</span><span>)
+</span><span>)
+</span><span>
+</span><span>args </span><span style="color:#72ab00;">&lt;- </span><span style="color:#5597d6;">parse_args</span><span>(</span><span style="color:#5597d6;">OptionParser</span><span>(</span><span style="color:#5597d6;">option_list </span><span style="color:#72ab00;">=</span><span> option_list))
+</span><span>
+</span><span style="color:#c23f31;">time_consuming_function </span><span style="color:#72ab00;">&lt;- </span><span style="color:#668f14;">function</span><span>(</span><span style="color:#5597d6;">i</span><span>, </span><span style="color:#5597d6;">j</span><span>, </span><span style="color:#5597d6;">k</span><span>) {
+</span><span>    result </span><span style="color:#72ab00;">&lt;- </span><span style="color:#b3933a;">0
+</span><span>    </span><span style="color:#7f8989;"># here is some time consuming computation
+</span><span>    </span><span style="color:#7f8989;"># ...
+</span><span>    </span><span style="color:#7f8989;"># result &lt;- result + ...
+</span><span>    </span><span style="color:#7f8989;"># ...
+</span><span>    result
+</span><span>}
+</span><span>
+</span><span style="color:#7f8989;"># iterating over i and j moved &quot;outside&quot;
+</span><span style="color:#7f8989;"># i_parameters &lt;- c(10, 20, 30, 40, 50, 60, 70, 80, 90, 100)
+</span><span style="color:#7f8989;"># j_parameters &lt;- c(2, 4, 6, 8, 10, 12, 14, 16, 18, 20)
+</span><span>
+</span><span>k_parameters </span><span style="color:#72ab00;">&lt;- </span><span style="color:#b39f04;">c</span><span>(</span><span style="color:#b3933a;">5</span><span>, </span><span style="color:#b3933a;">10</span><span>, </span><span style="color:#b3933a;">15</span><span>, </span><span style="color:#b3933a;">20</span><span>, </span><span style="color:#b3933a;">25</span><span>, </span><span style="color:#b3933a;">30</span><span>, </span><span style="color:#b3933a;">35</span><span>, </span><span style="color:#b3933a;">40</span><span>, </span><span style="color:#b3933a;">45</span><span>, </span><span style="color:#b3933a;">50</span><span>)
+</span><span>
+</span><span>result </span><span style="color:#72ab00;">&lt;- </span><span style="color:#b3933a;">0
+</span><span>num_computations </span><span style="color:#72ab00;">&lt;- </span><span style="color:#b3933a;">0
+</span><span>
+</span><span style="color:#72ab00;">for</span><span>(k </span><span style="color:#72ab00;">in</span><span> k_parameters)
+</span><span>{
+</span><span>    result </span><span style="color:#72ab00;">&lt;-</span><span> result </span><span style="color:#72ab00;">+ </span><span style="color:#5597d6;">time_consuming_function</span><span>(args</span><span style="color:#72ab00;">$</span><span>i, args</span><span style="color:#72ab00;">$</span><span>j, k)
+</span><span>    num_computations </span><span style="color:#72ab00;">&lt;-</span><span> num_computations </span><span style="color:#72ab00;">+ </span><span style="color:#b3933a;">1
+</span><span>}
+</span><span>
+</span><span style="color:#b39f04;">cat</span><span>(</span><span style="color:#d07711;">&quot;we performed&quot;</span><span>, num_computations, </span><span style="color:#d07711;">&quot;computations</span><span style="color:#aeb52b;">\n</span><span style="color:#d07711;">&quot;</span><span>)
+</span></code></pre>
+<p>Note how we have changed <code>i</code> and <code>j</code> to <code>args$i</code> and <code>args$j</code>.</p>
+<p>By introducing a command line interface (here using the <a href="https://github.com/trevorld/r-optparse">optparse</a> library)
+we make it possible to set <em>i</em> and <em>j</em> from the outside:</p>
+<pre data-lang="bash" style="background-color:#f5f5f5;color:#1f1f1f;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#5597d6;">$</span><span> Rscript example.R</span><span style="color:#5597d6;"> -i</span><span> 10</span><span style="color:#5597d6;"> -j</span><span> 2
+</span></code></pre>
+<p>Now we can call the script with a specific <em>i,j</em>-pair and reduce the number of
+expensive function calls from 1000 to 10.  Of course we still need to iterate
+over all <em>i,j</em>-combinations somewhere so the total amount of computing to be
+done did not magically reduce. However, now we can do all those calculations in
+parallel if we have enough cores available, for instance using <a href="https://slurm.schedmd.com/job_array.html">Slurm job
+arrays</a>.</p>
+<p>We also get a help text:</p>
+<pre data-lang="bash" style="background-color:#f5f5f5;color:#1f1f1f;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#5597d6;">$</span><span> Rscript example.R</span><span style="color:#5597d6;"> --help
+</span></code></pre>
+<pre style="background-color:#f5f5f5;color:#1f1f1f;"><code><span>Usage: example.R [options]
+</span><span>
+</span><span>Options:
+</span><span>	-i I-PARAMETER, --i-parameter=I-PARAMETER
+</span><span>		help text about the i parameter
+</span><span>
+</span><span>	-j J-PARAMETER, --j-parameter=J-PARAMETER
+</span><span>		help text about the j parameter
+</span><span>
+</span><span>	-h, --help
+</span><span>		Show this help message and exit
+</span></code></pre>
+<h2 id="reproducibility">Reproducibility</h2>
+<p>In order to simplify sharing the examples and document dependencies we have
+introduced <a href="https://rstudio.github.io/renv/articles/renv.html">renv</a> into the
+project.  We have also developed an <a href="https://github.com/bast/contain-R">Apptainer/Singularity container for
+reproducible R environments</a>.</p>
+<p>This is the Apptainer/Singularity container definition file that we have used
+for testing and debugging:</p>
+<pre data-lang="bash" style="background-color:#f5f5f5;color:#1f1f1f;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#5597d6;">Bootstrap:</span><span> docker
+</span><span style="color:#5597d6;">From:</span><span> satijalab/seurat:latest
+</span><span>
+</span><span style="color:#5597d6;">%post
+</span><span>    </span><span style="color:#5597d6;">apt-get</span><span> update</span><span style="color:#5597d6;"> -qq
+</span><span>    </span><span style="color:#668f14;">export </span><span style="color:#5597d6;">DEBIAN_FRONTEND</span><span style="color:#72ab00;">=</span><span style="color:#d07711;">noninteractive
+</span><span>
+</span><span>    </span><span style="color:#7f8989;"># possibly not all of these are needed
+</span><span>    </span><span style="color:#5597d6;">apt-get</span><span> install</span><span style="color:#5597d6;"> -y</span><span> libfontconfig1-dev libharfbuzz-dev libfribidi-dev libcairo2-dev libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev libgif-dev libwebp-dev libpoppler-glib-dev libpoppler-private-dev libssl-dev libcurl4-openssl-dev libxml2-dev
+</span><span>
+</span><span>    </span><span style="color:#5597d6;">R --quiet -e </span><span style="color:#d07711;">&quot;options(repos = c(CRAN = &#39;http://cran.us.r-project.org&#39;))&quot;
+</span><span>    </span><span style="color:#5597d6;">R --quiet -e </span><span style="color:#d07711;">&quot;install.packages(&#39;BiocManager&#39;)&quot;
+</span><span>
+</span><span>    </span><span style="color:#5597d6;">R --quiet -e </span><span style="color:#d07711;">&quot;BiocManager::install(c(&#39;systemfonts&#39;))&quot;
+</span><span>    </span><span style="color:#5597d6;">R --quiet -e </span><span style="color:#d07711;">&quot;BiocManager::install(c(&#39;clustree&#39;))&quot;
+</span><span>    </span><span style="color:#5597d6;">R --quiet -e </span><span style="color:#d07711;">&quot;BiocManager::install(c(&#39;scater&#39;))&quot;
+</span><span>    </span><span style="color:#5597d6;">R --quiet -e </span><span style="color:#d07711;">&quot;BiocManager::install(c(&#39;cowplot&#39;))&quot;
+</span><span>    </span><span style="color:#5597d6;">R --quiet -e </span><span style="color:#d07711;">&quot;BiocManager::install(c(&#39;scran&#39;))&quot;
+</span><span>    </span><span style="color:#5597d6;">R --quiet -e </span><span style="color:#d07711;">&quot;BiocManager::install(c(&#39;scmap&#39;))&quot;
+</span></code></pre>
+<p>The container is based on the container image provided
+<a href="https://satijalab.org/seurat/articles/install.html">here</a>.</p>
+
+
+  </article>
+
+      </div>
+
+      <hr>
+
+      <ul class="uk-iconnav">
+  <li class="uk-margin-large-right">
+    <a href="mailto:rse@uit.no" uk-icon="icon: mail">rse@uit.no</a>
+  </li>
+  <li class="uk-margin-large-right">
+    <a href="https://github.com/uit-no/research-software.uit.no" target="_blank" uk-icon="icon: github">github.com/uit-no/research-software.uit.no</a>
+  </li>
+</ul>
+
+
+    </div>
+  </body>
+</html>

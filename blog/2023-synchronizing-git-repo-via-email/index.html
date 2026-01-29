@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Research software engineering group at UiT</title>
+    <link rel="shortcut icon" href="https://research-software.uit.no/img/favicon.ico">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.23.12/dist/css/uikit.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.12/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.12/dist/js/uikit-icons.min.js"></script>
+
+    
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/uit-no/rse/main/content/logo1.png" />
+
+
+
+  <meta name="description" content="Sometimes GitHub&#x2F;GitLab&#x2F;own-server is not an option - good old email to the rescue" />
+  <meta name="twitter:description" content="Sometimes GitHub&#x2F;GitLab&#x2F;own-server is not an option - good old email to the rescue" />
+
+
+
+  <meta name="twitter:title" content="Synchronizing Git repositories via email" />
+
+
+
+    <link href="https://research-software.uit.no/style.css" rel="stylesheet">
+    <link href="https://research-software.uit.no/fonts.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="uk-container uk-container-small uk-margin-large-bottom">
+
+      
+
+<nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+  <ul class="uk-navbar-nav uk-visible@s">
+    
+      
+        <li><a href="https://research-software.uit.no">Home</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/services">Services</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/about">About us</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/courses">Courses</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/resources">Resources</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/projects">Projects</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/blog">Blog</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/testimonials">Testimonials</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/contact">Contact</a></li>
+      
+    
+  </ul>
+  <a href="#" class="uk-navbar-toggle uk-hidden@s" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
+</nav>
+
+<div id="sidenav" uk-offcanvas="flip: true" class="uk-offcanvas">
+  <div class="uk-offcanvas-bar">
+    <ul class="uk-nav">
+      
+        
+          <li><a href="https://research-software.uit.no">Home</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/services">Services</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/about">About us</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/courses">Courses</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/resources">Resources</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/projects">Projects</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/blog">Blog</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/testimonials">Testimonials</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/contact">Contact</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+      <div class="markdown">
+        
+  <article class="uk-article">
+
+    <h1 class="uk-article-title"><a class="uk-link-reset" href="">Synchronizing Git repositories via email</a></h1>
+
+    <p class="uk-article-meta">
+      
+        <h2>
+          Sometimes GitHub&#x2F;GitLab&#x2F;own-server is not an option - good old email to the rescue
+        </h2>
+      
+      November 27, 2023
+      
+        - Radovan Bast
+      
+    </p>
+
+    <hr>
+
+    <p>For a project with the <a href="https://en.uit.no/enhet/isk">Department of Language and
+Culture</a> at <a href="https://uit.no/">UiT</a> we had the
+challenge to find a way to synchronize two Git repositories where we wish to
+end up with a <strong>as-similar-as-possible history</strong>, but where we cannot communicate
+changes through GitHub or GitLab or similar servers.</p>
+<p>To have a concrete example, let us assume that we have two computers
+(<strong>computer A</strong> and <strong>computer B</strong>) which are far away and they can only talk
+to each other <strong>via email</strong>. Both hold a Git repository which tracks some data or
+code and both Git repository have the same starting point (they have a common
+history).</p>
+<div class="uk-child-width-expand@m" uk-grid>
+<div >
+<p>On <strong>computer A</strong> we have the following Git history:</p>
+<pre style="background-color:#f5f5f5;color:#1f1f1f;"><code><span>* 69bf25c (HEAD -&gt; main) another improvement
+</span><span>* b202aa5 adding more data to my repo
+</span><span>* 5670bc4 initial commit
+</span></code></pre>
+<p>We got this information with <code>git log --oneline --graph</code>.
+<code>69bf25c</code> is the newest commit and <code>5670bc4</code> the oldest.</p>
+</div>
+<div >
+<p>On <strong>computer B</strong> we have the following Git history:</p>
+<pre style="background-color:#f5f5f5;color:#1f1f1f;"><code><mark style="background-color:#c7c7bf2e;"><span>* e6287b6 (HEAD -&gt; main) another local modification
+</span></mark><mark style="background-color:#c7c7bf2e;"><span>* 1120a75 one local modification
+</span></mark><span>* 69bf25c another improvement
+</span><span>* b202aa5 adding more data to my repo
+</span><span>* 5670bc4 initial commit
+</span></code></pre>
+<p>The Git history on <strong>computer B</strong> has the same starting point (first 3 commits)
+but we created two more commits which we wish to later share with the other
+computer:</p>
+</div>
+</div>
+<p>Below I will discuss 3 options to do this, but <strong>I recommend the first</strong> (using
+<code>git bundle</code>) since that one preserves commit hashes (commit identifiers),
+whereas the other two option don't.</p>
+
+    
+        <ul>
+        
+            <li>
+                <a href="https://research-software.uit.no/blog/2023-synchronizing-git-repo-via-email/#using-git-bundle-recommended">Using git bundle (recommended)</a>
+                
+            </li>
+        
+            <li>
+                <a href="https://research-software.uit.no/blog/2023-synchronizing-git-repo-via-email/#using-git-format-patch">Using git format-patch</a>
+                
+            </li>
+        
+            <li>
+                <a href="https://research-software.uit.no/blog/2023-synchronizing-git-repo-via-email/#comparing-and-applying-patches-manually">Comparing and applying patches "manually"</a>
+                
+            </li>
+        
+        </ul>
+    
+
+<h2 id="using-git-bundle-recommended">Using <a href="https://git-scm.com/docs/git-bundle">git bundle</a> (recommended)</h2>
+<p>On <strong>computer B</strong> we create a bundle from the entire <code>main</code> branch:</p>
+<pre data-lang="bash" style="background-color:#f5f5f5;color:#1f1f1f;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#5597d6;">$</span><span> git bundle create project.bundle main
+</span></code></pre>
+<p>It can be useful to also tag the commit from which we created the bundle
+so that we know where to bundle from next time:</p>
+<pre data-lang="bash" style="background-color:#f5f5f5;color:#1f1f1f;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#5597d6;">$</span><span> git tag</span><span style="color:#5597d6;"> -f</span><span> last-export-on-computer-B
+</span></code></pre>
+<p>The generated <code>project.bundle</code> file is the one that we can email over to the other computer.</p>
+<p>On <strong>computer A</strong> we can now pull changes from the bundle into the <code>main</code> branch:</p>
+<pre data-lang="bash" style="background-color:#f5f5f5;color:#1f1f1f;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#5597d6;">$</span><span> git pull project.bundle main</span><span style="color:#5597d6;"> --rebase
+</span></code></pre>
+<p>The <code>--rebase</code> part makes sure that we move any local changes we might have to
+the end.  We can verify the result with <code>git log --oneline --graph</code>.  If
+<strong>computer A</strong> has commits that <strong>computer B</strong> does not have, we can do the
+same in reverse: create a bundle, tag the commit from which we created the
+bundle, email the bundle over and apply it there (pull from it there).</p>
+<p>Using the tags allows you to bundling commits only since that tag instead of
+all commits:</p>
+<pre data-lang="bash" style="background-color:#f5f5f5;color:#1f1f1f;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#5597d6;">$</span><span> git bundle create project.bundle last-export-on-computer-B..main
+</span></code></pre>
+<p>But don't forget to tag again after each bundling.</p>
+<p>If both computers changed the same portion of the code/data in different ways
+it is possible to get a conflict. Here it might be necessary that the humans
+who created the two changes communicate and decide which of the two versions
+they wish to keep and base their further work on. You can minimize the chance
+of conflicts by emailing bundles right after making a new commit and not
+waiting for too long.</p>
+<h2 id="using-git-format-patch">Using <a href="https://git-scm.com/docs/git-format-patch">git format-patch</a></h2>
+<p>Also here we start with <strong>computer B</strong> having two commits more. So let's create patches
+from the two most recent commits:</p>
+<pre data-lang="bash" style="background-color:#f5f5f5;color:#1f1f1f;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#5597d6;">$</span><span> git format-patch</span><span style="color:#5597d6;"> -2
+</span><span>
+</span><span style="color:#5597d6;">0001-one-local-modification.patch
+</span><span style="color:#5597d6;">0002-another-local-modification.patch
+</span></code></pre>
+<p>Note that the patches are numbered. We can now email
+<code>0001-one-local-modification.patch</code> and <code>0002-another-local-modification.patch</code>
+and try to apply them on the other computer. If you need to send very many
+files, you can zip them into one archive and email that one archive instead.</p>
+<p>Now we move to <strong>computer A</strong> and try to apply the patches but we need to apply them in order:</p>
+<pre data-lang="bash" style="background-color:#f5f5f5;color:#1f1f1f;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#5597d6;">$</span><span> git am 0001-one-local-modification.patch
+</span><span style="color:#5597d6;">$</span><span> git am 0002-another-local-modification.patch
+</span></code></pre>
+<p>One disadvantage of <code>git format-patch</code> compared to <code>git bundle</code> is however that
+we will end up with <strong>different Git commit hashes</strong>.
+To see this, compare histories on both. The content is the same, the commit messages
+are the same but the commit hashes differ:</p>
+<div class="uk-child-width-expand@m" uk-grid>
+<div >
+<p>Git history on <strong>computer A</strong>:</p>
+<pre style="background-color:#f5f5f5;color:#1f1f1f;"><code><mark style="background-color:#c7c7bf2e;"><span>* 87fe580 (HEAD -&gt; main) another local modification
+</span></mark><mark style="background-color:#c7c7bf2e;"><span>* 175d42c one local modification
+</span></mark><span>* 69bf25c another improvement
+</span><span>* b202aa5 adding more data to my repo
+</span><span>* 5670bc4 initial commit
+</span></code></pre>
+</div>
+<div >
+<p>Git history on <strong>computer B</strong>:</p>
+<pre style="background-color:#f5f5f5;color:#1f1f1f;"><code><mark style="background-color:#c7c7bf2e;"><span>* e6287b6 (HEAD -&gt; main) another local modification
+</span></mark><mark style="background-color:#c7c7bf2e;"><span>* 1120a75 one local modification
+</span></mark><span>* 69bf25c another improvement
+</span><span>* b202aa5 adding more data to my repo
+</span><span>* 5670bc4 initial commit
+</span></code></pre>
+</div>
+</div>
+<h2 id="comparing-and-applying-patches-manually">Comparing and applying patches "manually"</h2>
+<p>If the data/software that is tracked in Git is not too large to be sent itself,
+then one way to share changes is to send the data or software over and on each
+side merge changes visually using programs like <a href="https://meldmerge.org/">Meld</a>
+and then commit the new changes:</p>
+<ul>
+<li>Email the data/software to computer A</li>
+<li>With Meld compare the new version with the last commit and merge changes</li>
+<li>Commit</li>
+<li>Email the merged result back to computer B</li>
+<li>With Meld compare the new version with the last commit and merge changes</li>
+<li>Commit</li>
+<li>...</li>
+</ul>
+<p>However, with this strategy we will end up with <strong>different Git commit hashes</strong>.</p>
+
+
+  </article>
+
+      </div>
+
+      <hr>
+
+      <ul class="uk-iconnav">
+  <li class="uk-margin-large-right">
+    <a href="mailto:rse@uit.no" uk-icon="icon: mail">rse@uit.no</a>
+  </li>
+  <li class="uk-margin-large-right">
+    <a href="https://github.com/uit-no/research-software.uit.no" target="_blank" uk-icon="icon: github">github.com/uit-no/research-software.uit.no</a>
+  </li>
+</ul>
+
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Research software engineering group at UiT</title>
+    <link rel="shortcut icon" href="https://research-software.uit.no/img/favicon.ico">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.23.12/dist/css/uikit.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.12/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.12/dist/js/uikit-icons.min.js"></script>
+
+    
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/uit-no/rse/main/content/logo1.png" />
+
+
+
+  <meta name="description" content="A practical guide on why software licenses matter and how to choose one and what practical steps to take" />
+  <meta name="twitter:description" content="A practical guide on why software licenses matter and how to choose one and what practical steps to take" />
+
+
+
+  <meta name="twitter:title" content="Draft: Research software licensing guide" />
+
+
+
+    <link href="https://research-software.uit.no/style.css" rel="stylesheet">
+    <link href="https://research-software.uit.no/fonts.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="uk-container uk-container-small uk-margin-large-bottom">
+
+      
+
+<nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+  <ul class="uk-navbar-nav uk-visible@s">
+    
+      
+        <li><a href="https://research-software.uit.no">Home</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/services">Services</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/about">About us</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/courses">Courses</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/resources">Resources</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/projects">Projects</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/blog">Blog</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/testimonials">Testimonials</a></li>
+      
+    
+      
+        <li><a href="https://research-software.uit.no/contact">Contact</a></li>
+      
+    
+  </ul>
+  <a href="#" class="uk-navbar-toggle uk-hidden@s" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
+</nav>
+
+<div id="sidenav" uk-offcanvas="flip: true" class="uk-offcanvas">
+  <div class="uk-offcanvas-bar">
+    <ul class="uk-nav">
+      
+        
+          <li><a href="https://research-software.uit.no">Home</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/services">Services</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/about">About us</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/courses">Courses</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/resources">Resources</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/projects">Projects</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/blog">Blog</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/testimonials">Testimonials</a></li>
+        
+      
+        
+          <li><a href="https://research-software.uit.no/contact">Contact</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+      <div class="markdown">
+        
+  <article class="uk-article">
+
+    <h1 class="uk-article-title"><a class="uk-link-reset" href="">Draft: Research software licensing guide</a></h1>
+
+    <p class="uk-article-meta">
+      
+        <h2>
+          A practical guide on why software licenses matter and how to choose one and what practical steps to take
+        </h2>
+      
+      June 21, 2023
+      
+        - Radovan Bast and Kathleen A. Smart
+      
+    </p>
+
+    <hr>
+
+    <div class="uk-alert-danger" uk-alert>
+<p><strong>This is a preliminary draft of a proposed research software licensing guide
+to be used by researchers at UiT</strong>. We are sharing this draft with colleagues
+and various stakeholders for review and comments.  Please send comments,
+suggestions, and corrections to
+<a href="mailto:radovan.bast@uit.no">radovan.bast@uit.no</a>.</p>
+</div>
+<div class="uk-alert-primary" uk-alert>
+<p>This guide is shared under the <a href="https://creativecommons.org/share-your-work/public-domain/cc0">Creative Commons CC0
+waiver</a>.</p>
+</div>
+
+    
+        <ul>
+        
+            <li>
+                <a href="https://research-software.uit.no/blog/2023-software-licensing-guide/#what-is-research-software">What is "research software"?</a>
+                
+            </li>
+        
+            <li>
+                <a href="https://research-software.uit.no/blog/2023-software-licensing-guide/#why-software-licenses-matter">Why software licenses matter</a>
+                
+            </li>
+        
+            <li>
+                <a href="https://research-software.uit.no/blog/2023-software-licensing-guide/#when-should-i-add-a-license">When should I add a license?</a>
+                
+            </li>
+        
+            <li>
+                <a href="https://research-software.uit.no/blog/2023-software-licensing-guide/#how-do-i-add-a-license-to-my-work">How do I add a license to my work?</a>
+                
+                    <ul>
+                        
+                            <li>
+                                <a href="https://research-software.uit.no/blog/2023-software-licensing-guide/#if-your-work-is-derivative-work">If your work is derivative work</a>
+                            </li>
+                        
+                            <li>
+                                <a href="https://research-software.uit.no/blog/2023-software-licensing-guide/#if-your-work-is-not-derivative-work">If your work is not derivative work</a>
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li>
+                <a href="https://research-software.uit.no/blog/2023-software-licensing-guide/#make-it-persistent-and-citable">Make it persistent and citable</a>
+                
+            </li>
+        
+            <li>
+                <a href="https://research-software.uit.no/blog/2023-software-licensing-guide/#how-about-data">How about data?</a>
+                
+            </li>
+        
+            <li>
+                <a href="https://research-software.uit.no/blog/2023-software-licensing-guide/#questions-and-contact">Questions and contact</a>
+                
+            </li>
+        
+            <li>
+                <a href="https://research-software.uit.no/blog/2023-software-licensing-guide/#great-resources">Great resources</a>
+                
+            </li>
+        
+            <li>
+                <a href="https://research-software.uit.no/blog/2023-software-licensing-guide/#acknowledgements">Acknowledgements</a>
+                
+            </li>
+        
+        </ul>
+    
+
+<h2 id="what-is-research-software">What is "research software"?</h2>
+<p>We consider any code, script, notebook, or file, regardless of size, as
+"research software" if it is needed to generate, visualize, or reproduce
+data/results that are part of, or will form part of a publication. You don't
+need to be a "proper software engineer" to produce software. Most research
+software is not written by "proper software engineers" (whatever that means).</p>
+<p>Examples of "research software" for the purpose of this guide:</p>
+<ul>
+<li>Script to convert data from one format to another</li>
+<li>Script to read data and visualize it</li>
+<li>Program that generates data</li>
+<li>Analysis script</li>
+<li>Set of scripts that form an analysis pipeline</li>
+<li>Code that is compiled</li>
+<li>Code that is dynamically interpreted and not compiled</li>
+<li>Web app</li>
+</ul>
+<h2 id="why-software-licenses-matter">Why software licenses matter</h2>
+<p>Imagine the following frequent scenario: You find some great code or data that
+you want to reuse for your own publication. This is good for the original
+author - you will cite them. Maybe other people who cite you will cite them.
+You need to modify the code a little bit, or you remix the data a bit. But
+then, when it comes time to publish, you realize there is no license to the
+original work. Thus, you can't release the new stuff you made!</p>
+<p>Now you have a problem:</p>
+<ul>
+<li>You manage to publish the paper without the software/data but others cannot
+build on your software and data and
+you don't get as many citations as you could.</li>
+<li>Or, you cannot publish it at all if the journal requires that papers should
+come with data and software so that they are reproducible.</li>
+</ul>
+<p>Next time you are smarter and check the license before building on someone
+else's work.  And others may approach your work the same way.</p>
+<p>Open science is built upon sharing of research data and software in a <a href="https://www.go-fair.org/fair-principles/">FAIR</a>
+(findable, accessible, interoperable, and reusable) manner. For research data,
+reuse entails applying an open data license (generally using <a href="https://creativecommons.org/">Creative Commons
+licenses</a>), but sharing of software requires licenses with more specific
+terms.</p>
+<p>In open science we strive towards reproducibility (results can be verified by
+other researchers) and reusability (results can be reused in follow-up research
+by you and/or others without starting over from scratch).</p>
+<p>Without a license that allows reuse and redistribution, and additionally clarifies terms
+under which code can be reused and redistributed:</p>
+<ul>
+<li>others may not be able to publish derivative work based on your code</li>
+<li>you may not be able to publish derivative work based on somebody else's code
+or even your own code (e.g. after changing jobs)</li>
+</ul>
+<p>This means that <strong>clarifying terms of use is essential for derivative work
+based on your research to be even publishable</strong>. Choosing an open source
+license can also be good insurance for you against being locked out of your
+own code after changing affiliation/group or job.</p>
+<h2 id="when-should-i-add-a-license">When should I add a license?</h2>
+<p>Choose a license early in the project, even before you publish it. Later in the
+project it may become complicated to change it.  Agreeing on a software license
+does not mean that you have to make it open immediately.  You can also follow
+the "open core" approach: You don't have to open source all your work. Core can
+be open and on a public branch. Unpublished code can be on a private
+repository.</p>
+<p>However, we recommend to work as if the code is public even though it still may
+be private: This is to avoid surprises about code in the history with
+incompatible license years later when you decide to open the project.</p>
+<h2 id="how-do-i-add-a-license-to-my-work">How do I add a license to my work?</h2>
+<h3 id="if-your-work-is-derivative-work">If your work is derivative work</h3>
+<p>(here we will add a decision tree/ flow-chart)</p>
+<p>Your code is derivative work if you have started (partially) from an existing code and
+made changes to it or if you incorporated an existing code into your code.</p>
+<p>If your code is derivative work, then <strong>you need to check the license of the
+original code</strong>. Depending on the license, your choices might be limited. In
+this case we recommend to use these two resources:</p>
+<ul>
+<li><a href="https://joinup.ec.europa.eu/collection/eupl/solution/joinup-licensing-assistant/jla-find-and-compare-software-licenses">Joinup Licensing Assistant - Find and compare software licenses</a></li>
+<li><a href="https://joinup.ec.europa.eu/collection/eupl/solution/joinup-licensing-assistant/jla-compatibility-checker">Joinup Licensing Assistant - Compatibility Checker</a></li>
+</ul>
+<p>If the original code does not have a license, you may not be able to distribute your
+derivative code.
+Even if it doesn't have a license, it still might have terms of use, which might or might not be compatible with a standard license.
+You can try to contact the authors and ask them to clarify
+the license of their code.</p>
+<p>Practical steps for <strong>incorporating something small into your own project</strong> with a license
+that allows you to do so (as
+an example incorporating a function or two from another project):</p>
+<ul>
+<li>Create a <code>LICENSES/</code> folder in your project and "put the unmodified license text
+(i.e., the license text template without any copyright notices) in your
+<code>LICENSES/</code> folder" (<a href="https://reuse.software/faq/#license-templates">https://reuse.software/faq/#license-templates</a>). This
+way if you reuse code from multiple projects, you can keep there multiple
+license files.</li>
+<li>Put the code that you incorporate into a separate file or separate files. This makes
+it later easier to see what was incorporated, and what was written from scratch.
+On top of the file(s) which you have incorporated into your project add (and
+adapt) the following header (<a href="https://reuse.software/faq/">more examples</a>):<pre data-lang="python" style="background-color:#f5f5f5;color:#1f1f1f;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#7f8989;"># SPDX-FileCopyrightText: 2023 Jane Doe &lt;jane@example.com&gt;
+</span><span style="color:#7f8989;">#
+</span><span style="color:#7f8989;"># SPDX-License-Identifier: MIT
+</span></code></pre>
+The <a href="https://reuse.software/">REUSE</a> initiative was started by the <a href="https://fsfe.org/">Free
+Software Foundation Europe</a> to make licensing of software
+projects easier.  It is OK if you prefer to not follow this strict format but
+the advantage of following it is that the
+<a href="https://github.com/fsfe/reuse-tool">reuse-tool</a> makes it then easy to verify
+and update license headers if you have many files from different sources.</li>
+<li>If it does not make sense to have several files in your project (e.g. when incorporating
+something into a notebook), then add a note/comment
+about the license and where the code came from on top of the function.</li>
+<li>Although it is not dictated by the license but it can still be nice to
+acknowledge the incorporated functions/code in your README/documentation and to cite
+their work if you publish a paper about your code.</li>
+<li>Some licenses are more permissive (you can keep your changes private) but some licenses
+require you to publish the changes ("share-alike" or "copy-left").</li>
+</ul>
+<p>Practical steps for making <strong>changes to an existing project</strong> with a license
+that allows you to do so:</p>
+<ul>
+<li>If the project is on GitHub or GitLab or similar, first fork the project
+(copy it into your user space where you can make changes).</li>
+<li>For the BSD and MIT licenses you are not obliged to state your changes but it can
+still be helpful for others if you do. You can state your changes in the
+header of the files you have modified. It can be helpful to state
+bigger-picture changes in the README file of the project.</li>
+<li>Some licenses are more permissive (you can keep your changes private) but some licenses
+require you to publish the changes (share-alike).</li>
+</ul>
+<h3 id="if-your-work-is-not-derivative-work">If your work is not derivative work</h3>
+<p>If you have started "from scratch", and not used any existing code, or
+incorporated existing code into your code, then you may consider your code to
+be not derivative work. Note that if you only use (but not incorporate or
+change) libraries, plug-ins, and packages, which are distributed via platforms
+like PyPI, Conda, CRAN, Crates, ... this is typically not considered derivative work.</p>
+<p>Before you may choose a license, clarify the following points with, for
+example, your supervisor, principal investigator, collaborators, or research
+support service:</p>
+<ul>
+<li>Does your work contract, grant, or collaboration agreement dictate a
+specific license?</li>
+<li>Is there an intent to commercialize the code?</li>
+<li>When there is unknown or mixed ownership: If there are multiple persons or
+organizations as owners of the code, all must agree to the license.</li>
+</ul>
+<p>Do not invent your own license. Choose one of the standard licenses, otherwise
+compatibility is not clear:</p>
+<ul>
+<li><a href="https://joinup.ec.europa.eu/collection/eupl/solution/joinup-licensing-assistant/jla-find-and-compare-software-licenses">Joinup Licensing Assistant - Find and compare software licenses</a></li>
+<li><a href="https://joinup.ec.europa.eu/collection/eupl/solution/joinup-licensing-assistant/jla-compatibility-checker">Joinup Licensing Assistant - Compatibility Checker</a></li>
+</ul>
+<p>If there are no restrictions from the above points, and no overriding guidelines exist,
+we recommend one of the following two licenses:</p>
+<ul>
+<li><strong>European Union Public Licence, Version 1.2 or later (EUPL)</strong>
+(<a href="https://data.europa.eu/doi/10.2799/77160">https://data.europa.eu/doi/10.2799/77160</a>): this license is an official
+license of the European Union (EC Decision, part of European law). It is
+interoperable, reciprocal (derivative work must publish and provide back
+the modified source code), and compatible with many standard licenses. It
+is a good choice if you want to make sure that you have access to changes
+and improvements applied to your code so that you can integrate them back
+and reuse them in your own work or you want some competitive advantage
+(right to relicense) over other users of your work.</li>
+<li><strong>MIT License</strong>: Choose this license to prioritize ease of reuse
+over requiring derivative work to provide modifications back to you and the
+community: Others will be able to do whatever they want with your code as
+long as they include the original copyright and licence notice in any copy
+of the software/source. For small and short-lived projects this can be a
+good choice.</li>
+</ul>
+<p>Note that with the exception of CC0 (i.e. public domain dedication)
+<a href="https://creativecommons.org/">CC</a> licenses are not appropriate for software
+(although they can be used for software documentation).</p>
+<p>Practical steps:</p>
+<ul>
+<li>Create a <code>LICENSES/</code> folder (<a href="https://github.com/bast/runtest/tree/main/LICENSES">example</a>).</li>
+<li>Put the unmodified license text
+(i.e., the license text template without any copyright notices) in plain
+text format into the folder  (<a href="https://github.com/bast/runtest/tree/main/LICENSES">example</a>).  Here are
+the two above licenses in plain text:
+<a href="https://joinup.ec.europa.eu/sites/default/files/custom-page/attachment/2020-03/EUPL-1.2%20EN.txt">EUPL</a>
+and <a href="https://en.wikipedia.org/wiki/MIT_License#License_terms">MIT</a> (we recommend
+to use the MIT license text without the copyright header).</li>
+<li>Add copyright and license information to each file following
+<a href="https://reuse.software/tutorial/">https://reuse.software/tutorial/</a> which uses a standard format with
+so-called <a href="https://spdx.org/licenses/">SPDX identifiers</a>. Example below
+(<a href="https://github.com/bast/runtest/blob/3b210d2e9bdbdc1903a1dab9da32e161d390092d/runtest/tuple_comparison.py#L1-L3">example</a>):<pre data-lang="python" style="background-color:#f5f5f5;color:#1f1f1f;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#7f8989;"># SPDX-FileCopyrightText: 2023 Jane Doe &lt;jane@example.com&gt;
+</span><span style="color:#7f8989;">#
+</span><span style="color:#7f8989;"># SPDX-License-Identifier: EUPL-1.2
+</span></code></pre>
+The <a href="https://reuse.software/">REUSE</a> initiative was started by the <a href="https://fsfe.org/">Free
+Software Foundation Europe</a> to make licensing of software
+projects easier.  It is OK if you prefer to not follow this strict format but
+the advantage of following it is that the
+<a href="https://github.com/fsfe/reuse-tool">reuse-tool</a> makes it then easy to verify
+and update license headers if you have many files from different sources.</li>
+<li>Create a <a href="https://citation-file-format.github.io/">CITATION.cff file</a>
+(<a href="https://github.com/bast/runtest/blob/main/CITATION.cff">example</a>; more about it below).</li>
+<li>For really small projects with one or two files the above may seem excessive
+and some projects choose to not have copyright information on top of their
+files and they only have one <code>LICENSE</code> file and a <code>CITATION.cff</code> file and that is
+OK for really small projects.</li>
+</ul>
+<h2 id="make-it-persistent-and-citable">Make it persistent and citable</h2>
+<p>Choosing a license, adding a license file, and putting your code on GitHub or
+GitLab is good start, but to ensure FAIR (findable, accessible, interoperable,
+and reusable) research software for long term access, we recommend to go two
+steps further:</p>
+<ul>
+<li>Add a file called <a href="https://citation-file-format.github.io/">CITATION.cff</a> (<a href="https://github.com/bast/runtest/blob/main/CITATION.cff">example</a>).</li>
+<li>Get a <a href="https://en.wikipedia.org/wiki/Digital_object_identifier">digital object identifier
+(DOI)</a> for your code
+on <a href="https://zenodo.org/">Zenodo</a> (<a href="https://zenodo.org/record/8003695">example</a>).</li>
+</ul>
+<p>The reason why we currently recommend <a href="https://zenodo.org/">Zenodo</a> over
+<a href="https://dataverse.no/">DataverseNO</a> <strong>for software products</strong> is that it is
+easier to update versions.  DataverseNO currently does not allow to assign
+different licenses on a file-level which may result in license conflicts
+(possible case: publishing software under CC0 on DataverseNO and having it
+under a more restrictive license on GitHub at the same time). We believe that
+linking from the DataverseNO entry to the software as "related dataset" is a
+better option.</p>
+<p><a href="https://www.softwareheritage.org/">Software Heritage</a> and
+<a href="https://codemeta.github.io/">CodeMeta</a> exist as an alternative ecosystem that
+is currently receiving some attention on a European level. Comparison and links
+to converters can be found in <a href="https://zenodo.org/record/8086413">https://zenodo.org/record/8086413</a>.</p>
+<p>Additionally, UiT and other major national (<a href="https://www.forskningsradet.no/en/research-policy-strategy/open-science/">RCN Open Science</a>) and European
+funders (<a href="https://research-and-innovation.ec.europa.eu/strategy/strategy-2020-2024/our-digital-future/open-science_en">EU Open Science</a>) require open access to publications and research data
+(including research software) as early as possible, so self-archiving your
+research software satisfies these requirements. For more information on these
+policies, please see: <a href="https://en.uit.no/research/research-dataportal">UiT Research Data
+Portal</a>, <a href="https://uit.no/regelverk/sentraleregler#kapittel_734648">UiT Regulations on
+Research Data</a>, or
+contact the University Library at
+<a href="mailto:researchdata@uit.no">researchdata@uit.no</a>. </p>
+<h2 id="how-about-data">How about data?</h2>
+<p>Citing from the <a href="https://uit.no/regelverk/sentraleregler#v-pills-742423">Principles and guidelines for management of research data at
+UiT</a>:</p>
+<ul>
+<li>"The researcher shall make research data openly available for further use to
+all relevant users, providing there are no legal, ethical, security or
+commercial reasons for not doing so."</li>
+<li>"Research data shall be equipped with licenses for access, reuse, and
+redistribution."</li>
+<li>"The licenses should be internationally recognised and place as few
+restrictions as possible on the access, reuse and redistribution of the
+data."</li>
+</ul>
+<p>By default, the <a href="https://dataverse.no/dataverse/uit">UiT collection in DataverseNO</a> recommends the <a href="https://creativecommons.org/share-your-work/public-domain/cc0">Creative Commons
+CC0 waiver</a>.
+The <a href="https://en.uit.no/research/research-dataportal/art?p_document_id=726373">UiT Research Data Portal</a>
+contains information and guides on why and how to add such a license to your
+data.</p>
+<p>The <a href="https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/guidance/programme-guide_horizon_en.pdf">Horizon Europe
+guideline</a>
+specifies that data should be CC0 or CC-BY.  Metadata must be CC0. The
+recommendations of the
+Norwegian Research council can be found in the report
+<a href="https://www.forskningsradet.no/siteassets/publikasjoner/2021/hvordan-skal-vi-dele-forskningsdata.v2.pdf">"Hvordan skal vi dele forskningdata"</a> (p. 40).
+The overall principle
+rule is "as open as possible, as closed as necessary".</p>
+<p>We wish to emphasize that using a restrictive license with the intention to
+protect privacy of the data is not a good substitute for having the data
+sufficiently protected in other ways.</p>
+<h2 id="questions-and-contact">Questions and contact</h2>
+<p>Unsure which license to choose?  Unsure how to proceed with sharing your code
+or reusing somebody else's code?  The <a href="https://research-software.uit.no/">research software engineering (RSE)
+group</a> at <a href="https://uit.no/">UiT</a> is here to
+help you. You can contact us at <a href="mailto:rse@uit.no">rse@uit.no</a> or come to our
+office hours. For questions regarding sharing of publications and research
+data, contact us at <a href="mailto:researchdata@uit.no">researchdata@uit.no</a>.</p>
+<h2 id="great-resources">Great resources</h2>
+<ul>
+<li><a href="https://www.researchsoft.org/software-policies/">Research institution policies to support research software (compiled by the Research Software Alliance)</a></li>
+<li>Guide from the Aalto University in Finland: <a href="https://www.aalto.fi/en/open-science-and-research/opening-your-software-at-aalto-university">"Opening your Software at Aalto University"</a></li>
+<li><a href="https://joinup.ec.europa.eu/collection/eupl/solution/joinup-licensing-assistant/jla-find-and-compare-software-licenses">Joinup Licensing Assistant - Find and compare software licenses</a></li>
+<li><a href="https://joinup.ec.europa.eu/collection/eupl/solution/joinup-licensing-assistant/jla-compatibility-checker">Joinup Licensing Assistant - Compatibility Checker</a></li>
+<li><a href="https://coderefinery.github.io/social-coding/">Social coding lesson material</a> by <a href="https://coderefinery.org/">CodeRefinery</a></li>
+<li><a href="https://citation-file-format.github.io/">Citation File Format (CFF)</a></li>
+<li><a href="https://ufal.github.io/public-license-selector/">License Selector</a></li>
+<li><a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository">GitHub licensing guide</a></li>
+</ul>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>We are very grateful to
+Korbinian Michael Bösl,
+Philipp Conzett,
+Richard Darst,
+Luca Ferranti,
+Noortje Haugstvedt,
+and
+Jenny Ostrop,
+for their comments and suggestions which
+significantly improved this document.</p>
+
+
+  </article>
+
+      </div>
+
+      <hr>
+
+      <ul class="uk-iconnav">
+  <li class="uk-margin-large-right">
+    <a href="mailto:rse@uit.no" uk-icon="icon: mail">rse@uit.no</a>
+  </li>
+  <li class="uk-margin-large-right">
+    <a href="https://github.com/uit-no/research-software.uit.no" target="_blank" uk-icon="icon: github">github.com/uit-no/research-software.uit.no</a>
+  </li>
+</ul>
+
+
+    </div>
+  </body>
+</html>
